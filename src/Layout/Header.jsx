@@ -31,11 +31,14 @@ const Header = () => {
       }`}
     >
       <div className="contain h-[108px] justify-between items-center">
-        <img
-          src="/logo.png"
-          className="h-[40px] xl:h-[50px] object-contain"
-          alt=""
-        />
+        <div className="relative flex justify-start group items-center">
+          <img src="/logo.png" className="h-[40px] object-contain" alt="" />
+          <img
+            src="/logo-text.png"
+            className="-translate-x-1/2 max-w-[120px] -z-20 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700"
+            alt=""
+          />
+        </div>
         {headerToggle && (
           <div
             onClick={() => setHeaderToggle(false)}
@@ -43,15 +46,15 @@ const Header = () => {
           ></div>
         )}
         <nav
-          className={`border-l-2 lg:border-none border-solid border-white lg:static fixed top-0 transition-all duration-1000 ${
+          className={`border-l-2 head:border-none border-solid border-white head:static fixed top-0 transition-all duration-1000 ${
             headerToggle ? "right-0" : "-right-[900px]"
-          } h-full lg:w-auto lg:max-w-none w-full max-w-full sm:max-w-[400px] flex justify-start lg:items-center gap-6 overflow-y-auto pt-[7rem] sm:pt-[6rem] px-8 lg:p-0 z-[89] lg:gap-5 xl:gap-[40px] lg:flex-row flex-col items-center sm:items-start bg-[#05050f] lg:bg-transparent`}
+          } h-full head:w-auto head:max-w-none w-full max-w-full sm:max-w-[400px] flex justify-start head:items-center gap-6 overflow-y-auto pt-[7rem] sm:pt-[6rem] px-8 head:p-0 z-[89] head:gap-5 xl:gap-[40px] head:flex-row flex-col items-center sm:items-start bg-[#05050f] head:bg-transparent`}
         >
-          <div className="flex justify-start items-center sm:items-start flex-col lg:flex-row lg:items-center gap-6 xl:gap-8">
+          <div className="flex justify-start items-center sm:items-start flex-col head:flex-row head:items-center gap-6 xl:gap-8">
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg lg:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
             >
               Explore{" "}
               <FontAwesomeIcon
@@ -62,7 +65,7 @@ const Header = () => {
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg lg:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
             >
               Ecosystem{" "}
               <FontAwesomeIcon
@@ -73,21 +76,21 @@ const Header = () => {
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg lg:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
             >
               Industries{" "}
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg lg:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
             >
               Blog
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg lg:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
             >
               Pricing
               <FontAwesomeIcon
@@ -98,20 +101,20 @@ const Header = () => {
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg lg:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
             >
               About us
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg lg:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
             >
               Contact
             </a>
           </div>
-          <div className="flex justify-start items-center sm:items-start flex-col lg:flex-row lg:items-center  gap-6 lg:gap-2 xl:gap-6">
-            <button className="bg-transparent border-[1px] border-solid border-white text-white h-[41px] w-[104px] rounded-full hover:bg-white hover:text-black transition-all duration-500 cursor-pointer text-lg font-medium">
+          <div className="flex justify-start items-center sm:items-start flex-col head:flex-row head:items-center  gap-6 head:gap-2 xl:gap-6">
+            <button className="bg-transparent border-[1px] border-solid border-white text-white h-[41px] w-[104px] rounded-full hover:bg-pink hover:border-pink  transition-all duration-500 cursor-pointer text-lg font-medium">
               Sign in
             </button>
             <button className="bg-white border-[1px] border-solid border-white text-black h-[41px] w-[104px] rounded-full hover:bg-transparent hover:text-white transition-all duration-500 cursor-pointer text-lg font-medium">
@@ -128,7 +131,7 @@ const Header = () => {
         <FontAwesomeIcon
           onClick={() => setHeaderToggle((prev) => !prev)}
           icon={headerToggle ? faXmark : faBars}
-          className="relative z-[90] text-white lg:hidden block text-2xl cursor-pointer"
+          className="relative z-[90] text-white head:hidden block text-2xl cursor-pointer"
         />
       </div>
     </div>

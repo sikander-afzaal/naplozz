@@ -2,7 +2,7 @@ import GradientButton from "../../Components/GradientButton";
 
 const Hero = () => {
   return (
-    <div className="wrapper mt-[130px] mid:mt-[100px] relative isolate">
+    <div className="wrapper overflow-x-hidden mt-[130px] mid:mt-[100px] relative isolate">
       <div className="w-[800px] bg-greenRadial absolute opacity-50 -z-10 blur-[125px] left-0 -translate-x-1/2 h-[800px] "></div>
       <div className="contain mid:flex-row flex-col justify-between overflow-visible items-center gap-[40px] sm:gap-[60px] mid:gap-5">
         <div className="flex justify-start items-center text-center mid:text-left mid:items-start mid:max-w-none max-w-[600px] flex-col gap-5">
@@ -16,13 +16,13 @@ const Hero = () => {
             businesses function more efficiently.{" "}
           </p>
           <GradientButton
-            classes={"w-[151px] h-[55px]"}
+            classes={"w-[151px] h-[55px] hover:w-[190px]"}
             text={" Get Started"}
           />
         </div>
         <img
-          src="/hero-img.png"
-          className="w-full object-contain max-w-[800px]"
+          src="/hero-phone.png"
+          className="w-full object-contain max-w-[600px]"
           alt=""
         />
       </div>

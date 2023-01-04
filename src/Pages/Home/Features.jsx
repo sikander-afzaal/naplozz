@@ -21,7 +21,7 @@ const Features = () => {
           </div>
           <img
             src="/set2.png"
-            className="absolute right-0 bottom-full -z-10"
+            className="absolute max-w-[110px] right-0 bottom-full -z-10"
             alt=""
           />
           <img
@@ -78,40 +78,70 @@ const Features = () => {
             Our main features
           </h2>
           <div className="w-full flex-wrap flex justify-center lg:justify-between items-stretch gap-5">
-            <div className="flex justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat1.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">
                   Task Manager
                 </h6>
               </div>
+              <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
+                <p className="text-white text-lg">
+                  A simple interface that allows you to track your tasks and
+                  assign them to your employees
+                </p>
+              </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>
-            <div className="flex justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat2.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">User Levels</h6>
+              </div>{" "}
+              <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
+                <p className="text-white text-lg">
+                  A simple interface that allows you to track your tasks and
+                  assign them to your employees
+                </p>
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>
-            <div className="flex justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat3.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">Log Manager</h6>
+              </div>{" "}
+              <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
+                <p className="text-white text-lg">
+                  A simple interface that allows you to track your tasks and
+                  assign them to your employees
+                </p>
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>
-            <div className="flex justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat4.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">Attendance</h6>
+              </div>{" "}
+              <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
+                <p className="text-white text-lg">
+                  A simple interface that allows you to track your tasks and
+                  assign them to your employees
+                </p>
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>
-            <div className="flex justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat5.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">Communicate</h6>
+              </div>{" "}
+              <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
+                <p className="text-white text-lg">
+                  A simple interface that allows you to track your tasks and
+                  assign them to your employees
+                </p>
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>

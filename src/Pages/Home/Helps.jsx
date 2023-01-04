@@ -47,7 +47,7 @@ const Helps = () => {
             className="w-full h-[100px] pt-5 resize-none text-base text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
           />
           <GradientButton
-            classes="w-[101px] h-[55px] self-end"
+            classes="w-[101px] h-[55px] self-end hover:w-[150px]"
             text={
               <>
                 Send{" "}
