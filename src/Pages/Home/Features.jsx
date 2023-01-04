@@ -2,7 +2,8 @@ const Features = () => {
   return (
     <div className="wrapper mt-[190px] sm:mt-[240px] ">
       <div className="contain flex-col justify-start items-center">
-        <div className="flex w-full xl:flex-row flex-col justify-center relative isolate items-center gap-[50px] xl:gap-[100px]">
+        <div className="flex  w-full xl:flex-row flex-col justify-center relative isolate items-center gap-[50px] xl:gap-[100px]">
+          <div className="absolute bg-blueRadial opacity-10 hidden head:block blur-[115px] -z-10 w-[1130px] h-[600px] -translate-x-1/2 left-1/2 top-0"></div>
           <div className="flex justify-start items-start flex-col gap-5">
             <h2 className="text-white text-[40px] sm:text-[48px] font-bold leading-[1]">
               Main features
