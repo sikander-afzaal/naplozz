@@ -1,4 +1,5 @@
 import Ecosystem from "./Ecosystem";
+import Features from "./Features";
 import Hero from "./Hero";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Hero />
       <Ecosystem />
+      <Features />
     </div>
   );
 };

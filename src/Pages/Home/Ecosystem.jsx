@@ -3,6 +3,7 @@ const Ecosystem = () => {
     <div className="wrapper mt-[60px] sm:mt-[100px]">
       <div className="contain flex-col items-start justify-start">
         <div className="flex item-center sm:text-left gap-2 text-center justify-start sm:max-w-[530px] sm:items-start flex-col">
+          <img src="/set1.png" className="mb-[50px]" alt="" />
           <h2 className="gr-text text-[40px] leading-[1.1]  sm:text-[48px] font-bold">
             Naplozz Ecosystem
           </h2>
@@ -67,6 +68,22 @@ const Ecosystem = () => {
             </p>
             <div className="absolute -inset-[4px] bg-blueGr -z-10 rounded-full"></div>
             <div className="absolute right-[129%] bg-blueGr h-[110px] -z-20 w-[6px] hidden sm:block bottom-[54%] -rotate-[62deg]"></div>
+          </div>
+        </div>
+        <div className="flex justify-center lg:flex-row flex-col mt-[80px] items-center w-full gap-5">
+          <div className="w-full rounded-[20px] border-solid border-[1px] border-[#b3b3b3] bg-blackGr  p-5 flex justify-start items-center flex-col">
+            <img src="/star.png" alt="" />
+            <p className="text-[#b3b3b3] max-w-[400px] font-medium sm:text-left text-center text-lg sm:text-xl">
+              Drive down the hassle of managing your quality measures and
+              ensuring that every step from obtain to delivery works well.
+            </p>
+          </div>
+          <div className="w-full rounded-[20px] border-solid border-[1px] border-[#b3b3b3] bg-blackGr  p-5 flex justify-start items-center flex-col">
+            <img src="/star.png" alt="" />
+            <p className="text-[#b3b3b3] max-w-[400px] font-medium sm:text-left text-center text-lg sm:text-xl">
+              Drive down the hassle of managing your quality measures and
+              ensuring that every step from obtain to delivery works well.
+            </p>
           </div>
         </div>
       </div>
