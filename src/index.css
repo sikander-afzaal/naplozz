@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .wrapper {
+    @apply flex justify-start items-center flex-col w-full;
+  }
+  .contain {
+    @apply flex w-full max-w-[1350px] px-5;
+  }
+}
+@layer components {
+  .gr-text {
+    @apply bg-blueGr bg-clip-text text-transparent;
+  }
+}
+@font-face {
+  font-family: Gilroy;
+  src: url("/fonts/Gilroy-ExtraBold.otf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url("/fonts/Gilroy-Light.otf");
+  font-weight: 400;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #05050f;
+}
