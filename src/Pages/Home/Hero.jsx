@@ -1,3 +1,5 @@
+import GradientButton from "../../Components/GradientButton";
+
 const Hero = () => {
   return (
     <div className="wrapper mt-[130px] mid:mt-[100px]">
@@ -12,12 +14,10 @@ const Hero = () => {
             utilizing the innovative technology of the blockchain to help
             businesses function more efficiently.{" "}
           </p>
-          <button className="w-[151px] h-[55px] rounded-full flex justify-center items-center bg-btnBg relative isolate border-none text-white cursor-pointer group font-semibold text-base">
-            <p className="w-full h-full bg-btnBg rounded-full group-hover:bg-transparent transition-all duration-700 flex justify-center items-center">
-              Get Started
-            </p>
-            <div className="absolute -inset-[2px] bg-btnGr -z-10 rounded-full"></div>
-          </button>
+          <GradientButton
+            classes={"w-[151px] h-[55px]"}
+            text={" Get Started"}
+          />
         </div>
         <img
           src="/hero-img.png"
