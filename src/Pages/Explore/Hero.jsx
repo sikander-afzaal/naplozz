@@ -4,14 +4,14 @@ import GradientButton from "../../Components/GradientButton";
 
 const Hero = () => {
   return (
-    <div className="wrapper pt-[40px] mid:pt-[100px]  relative isolate">
+    <div className="wrapper pt-[0px] mid:pt-[50px]  relative isolate">
       <img
         src="/explore/hero-bg.png"
         className="absolute w-full h-full top-0 left-0 object-cover -z-10"
         alt=""
       />
       <div className="contain  flex-col mid:flex-row   justify-between items-center mid:items-start">
-        <div className="flex justify-start items-center pt-[80px] text-center mid:text-left mid:items-start mid:max-w-none max-w-[600px] flex-col gap-5">
+        <div className="flex justify-start items-center pt-[150px] text-center mid:text-left mid:items-start mid:max-w-none max-w-[600px] flex-col gap-5">
           <h2 className="font-bold leading-[1.2] mid:leading-[92px] text-[40px] sm:text-[55px] mid:text-[68px] text-white">
             <span className="gr-text">Naplozz App</span> the paperless record
             keeper
@@ -36,7 +36,7 @@ const Hero = () => {
         <img
           src="/explore/hero-img.png"
           alt=""
-          className="max-w-[400px] mid:max-w-[900px] w-full object-contain"
+          className="max-w-[400px] mid:max-w-[700px] w-full object-contain"
         />
       </div>
     </div>
