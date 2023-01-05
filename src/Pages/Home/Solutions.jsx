@@ -24,7 +24,7 @@ const Features = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const timeLine = gsap.timeline({
-      defaults: { duration: 0.6, ease: Circ.easeOut },
+      defaults: { duration: 0.5, ease: Circ.easeOut },
       scrollTrigger: {
         trigger: container.current,
         start: "top 50%",
@@ -40,7 +40,7 @@ const Features = () => {
     });
     //for feature boxes
     const timeLine3 = gsap.timeline({
-      defaults: { duration: 1, ease: Circ.easeOut },
+      defaults: { duration: 0.5, ease: Circ.easeOut },
       scrollTrigger: {
         trigger: container3.current,
         start: "top 50%",
@@ -77,7 +77,7 @@ const Features = () => {
           feat5.current,
         ],
         { opacity: 0, y: 90 },
-        { opacity: 1, y: 0, stagger: 0.5 }
+        { opacity: 1, y: 0, stagger: 0.3 }
       );
   }, []);
 

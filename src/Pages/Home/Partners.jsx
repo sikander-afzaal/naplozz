@@ -14,7 +14,7 @@ const Partners = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const timeLine = gsap.timeline({
-      defaults: { duration: 1, ease: Circ.easeOut },
+      defaults: { duration: 0.7, ease: Circ.easeOut },
       scrollTrigger: {
         trigger: container.current,
         start: "top 50%",

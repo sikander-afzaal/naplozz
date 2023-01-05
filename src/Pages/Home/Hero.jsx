@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import GradientButton from "../../Components/GradientButton";
 //gsap
-import gsap from "gsap";
+import gsap, { Circ } from "gsap";
 
 const Hero = () => {
   const heading = useRef();
@@ -10,7 +10,9 @@ const Hero = () => {
   const btn = useRef();
   const img = useRef();
   useEffect(() => {
-    const timeLine = gsap.timeline({ defaults: { duration: 0.6 } });
+    const timeLine = gsap.timeline({
+      defaults: { duration: 0.5, ease: Circ.easeOut },
+    });
     timeLine.fromTo(
       heading.current,
       { opacity: 0, x: -80 },

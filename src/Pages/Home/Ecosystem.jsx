@@ -22,14 +22,14 @@ const Ecosystem = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const timeLine = gsap.timeline({
-      defaults: { duration: 0.6, ease: Circ.easeOut },
+      defaults: { duration: 0.5, ease: Circ.easeOut },
       scrollTrigger: {
         trigger: container.current,
         start: "top 30%",
       },
     });
     const timeLine2 = gsap.timeline({
-      defaults: { duration: 0.6, ease: Circ.easeOut },
+      defaults: { duration: 0.5, ease: Circ.easeOut },
       scrollTrigger: {
         trigger: container2.current,
         start: "top 50%",

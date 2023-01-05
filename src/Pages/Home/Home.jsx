@@ -1,5 +1,5 @@
 import Ecosystem from "./Ecosystem";
-import Features from "./Features";
+import Solutions from "./Solutions";
 import Helps from "./Helps";
 import Hero from "./Hero";
 import Partners from "./Partners";
@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <Hero />
       <Ecosystem />
-      <Features />
+      <Solutions />
       <Partners />
       <Helps />
     </div>
