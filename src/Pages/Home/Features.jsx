@@ -78,8 +78,8 @@ const Features = () => {
           <h2 className="text-white text-center text-[38px] sm:text-[48px] font-bold leading-[1]">
             Our main features
           </h2>
-          <div className="w-full flex-wrap flex justify-center lg:justify-between items-stretch gap-5">
-            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+          <div className="w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center xl:grid-cols-5 grid gap-6 xl:gap-5">
+            <div className="flex group justify-center items-center w-full sm:max-w-none max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat1.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">
@@ -94,7 +94,7 @@ const Features = () => {
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>
-            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full sm:max-w-none max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat2.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">User Levels</h6>
@@ -107,7 +107,7 @@ const Features = () => {
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>
-            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full sm:max-w-none max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat3.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">Log Manager</h6>
@@ -120,7 +120,7 @@ const Features = () => {
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>
-            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full sm:max-w-none max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat4.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">Attendance</h6>
@@ -133,7 +133,7 @@ const Features = () => {
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-blueGr -z-20 "></div>
             </div>
-            <div className="flex group justify-center items-center w-full max-w-[240px] relative rounded-[30px]">
+            <div className="flex group justify-center items-center w-full sm:max-w-none max-w-[240px] relative rounded-[30px]">
               <div className="flex min-h-[200px] min-w-[200px]  flex-col  gap-2 justify-center items-center w-full h-full bg-black rounded-[30px]">
                 <img src="/feat5.png" alt="" />
                 <h6 className="text-white text-2xl font-medium">Communicate</h6>

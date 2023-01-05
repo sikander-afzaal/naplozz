@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     screens: {
       mid: "1400px",
-      head: "1135px",
+      head: "1215px",
       ...defaultTheme.screens,
       xs: "520px",
     },
@@ -18,6 +18,8 @@ module.exports = {
         hoverShadow: "0px 0px 20px #7BCBE8",
       },
       backgroundImage: {
+        headerScroll:
+          "linear-gradient(183.33deg, #000000 2.75%, rgba(0, 0, 0, 0) 97.54%)",
         blueRadial:
           "radial-gradient(51.45% 101.64% at 52.54% 51.68%, #7BCBE8 0%, #8715E6 46.88%, #33FDFF 100%)",
         greenRadial:

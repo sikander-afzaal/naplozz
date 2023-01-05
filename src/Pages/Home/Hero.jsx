@@ -6,8 +6,11 @@ const Hero = () => {
       <div className="w-[80%] lg:w-[800px] bg-greenRadial absolute opacity-50 -z-10 blur-[125px] left-0 lg:-left-[400px]  h-[800px] "></div>
       <div className="contain mid:flex-row flex-col justify-between overflow-visible items-center gap-[40px] sm:gap-[60px] mid:gap-5">
         <div className="flex justify-start items-center text-center mid:text-left mid:items-start mid:max-w-none max-w-[600px] flex-col gap-5">
-          <h2 className="font-bold leading-[1.2] mid:leading-[92px] text-[40px] sm:text-[55px] mid:text-[68px] text-white">
-            Smart Quality <span className="gr-text">Management Powered</span>{" "}
+          <h2 className="font-bold leading-[1.2] mid:leading-[88px] text-[40px] sm:text-[55px] mid:text-[68px] text-white">
+            Smart Quality{" "}
+            <span className="gr-text">
+              Management <br /> Powered
+            </span>{" "}
             <span className="text-[24px]">by the Blockchain</span>
           </h2>
           <p className="text-[rgba(255,255,255,0.76)] text-base sm:text-xl font-medium">

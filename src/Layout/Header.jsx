@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
@@ -27,18 +28,21 @@ const Header = () => {
   return (
     <div
       className={`wrapper fixed top-0 left-0 z-50 transition-all ${
-        bg ? "bg-black" : ""
+        bg ? "bg-headerScroll" : ""
       }`}
     >
       <div className="contain h-[108px] justify-between items-center">
-        <div className="relative flex justify-start group items-center">
+        <Link
+          to={"/"}
+          className="relative flex justify-start group items-center"
+        >
           <img src="/logo.png" className="h-[40px] object-contain" alt="" />
           <img
             src="/logo-text.png"
             className="-translate-x-1/2 max-w-[120px] -z-20 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700"
             alt=""
           />
-        </div>
+        </Link>
         {headerToggle && (
           <div
             onClick={() => setHeaderToggle(false)}
@@ -48,67 +52,67 @@ const Header = () => {
         <nav
           className={`border-l-2 head:border-none border-solid border-white head:static fixed top-0 transition-all duration-1000 ${
             headerToggle ? "right-0" : "-right-[900px]"
-          } h-full head:w-auto head:max-w-none w-full max-w-full sm:max-w-[400px] flex justify-start head:items-center gap-6 overflow-y-auto pt-[7rem] sm:pt-[6rem] px-8 head:p-0 z-[89] head:gap-5 xl:gap-[40px] head:flex-row flex-col items-center sm:items-start bg-[#05050f] head:bg-transparent`}
+          } h-full head:w-auto head:max-w-none w-full max-w-full sm:max-w-[400px] flex justify-start head:items-center gap-6 overflow-y-auto pt-[7rem] sm:pt-[6rem] px-8 head:p-0 z-[89] head:gap-5  xl:gap-[40px] head:flex-row flex-col items-center sm:items-start bg-[#05050f] head:bg-transparent`}
         >
-          <div className="flex justify-start items-center sm:items-start flex-col head:flex-row head:items-center gap-6 xl:gap-8">
-            <a
+          <div className="flex justify-start items-center sm:items-start flex-col head:flex-row head:items-center gap-6 mid:gap-4 xl:gap-5">
+            <Link
               onClick={() => setHeaderToggle(false)}
-              href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
+              to="/explore"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
             >
               Explore{" "}
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="text-inherit text-sm"
+                className="text-inherit text-xs"
               />
-            </a>
+            </Link>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
             >
               Ecosystem{" "}
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="text-inherit text-sm"
+                className="text-inherit text-xs"
               />
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
             >
               Industries{" "}
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
             >
               Blog
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
             >
               Pricing
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="text-inherit text-sm"
+                className="text-inherit text-xs"
               />
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
             >
               About us
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-lg font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
             >
               Contact
             </a>
