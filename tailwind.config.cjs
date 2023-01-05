@@ -18,6 +18,8 @@ module.exports = {
         hoverShadow: "0px 0px 20px #7BCBE8",
       },
       backgroundImage: {
+        tableBorder:
+          "linear-gradient(270deg, rgba(255, 255, 255, 0) 0.12%, rgba(255, 255, 255, 0) 0.13%, #E04ADC 47.6%, rgba(255, 254, 254, 0) 101.4%)",
         headerScroll:
           "linear-gradient(183.33deg, #000000 2.75%, rgba(0, 0, 0, 0) 97.54%)",
         blueRadial:
