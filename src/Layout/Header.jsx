@@ -27,6 +27,15 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const body = document.querySelector("html");
+    if (headerToggle) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
+  }, [headerToggle]);
+
   return (
     <div
       className={`wrapper fixed top-0 left-0 z-50 transition-all duration-500 ${
