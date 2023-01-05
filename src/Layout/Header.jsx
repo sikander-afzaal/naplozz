@@ -7,9 +7,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useScrollDirection } from "../hooks/scrollDirection";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
+  const scrollDirection = useScrollDirection();
   const [bg, setBg] = useState(false);
   useEffect(() => {
     const showBg = () => {
@@ -27,9 +29,9 @@ const Header = () => {
 
   return (
     <div
-      className={`wrapper fixed top-0 left-0 z-50 transition-all ${
+      className={`wrapper fixed top-0 left-0 z-50 transition-all duration-500 ${
         bg ? "bg-headerScroll" : ""
-      }`}
+      } ${scrollDirection === "down" ? "-top-24" : "top-0"}`}
     >
       <div className="contain h-[108px] justify-between items-center">
         <Link

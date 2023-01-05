@@ -1,6 +1,6 @@
 const Tokenomics = () => {
   return (
-    <div className="wrapper mt-[100px]">
+    <div className="wrapper mt-[100px] relative isolate">
       <div className="contain flex-col items-center justify-center">
         <div className="flex justify-start items-start flex-col w-full gap-5">
           <h2 className="text-white text-[40px] sm:text-[48px] font-bold">
@@ -57,7 +57,8 @@ const Tokenomics = () => {
             </div>
           </div>
         </div>
-        <div className="flex mt-[80px] xl:mt-[150px] xl:flex-row flex-col justify-between items-center gap-[60px] xl:gap-5 w-full">
+        <div className="flex  mt-[80px] xl:mt-[150px] xl:flex-row flex-col justify-between items-center gap-[60px] xl:gap-5 w-full">
+          {/* <div className="absolute -z-10 opacity-[0.24] -right-[30%] top-[50%] w-full max-w-[1064px] h-[700px] bg-[#a50498] blur-[250px]"></div> */}
           <div className="flex overflow-x-auto justify-start items-start flex-col gap-5  max-w-[550px] w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] relative">
             <div className="grid  grid-cols-2 gap-5 w-full py-5 items-center relative">
               <div className="w-full h-[2px] bg-tableBorder absolute bottom-full left-0 z-10"></div>
