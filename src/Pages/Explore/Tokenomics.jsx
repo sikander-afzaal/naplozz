@@ -58,7 +58,7 @@ const Tokenomics = () => {
           </div>
         </div>
         <div className="flex  mt-[80px] xl:mt-[150px] xl:flex-row flex-col justify-between items-center gap-[60px] xl:gap-5 w-full">
-          {/* <div className="absolute -z-10 opacity-[0.24] -right-[30%] top-[50%] w-full max-w-[1064px] h-[700px] bg-[#a50498] blur-[250px]"></div> */}
+          <div className="absolute -z-10 opacity-[0.24] -right-[30%] top-[30%] w-full max-w-[1064px] h-[700px] bg-[#a50498] blur-[250px]"></div>
           <div className="flex overflow-x-auto justify-start items-start flex-col gap-5  max-w-[550px] w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] relative">
             <div className="grid  grid-cols-2 gap-5 w-full py-5 items-center relative">
               <div className="w-full h-[2px] bg-tableBorder absolute bottom-full left-0 z-10"></div>
@@ -107,6 +107,16 @@ const Tokenomics = () => {
           <img
             src="/explore/pie-chart.png"
             className="object-contain w-full max-w-[570px]"
+            alt=""
+          />
+        </div>
+        <div className="flex relative z-10 w-full justify-start items-start flex-col gap-10 mt-[80px] xl:mt-[130px]">
+          <h2 className="text-white md:text-left text-center text-[40px] sm:text-[48px] font-bold">
+            Cumulative Vesting diagram
+          </h2>
+          <img
+            src="/explore/chart.png"
+            className="w-full object-contain"
             alt=""
           />
         </div>

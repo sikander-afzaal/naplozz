@@ -202,13 +202,6 @@ const Header = () => {
               fill="white"
             />
           </svg>
-
-          {/* <img src="/logo.png"  alt="" /> */}
-          {/* <img
-            src="/logo-text.png"
-           
-            alt=""
-          /> */}
         </Link>
         {headerToggle && (
           <div
