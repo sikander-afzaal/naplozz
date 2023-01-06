@@ -28,7 +28,7 @@ module.exports = {
           "radial-gradient(51.45% 101.64% at 52.54% 51.68%, #7BCBE8 0%, #8715E6 46.88%, #33FDFF 100%)",
         greenRadial:
           "radial-gradient(50% 50% at 50% 50%, #33FDFF 0%, rgba(51, 253, 255, 0) 100%)",
-        blueGr: "linear-gradient(180deg, #33FDFF -1.44%, #424CFF 99.66%)",
+        blueGr: "linear-gradient(268.92deg, #33FDFF -20.04%, #424CFF 84.72%)",
         btnGr:
           "linear-gradient(116.22deg, #7BCBE8 1.27%, #8715E6 49.07%, #33FDFF 103.24%)",
         blackGr:
