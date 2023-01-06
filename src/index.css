@@ -38,14 +38,14 @@ body {
 /* Firefox */
 body,
 .roadmap {
-  scrollbar-width: auto;
+  scrollbar-width: thin;
   scrollbar-color: #14133b #060610;
 }
 
 /* Chrome, Edge, and Safari */
 body::-webkit-scrollbar,
 .roadmap::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track,
@@ -61,14 +61,14 @@ body::-webkit-scrollbar-thumb:hover body::-webkit-scrollbar-track,
 }
 body::-webkit-scrollbar-thumb:hover,
 .roadmap::-webkit-scrollbar-thumb:hover {
-  background-color: #615f6c;
+  background-color: #0262f7;
 }
 
 body::-webkit-scrollbar-thumb,
 .roadmap::-webkit-scrollbar-thumb {
-  background-color: #333141;
+  background-color: #192538;
   border-radius: 200px;
-  border: 1px solid #333141;
+  border: 1px solid #192538;
 }
 html {
   overflow-x: hidden;

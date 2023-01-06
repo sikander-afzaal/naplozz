@@ -41,11 +41,11 @@ const Helps = () => {
   }, []);
   return (
     <div ref={container} className="wrapper mt-[80px] lg:mt-[150px]">
-      <div className="contain lg:flex-row flex-col justify-between items-start gap-[50px] lg:gap-4">
+      <div className="contain lg:flex-row flex-col justify-between items-start gap-[50px] lg:gap-8">
         <div className="flex justify-start items-center text-center sm:text-left sm:items-start flex-col gap-4">
           <h2
             ref={heading}
-            className="gr-text leading-[1.3] text-[35px] sm:text-[50px] lg:text-[72px] font-extrabold"
+            className="gr-text leading-[1.3] text-[35px] sm:text-[50px] lg:text-[60px] mid:text-[72px] font-extrabold"
           >
             Naplozz helps businesses run smoother
           </h2>
@@ -65,9 +65,9 @@ const Helps = () => {
         </div>
         <form
           ref={form}
-          className="flex justify-start items-center flex-col gap-5 w-full"
+          className="flex border-solid border-[1px] border-[#b3b3b3] p-5 sm:p-8 rounded-2xl justify-start items-center flex-col gap-5 w-full"
         >
-          <div className="flex justify-center items-center w-full gap-5">
+          <div className="flex sm:flex-row flex-col justify-center items-center w-full gap-5">
             <input
               type="text"
               placeholder="First Name"

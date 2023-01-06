@@ -67,16 +67,16 @@ const Partners = () => {
           ref={partners}
           className="flex justify-center items-center max-w-[700px] self-center gap-[50px] flex-wrap w-full"
         >
-          <img src="/part1.png" alt="" />
-          <img src="/part2.png" alt="" />
-          <img src="/part3.png" alt="" />
-          <img src="/part4.png" alt="" />
-          <img src="/part5.png" alt="" />
-          <img src="/part6.png" alt="" />
-          <img src="/part7.png" alt="" />
-          <img src="/part8.png" alt="" />
-          <img src="/part9.png" alt="" />
-          <img src="/part10.png" alt="" />
+          <img src="/part1.png" className="hover:brightness-200" alt="" />
+          <img src="/part2.png" className="hover:brightness-200" alt="" />
+          <img src="/part3.png" className="hover:brightness-200" alt="" />
+          <img src="/part4.png" className="hover:brightness-200" alt="" />
+          <img src="/part5.png" className="hover:brightness-200" alt="" />
+          <img src="/part6.png" className="hover:brightness-200" alt="" />
+          <img src="/part7.png" className="hover:brightness-200" alt="" />
+          <img src="/part8.png" className="hover:brightness-200" alt="" />
+          <img src="/part9.png" className="hover:brightness-200" alt="" />
+          <img src="/part10.png" className="hover:brightness-200" alt="" />
         </div>
       </div>
     </div>

@@ -137,21 +137,25 @@ const Features = () => {
           >
             <ul className="w-full bg-black list-none p-5 h-full flex justify-start rounded-[40px] items-start flex-col gap-4">
               <li className="text-[#f9f9f9]  font-medium text-base sm:text-xl">
-                ⦁ Easily track all the mandatory work happening in your business
-                with a single click{" "}
+                <span className="gr-text">⦁</span> Easily track all the
+                mandatory work happening in your business with a single click{" "}
               </li>
 
               <li className="text-[#f9f9f9] font-medium text-base sm:text-xl">
-                ⦁ Create inner protocols or send protocols to other businesses
+                <span className="gr-text">⦁</span> Create inner protocols or
+                send protocols to other businesses
               </li>
               <li className="text-[#f9f9f9] font-medium text-base sm:text-xl">
-                ⦁ Track your employees working time
+                <span className="gr-text">⦁</span> Track your employees working
+                time
               </li>
               <li className="text-[#f9f9f9] font-medium text-base sm:text-xl">
-                ⦁ Stand out with your result through our social feed
+                <span className="gr-text">⦁</span> Stand out with your result
+                through our social feed
               </li>
               <li className="text-[#f9f9f9] font-medium text-base sm:text-xl">
-                ⦁ Easily order HACCP or other assessments
+                <span className="gr-text">⦁</span> Easily order HACCP or other
+                assessments
               </li>
             </ul>
             <div className="absolute -inset-[1px] bg-blueGr -z-20 rounded-[40px] group-hover:opacity-0 transition-all duration-500"></div>
@@ -163,18 +167,22 @@ const Features = () => {
           >
             <ul className="w-full bg-black list-none p-5 h-full flex justify-start rounded-[40px] items-start flex-col gap-4">
               <li className="text-[#f9f9f9]  font-medium text-base sm:text-xl">
-                ⦁ Create a flexible dashboard for your team that enables them to
-                see how they are performing across all their projects
+                <span className="gr-text">⦁</span> Create a flexible dashboard
+                for your team that enables them to see how they are performing
+                across all their projects
               </li>
               <li className="text-[#f9f9f9] font-medium text-base sm:text-xl">
-                ⦁ Manage tasks so that they are done on time, and no one misses
-                out due to a lack of communication
+                <span className="gr-text">⦁</span> Manage tasks so that they are
+                done on time, and no one misses out due to a lack of
+                communication
               </li>
               <li className="text-[#f9f9f9] font-medium text-base sm:text-xl">
-                ⦁ Reward your employees with NAP Tokens for their hard work
+                <span className="gr-text">⦁</span> Reward your employees with
+                NAP Tokens for their hard work
               </li>
               <li className="text-[#f9f9f9] font-medium text-base sm:text-xl">
-                ⦁ Get educational certificates after completing our tests
+                <span className="gr-text">⦁</span> Get educational certificates
+                after completing our tests
               </li>
             </ul>
             <div className="absolute -inset-[1px] bg-blueGr -z-20 rounded-[40px] group-hover:opacity-0 transition-all duration-500"></div>
@@ -183,8 +191,9 @@ const Features = () => {
         </div>
         <div
           ref={container3}
-          className=" flex w-full flex-col justify-start items-center sm:items-start gap-10 mt-[80px] sm:mt-[100px]"
+          className=" flex relative w-full flex-col justify-start items-center sm:items-start gap-10 mt-[80px] sm:mt-[100px]"
         >
+          <div className="absolute bg-[#0262f7] h-[680px] -z-10 blur-[120px] opacity-10 w-full -top-[10%] left-1/2 -translate-x-1/2 max-w-[1320px]"></div>
           <h2
             ref={featHead}
             className="text-white text-center text-[38px] sm:text-[48px] font-bold leading-[1]"
@@ -220,8 +229,8 @@ const Features = () => {
               </div>{" "}
               <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
                 <p className="text-white text-lg">
-                  A simple interface that allows you to track your tasks and
-                  assign them to your employees
+                  The Naplozz App is designed to minimize bureaucracy and
+                  maximize your users’ productivity.
                 </p>
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-btnGr -z-20 "></div>
@@ -236,8 +245,8 @@ const Features = () => {
               </div>{" "}
               <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
                 <p className="text-white text-lg">
-                  A simple interface that allows you to track your tasks and
-                  assign them to your employees
+                  The Log Manager allows you to organize and monitor your
+                  inspection records and logs easily.
                 </p>
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-btnGr -z-20 "></div>
@@ -252,8 +261,8 @@ const Features = () => {
               </div>{" "}
               <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
                 <p className="text-white text-lg">
-                  A simple interface that allows you to track your tasks and
-                  assign them to your employees
+                  Attendance Assistant is a tool to accurately track, record,
+                  and report the attendance of your workers around the clock.
                 </p>
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-btnGr -z-20 "></div>
@@ -268,8 +277,8 @@ const Features = () => {
               </div>{" "}
               <div className="flex justify-start group-hover:opacity-100 duration-500 transition-all group-hover:bottom-0 items-center w-full p-5 bg-black rounded-[30px] h-full absolute left-0 opacity-0 -bottom-[100px]">
                 <p className="text-white text-lg">
-                  A simple interface that allows you to track your tasks and
-                  assign them to your employees
+                  You can communicate in real-time, allowing each member to
+                  voice their opinion and move forward.
                 </p>
               </div>
               <div className="absolute rounded-[30px] -inset-[1px] bg-btnGr -z-20 "></div>

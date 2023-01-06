@@ -9,6 +9,7 @@ const Hero = () => {
   const para = useRef();
   const btn = useRef();
   const img = useRef();
+  const shadow = useRef();
   useEffect(() => {
     const timeLine = gsap.timeline({
       defaults: { duration: 0.5, ease: Circ.easeOut },
@@ -22,16 +23,30 @@ const Hero = () => {
     timeLine.fromTo(para.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 });
     timeLine.fromTo(btn.current, { opacity: 0, y: 80 }, { opacity: 1, y: 0 });
     timeLine.fromTo(img.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
+
+    gsap.fromTo(
+      shadow.current,
+      { scale: 1 },
+      {
+        scale: 0.8,
+        yoyo: true,
+        repeat: -1,
+        duration: 2,
+      }
+    );
   }, []);
 
   return (
-    <div className="wrapper  mt-[130px] mid:mt-[100px] relative isolate">
-      <div className="w-[80%] lg:w-[800px] bg-greenRadial absolute opacity-50 -z-10 blur-[125px] left-0 lg:-left-[400px]  h-[800px] "></div>
-      <div className="contain mid:flex-row flex-col justify-between overflow-visible items-center gap-[40px] sm:gap-[60px] mid:gap-5">
-        <div className="flex mid:-mt-[130px] justify-start items-center text-center mid:text-left mid:items-start mid:max-w-[560px] max-w-[600px] flex-col gap-5">
+    <div className="wrapper  mt-[130px] xl:mt-[100px] relative isolate">
+      <div
+        ref={shadow}
+        className="w-[80%] lg:w-[800px] bg-greenRadial absolute opacity-50 -z-10 blur-[125px] left-0 lg:-left-[400px]  h-[800px] "
+      ></div>
+      <div className="contain xl:flex-row flex-col justify-between overflow-visible items-center gap-[40px] sm:gap-[60px] xl:gap-5">
+        <div className="flex xl:-mt-[130px] justify-start items-center text-center xl:text-left xl:items-start xl:max-w-[560px] max-w-[600px] flex-col gap-5">
           <h2
             ref={heading}
-            className="font-bold leading-[1.2] mid:leading-[88px] text-[40px] sm:text-[55px] mid:text-[68px] text-white"
+            className="font-bold leading-[1.2] xl:leading-[88px] text-[40px] sm:text-[55px] xl:text-[63px] mid:text-[68px] text-white"
           >
             Smart Quality{" "}
             <span className="gr-text">
@@ -59,7 +74,7 @@ const Hero = () => {
         <img
           ref={img}
           src="/hero-phone.png"
-          className="w-full object-contain max-w-[600px]"
+          className="w-full object-contain max-w-[500px] mid:max-w-[600px]"
           alt=""
         />
       </div>

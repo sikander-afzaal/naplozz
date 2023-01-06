@@ -87,8 +87,10 @@ const Ecosystem = () => {
             ref={eco1}
             className="rounded-full hover:shadow-hoverShadow hover:scale-110 transition-all duration-500 group self-center justify-self-center xs:justify-self-start xs:self-end w-[140px] h-[140px]  isolate relative"
           >
-            <p className="bg-purple text-pink text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
-              Naplozz <br /> Star
+            <p className="bg-purple  text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
+              <span className="gr-text">
+                Naplozz <br /> Star
+              </span>
             </p>
             <p className="text-white text-base font-semibold lg:block hidden absolute right-full bottom-full">
               Pubs
@@ -106,8 +108,10 @@ const Ecosystem = () => {
             ref={eco2}
             className="rounded-full  self-start justify-self-center  w-[140px] h-[140px]  isolate relative  hover:shadow-hoverShadow hover:scale-110 transition-all duration-500 group"
           >
-            <p className="bg-purple text-pink text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
-              Naplozz <br /> App
+            <p className="bg-purple  text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
+              <span className="gr-text">
+                Naplozz <br /> App
+              </span>
             </p>
 
             <p className="text-white text-center lg:block hidden min-w-[150px] text-base font-semibold absolute right-full bottom-full">
@@ -126,8 +130,10 @@ const Ecosystem = () => {
             ref={eco3}
             className="rounded-full self-center justify-self-center xs:self-end xs:justify-self-end   w-[140px] h-[140px]  isolate relative  hover:shadow-hoverShadow hover:scale-110 transition-all duration-500 group"
           >
-            <p className="bg-purple text-pink text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
-              Naplozz <br /> Education AND
+            <p className="bg-purple  text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
+              <span className="gr-text">
+                Naplozz <br /> Education AND
+              </span>
             </p>
             <p className="text-white text-center  text-base lg:block hidden font-semibold absolute left-[70%] bottom-[120%]">
               Brasseries
@@ -164,8 +170,10 @@ const Ecosystem = () => {
             ref={eco4}
             className="rounded-full self-center justify-self-center xs:self-start xs:justify-self-start w-[140px] h-[140px]  isolate relative  hover:shadow-hoverShadow hover:scale-110 transition-all duration-500 group"
           >
-            <p className="bg-purple text-pink text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
-              Naplozz <br /> Wizard
+            <p className="bg-purple  text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
+              <span className="gr-text">
+                Naplozz <br /> Wizard
+              </span>
             </p>
             <p className="text-white text-center  text-base lg:block hidden font-semibold absolute right-[130%] -top-[5%]">
               Industrial <br /> units
@@ -183,8 +191,10 @@ const Ecosystem = () => {
             ref={eco5}
             className="rounded-full self-end  justify-self-center w-[140px] h-[140px]  isolate relative  hover:shadow-hoverShadow hover:scale-110 transition-all duration-500 group"
           >
-            <p className="bg-purple text-pink text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
-              Naplozz <br /> Certification System
+            <p className="bg-purple  text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
+              <span className="gr-text">
+                Naplozz <br /> Certification System
+              </span>
             </p>
             <p className="text-white text-center  text-base lg:block hidden font-semibold absolute left-full -bottom-[20%]">
               Restaurants
@@ -202,8 +212,10 @@ const Ecosystem = () => {
             ref={eco6}
             className="rounded-full self-center justify-self-center xs:self-start xs:justify-self-end w-[140px] h-[140px]  isolate relative  hover:shadow-hoverShadow hover:scale-110 transition-all duration-500 group"
           >
-            <p className="bg-purple text-pink text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
-              Naplozz <br /> Marketplace
+            <p className="bg-purple  text-base font-bold uppercase text-center w-full h-full flex justify-center items-center rounded-full">
+              <span className="gr-text">
+                Naplozz <br /> Marketplace
+              </span>
             </p>
             <p className="text-white text-center  text-base lg:block hidden font-semibold absolute left-[120%] bottom-[50%]">
               Accomodation <br /> units
@@ -243,8 +255,8 @@ const Ecosystem = () => {
             <div className="w-full h-full bg-black rounded-[20px] flex justify-start items-center flex-col p-5">
               <img src="/star.png" alt="" />
               <p className="text-[#b3b3b3] max-w-[400px] font-medium sm:text-left text-center text-lg sm:text-xl">
-                Drive down the hassle of managing your quality measures and
-                ensuring that every step from obtain to delivery works well.
+                With Naplozz, you’ll no longer have to rely on paper records or
+                spend an hour each day entering data into spreadsheets.
               </p>
             </div>
           </div>
