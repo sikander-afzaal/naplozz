@@ -1,13 +1,32 @@
+import {
+  faDiscord,
+  faFacebook,
+  faFacebookF,
+  faLinkedin,
+  faMedium,
+  faTelegram,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Footer = () => {
   return (
-    <div className="wrapper mt-[60px] lg:mt-[100px]">
+    <div className="wrapper mt-[60px] lg:mt-[100px] relative">
+      <FontAwesomeIcon
+        onClick={() => window.scrollTo(0, 0)}
+        icon={faArrowUp}
+        className="absolute right-5 bottom-[85%] sm:bottom-5 rounded-full w-5 sm:w-7 h-5 sm:h-7 grid place-items-center p-3 box-border cursor-pointer bg-btnBg  text-white text-3xl"
+      />
       <div className="contain pt-[40px] sm:pt-[60px] pb-5 justify-start items-center flex-col">
-        <footer className="w-full flex flex-col lg:flex-row justify-between items-center sm:items-start gap-5">
+        <footer className="w-full grid grid-cols-2 grid-rows-2 sm:flex sm:flex-col lg:flex-row justify-between items-center sm:items-start gap-5">
           <svg
             width="329"
             height="77"
             viewBox="0 0 329 77"
             fill="none"
+            className="col-span-2 justify-self-center"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -164,7 +183,7 @@ const Footer = () => {
               About Us
             </a>
           </div>
-          <div className=" flex justify-start items-center sm:items-start flex-col gap-5">
+          <div className="sm:flex hidden justify-start items-center sm:items-start flex-col gap-5">
             <a href="#" className="text-white text-base font-semibold">
               Naplozz App
             </a>
@@ -198,7 +217,7 @@ const Footer = () => {
               White paper
             </a>
           </div>
-          <div className=" flex justify-start items-center sm:items-start flex-col gap-5">
+          <div className=" sm:flex hidden justify-start items-center sm:items-start flex-col gap-5">
             <a href="#" className="text-white text-base font-semibold">
               Catering
             </a>
@@ -222,16 +241,65 @@ const Footer = () => {
             </a>
           </div>
         </footer>
-        <div className="justify-center flex mt-[40px] items-center w-full gap-5">
-          <a href="#" className="text-sm sm:text-base text-pink font-normal">
-            © Naplozz 2022
-          </a>
-          <a href="#" className="text-sm sm:text-base text-pink font-normal">
-            Privacy Policy
-          </a>
-          <a href="#" className="text-sm sm:text-base text-pink font-normal">
-            Terms of Use
-          </a>
+        <div className="flex flex-col w-full justify-center items-center gap-5 mt-14 sm:mt-5">
+          <div className="flex justify-center items-center flex-wrap gap-5">
+            <a href="#" target={"blank"}>
+              <FontAwesomeIcon
+                className="text-white text-2xl"
+                icon={faFacebook}
+              />
+            </a>
+            <a href="https://twitter.com/naplozz" target={"blank"}>
+              <FontAwesomeIcon
+                className="text-white text-2xl"
+                icon={faTwitter}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/naplozz-io/"
+              target={"blank"}
+            >
+              <FontAwesomeIcon
+                className="text-white text-2xl"
+                icon={faLinkedin}
+              />
+            </a>
+            <a href="#" target={"blank"}>
+              <FontAwesomeIcon
+                className="text-white text-2xl"
+                icon={faTelegram}
+              />
+            </a>
+            <a href="#" target={"blank"}>
+              <FontAwesomeIcon
+                className="text-white text-2xl"
+                icon={faDiscord}
+              />
+            </a>
+            <a href="#" target={"blank"}>
+              <FontAwesomeIcon
+                className="text-white text-2xl"
+                icon={faYoutube}
+              />
+            </a>
+            <a href="https://medium.com/@naplozzio" target={"blank"}>
+              <FontAwesomeIcon
+                className="text-white text-2xl"
+                icon={faMedium}
+              />
+            </a>
+          </div>
+          <div className="justify-center flex  items-center w-full gap-5">
+            <a href="#" className="text-sm sm:text-base text-pink font-normal">
+              © Naplozz 2022
+            </a>
+            <a href="#" className="text-sm sm:text-base text-pink font-normal">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-sm sm:text-base text-pink font-normal">
+              Terms of Use
+            </a>
+          </div>
         </div>
       </div>
     </div>

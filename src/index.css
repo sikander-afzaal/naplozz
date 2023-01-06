@@ -74,3 +74,28 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+.explore {
+  animation: move 20s ease-in-out 0s infinite alternate;
+}
+@keyframes move {
+  0% {
+    top: 0;
+    left: -20%;
+  }
+  25% {
+    top: -20%;
+    left: -20%;
+  }
+  50% {
+    top: -10%;
+    left: 10%;
+  }
+  75% {
+    top: -10%;
+    left: -20%;
+  }
+  100% {
+    top: 0;
+    left: -20%;
+  }
+}
