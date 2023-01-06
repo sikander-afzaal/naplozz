@@ -1,6 +1,12 @@
 const Tokenomics = () => {
   return (
     <div className="wrapper mt-[100px] relative isolate">
+      <img
+        src="/explore/token-bg.png"
+        alt=""
+        className="absolute right-0 top-[20%] sm:top-[10%] -z-10 max-w-[300px] w-full"
+      />
+      <div className="absolute opacity-50 w-full -left-[30%]  -top-[13%] -z-10 blur-[250px] bg-greenRadial max-w-[804px] h-[804px]"></div>
       <div className="contain flex-col items-center justify-center">
         <div className="flex justify-start items-start flex-col w-full gap-5">
           <h2 className="text-white text-[40px] sm:text-[48px] font-bold">
