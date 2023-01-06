@@ -10,9 +10,10 @@ import { Link } from "react-router-dom";
 import { useScrollDirection } from "../hooks/scrollDirection";
 
 const Header = () => {
-  const [headerToggle, setHeaderToggle] = useState(false);
   const scrollDirection = useScrollDirection();
+  const [headerToggle, setHeaderToggle] = useState(false);
   const [bg, setBg] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
   useEffect(() => {
     const showBg = () => {
       if (window.scrollY > 60) {
@@ -210,22 +211,49 @@ const Header = () => {
           ></div>
         )}
         <nav
-          className={`border-l-2 head:border-none border-solid border-white head:static fixed top-0 transition-all duration-1000 ${
+          className={`border-l-2 overflow-y-auto  head:overflow-visible head:border-none border-solid border-white head:static fixed top-0 transition-all duration-1000 ${
             headerToggle ? "right-0" : "-right-[900px]"
-          } h-full head:w-auto head:max-w-none w-full max-w-full sm:max-w-[400px] flex justify-start head:items-center gap-6 overflow-y-auto pt-[7rem] sm:pt-[6rem] px-8 head:p-0 z-[89] head:gap-5  xl:gap-[40px] head:flex-row flex-col items-center sm:items-start bg-[#05050f] head:bg-transparent`}
+          } h-full head:w-auto head:max-w-none w-full max-w-full sm:max-w-[400px] flex justify-start head:items-center gap-6 pb-8  pt-[7rem] sm:pt-[6rem] px-8 head:p-0 z-[89] head:gap-5  xl:gap-[40px] head:flex-row flex-col items-center sm:items-start bg-[#05050f] head:bg-transparent`}
         >
-          <div className="flex justify-start items-center sm:items-start flex-col head:flex-row head:items-center gap-6 mid:gap-4 xl:gap-5">
-            <Link
-              onClick={() => setHeaderToggle(false)}
-              to="/explore"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
-            >
-              Explore{" "}
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className="text-inherit text-xs"
-              />
-            </Link>
+          <div className="flex justify-start items-center head:w-auto w-full sm:items-start flex-col head:flex-row head:items-center gap-6 mid:gap-4 xl:gap-5">
+            <div className="flex head:w-auto w-full justify-start items-center sm:items-start flex-col relative">
+              <button
+                onClick={() => setDropDown((prev) => !prev)}
+                className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
+              >
+                Explore{" "}
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`text-inherit transition-transform text-xs ${
+                    dropDown ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {dropDown && (
+                <div className="static mt-5 head:m-0 head:absolute px-5 py-3 gap-2 flex justify-center items-center sm:items-start flex-col w-full head:w-max bg-black text-white border-2 border-solid border-[#b3b3b3] rounded-xl top-[140%] left-1/2 head:-translate-x-1/2">
+                  <Link
+                    onClick={() => {
+                      setDropDown(false);
+                      setHeaderToggle(false);
+                    }}
+                    to={"/explore"}
+                    className="text-lg"
+                  >
+                    Solution
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setDropDown(false);
+                      setHeaderToggle(false);
+                    }}
+                    className="text-lg"
+                    to={"/explore"}
+                  >
+                    Nap Token
+                  </Link>
+                </div>
+              )}
+            </div>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"

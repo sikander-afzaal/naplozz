@@ -72,4 +72,5 @@ body::-webkit-scrollbar-thumb,
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
