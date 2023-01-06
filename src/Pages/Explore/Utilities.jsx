@@ -1,6 +1,7 @@
 const Utilities = () => {
   return (
-    <div className="wrapper mt-[80px] md:mt-[160px]">
+    <div className="wrapper relative mt-[80px] md:mt-[160px]">
+      <div className="absolute opacity-10 w-full left-1/2 -translate-x-1/2 top-[40%] -z-10 blur-[250px] bg-[#a50498] max-w-[1028px] h-[1028px]"></div>
       <div className="contain flex-col gap-[60px] md:gap-[0px] justify-start items-center  md:items-start">
         <h2 className="gr-text text-[40px] sm:text-[48px] md:m-0 -mb-5 font-bold">
           Token utilities
