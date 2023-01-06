@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import ProgressBar from "react-progressbar-on-scroll";
 import Loader from "./Components/Loader";
 import Footer from "./Layout/Footer";
 import Header from "./Layout/Header";
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <ProgressBar gradient gradientColor="#33FDFF" color="#8715E6" />
       {loader && <Loader />}
       <Header />
       <Routes>
