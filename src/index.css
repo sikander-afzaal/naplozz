@@ -77,6 +77,9 @@ html {
 .explore {
   animation: move 20s ease-in-out 0s infinite alternate;
 }
+.eco-words {
+  animation: float 5s ease-in-out 0s infinite alternate;
+}
 @keyframes move {
   0% {
     top: 0;
@@ -97,5 +100,13 @@ html {
   100% {
     top: 0;
     left: -20%;
+  }
+}
+@keyframes float {
+  from {
+    transform: translateX(-8px) translateY(-8px);
+  }
+  to {
+    transform: translateX(8px) translateY(8px);
   }
 }

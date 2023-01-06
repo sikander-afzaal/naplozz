@@ -19,43 +19,43 @@ const Ecosystem = () => {
   const leftBox = useRef();
   const rightBox = useRef();
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const timeLine = gsap.timeline({
-      defaults: { duration: 0.5, ease: Circ.easeOut },
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top 30%",
-      },
-    });
-    const timeLine2 = gsap.timeline({
-      defaults: { duration: 0.5, ease: Circ.easeOut },
-      scrollTrigger: {
-        trigger: container2.current,
-        start: "top 50%",
-      },
-    });
-    timeLine
-      .fromTo(heading.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
-      .fromTo(para.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
-      .fromTo(bead.current, { opacity: 0 }, { opacity: 1 })
-      .fromTo(
-        [
-          centerEco.current,
-          eco1.current,
-          eco2.current,
-          eco3.current,
-          eco4.current,
-          eco5.current,
-          eco6.current,
-        ],
-        { opacity: 0 },
-        { opacity: 1, stagger: 0.3, duration: 0.2 }
-      );
-    timeLine2
-      .fromTo(leftBox.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
-      .fromTo(rightBox.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
-  }, []);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   const timeLine = gsap.timeline({
+  //     defaults: { duration: 0.5, ease: Circ.easeOut },
+  //     scrollTrigger: {
+  //       trigger: container.current,
+  //       start: "top 30%",
+  //     },
+  //   });
+  //   const timeLine2 = gsap.timeline({
+  //     defaults: { duration: 0.5, ease: Circ.easeOut },
+  //     scrollTrigger: {
+  //       trigger: container2.current,
+  //       start: "top 50%",
+  //     },
+  //   });
+  //   timeLine
+  //     .fromTo(heading.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
+  //     .fromTo(para.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
+  //     .fromTo(bead.current, { opacity: 0 }, { opacity: 1 })
+  //     .fromTo(
+  //       [
+  //         centerEco.current,
+  //         eco1.current,
+  //         eco2.current,
+  //         eco3.current,
+  //         eco4.current,
+  //         eco5.current,
+  //         eco6.current,
+  //       ],
+  //       { opacity: 0 },
+  //       { opacity: 1, stagger: 0.3, duration: 0.2 }
+  //     );
+  //   timeLine2
+  //     .fromTo(leftBox.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
+  //     .fromTo(rightBox.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
+  // }, []);
   return (
     <div
       ref={container}
@@ -92,13 +92,13 @@ const Ecosystem = () => {
                 Naplozz <br /> Star
               </span>
             </p>
-            <p className="text-white group-hover:right-[110%] transition-all duration-500 group-hover:bottom-[110%] text-base font-semibold lg:block hidden absolute right-full bottom-full">
+            <p className="text-white eco-words group-hover:right-[110%] transition-all duration-500 group-hover:bottom-[110%] text-base font-semibold lg:block hidden absolute right-full bottom-full">
               Pubs
             </p>
-            <p className="text-white text-base font-semibold lg:block hidden min-w-[100px] absolute right-[110%] top-1/2 -translate-y-1/2 group-hover:right-[120%]  transition-all duration-500">
+            <p className="text-white eco-words text-base font-semibold lg:block hidden min-w-[100px] absolute right-[110%] top-[40%] group-hover:right-[120%]  transition-all duration-500">
               Retail Units
             </p>
-            <p className="text-white group-hover:right-[110%]  transition-all duration-500 text-center text-base font-semibold lg:block hidden min-w-[130px] absolute group-hover:top-[110%] right-full top-full">
+            <p className="text-white eco-words group-hover:right-[110%]  transition-all duration-500 text-center text-base font-semibold lg:block hidden min-w-[130px] absolute group-hover:top-[110%] right-full top-full">
               Food Producer <br /> units
             </p>
             <div className="absolute -inset-[4px] group-hover:bg-hoverSol bg-blueGr -z-10 rounded-full"></div>
@@ -114,13 +114,13 @@ const Ecosystem = () => {
               </span>
             </p>
 
-            <p className="text-white group-hover:right-[110%] group-hover:bottom-[110%] transition-all duration-500 text-center lg:block hidden min-w-[150px] text-base font-semibold absolute right-full bottom-full">
+            <p className="text-white eco-words  group-hover:right-[110%] group-hover:bottom-[110%] transition-all duration-500 text-center lg:block hidden min-w-[150px] text-base font-semibold absolute right-full bottom-full">
               Public <br /> Catering units
             </p>
-            <p className="text-white text-base  group-hover:bottom-[130%] transition-all duration-500 font-semibold lg:block hidden min-w-[100px] absolute left-1/2 bottom-[120%] -translate-x-1/2">
+            <p className="text-white eco-words  text-base  group-hover:bottom-[130%] transition-all duration-500 font-semibold lg:block hidden min-w-[100px] absolute left-[20%] bottom-[120%] ">
               Food bars
             </p>
-            <p className="text-white text-center group-hover:left-[100%] group-hover:bottom-[110%] transition-all duration-500 text-base font-semibold lg:block hidden min-w-[130px] absolute left-[90%] bottom-full">
+            <p className="text-white eco-words  text-center group-hover:left-[100%] group-hover:bottom-[110%] transition-all duration-500 text-base font-semibold lg:block hidden min-w-[130px] absolute left-[90%] bottom-full">
               Bistros
             </p>
             <div className="absolute -inset-[4px] bg-blueGr -z-10 rounded-full group-hover:bg-hoverSol"></div>
@@ -135,16 +135,16 @@ const Ecosystem = () => {
                 Naplozz <br /> Education AND
               </span>
             </p>
-            <p className="text-white text-center group-hover:left-[80%] group-hover:bottom-[130%] transition-all duration-500  text-base lg:block hidden font-semibold absolute left-[70%] bottom-[120%]">
+            <p className="text-white eco-words  text-center group-hover:left-[80%] group-hover:bottom-[130%] transition-all duration-500  text-base lg:block hidden font-semibold absolute left-[70%] bottom-[120%]">
               Brasseries
             </p>
-            <p className="text-white group-hover:left-[160%] group-hover:bottom-[95%] transition-all duration-500 text-base font-semibold lg:block hidden min-w-[100px] absolute left-[150%] bottom-[85%] -translate-x-1/2">
+            <p className="text-white eco-words  group-hover:left-[160%] group-hover:bottom-[95%] transition-all duration-500 text-base font-semibold lg:block hidden min-w-[100px] absolute left-[150%] bottom-[85%] -translate-x-1/2">
               Clubs
             </p>
-            <p className="text-white text-center  text-base font-semibold lg:block hidden min-w-[130px] absolute left-[100%] bottom-[40%] -translate-y-1/2 group-hover:left-[110%] group-hover:bottom-[30%] transition-all duration-500">
+            <p className="text-white eco-words  text-center  text-base font-semibold lg:block hidden min-w-[130px] absolute left-[100%] bottom-[40%] -translate-y-1/2 group-hover:left-[110%] group-hover:bottom-[30%] transition-all duration-500">
               Bakeries
             </p>
-            <p className="text-white text-center text-base font-semibold lg:block hidden min-w-[130px] absolute left-[80%] bottom-[10%] group-hover:left-[90%] group-hover:bottom-[0%] transition-all duration-500">
+            <p className="text-white  eco-words text-center text-base font-semibold lg:block hidden min-w-[130px] absolute left-[80%] bottom-[0%] group-hover:left-[90%] group-hover:-bottom-[10%] transition-all duration-500">
               Buffets
             </p>
             <div className="absolute -inset-[4px] bg-blueGr -z-10 rounded-full group-hover:bg-hoverSol"></div>
@@ -175,13 +175,13 @@ const Ecosystem = () => {
                 Naplozz <br /> Wizard
               </span>
             </p>
-            <p className="text-white text-center  text-base lg:block hidden font-semibold absolute right-[130%] -top-[5%] group-hover:right-[140%] group-hover:-top-[15%] transition-all duration-500">
+            <p className="text-white eco-words  text-center  text-base lg:block hidden font-semibold absolute right-[130%] -top-[5%] group-hover:right-[140%] group-hover:-top-[15%] transition-all duration-500">
               Industrial <br /> units
             </p>
-            <p className="text-white text-base font-semibold lg:block hidden min-w-[100px] absolute right-[120%] top-[60%] -translate-y-1/2 group-hover:right-[130%] group-hover:top-[70%] transition-all duration-500">
+            <p className="text-white eco-words  text-base font-semibold lg:block hidden min-w-[100px] absolute right-[120%] top-[60%] -translate-y-1/2 group-hover:right-[130%] group-hover:top-[70%] transition-all duration-500">
               Offices
             </p>
-            <p className="text-white text-center text-base font-semibold lg:block hidden min-w-[100px] absolute right-[120%] top-[100%] group-hover:right-[130%] group-hover:top-[110%] transition-all duration-500">
+            <p className="text-white eco-words  text-center text-base font-semibold lg:block hidden min-w-[100px] absolute right-[120%] top-[100%] group-hover:right-[130%] group-hover:top-[110%] transition-all duration-500">
               Food Retail Units
             </p>
             <div className="absolute -inset-[4px] bg-blueGr -z-10 rounded-full group-hover:bg-hoverSol"></div>
@@ -196,13 +196,13 @@ const Ecosystem = () => {
                 Naplozz <br /> Certification System
               </span>
             </p>
-            <p className="text-white text-center  text-base lg:block hidden font-semibold absolute left-full -bottom-[20%] group-hover:left-[110%] group-hover:-bottom-[30%] transition-all duration-500">
+            <p className="text-white eco-words  text-center  text-base lg:block hidden font-semibold absolute left-full -bottom-[20%] group-hover:left-[110%] group-hover:-bottom-[30%] transition-all duration-500">
               Restaurants
             </p>
-            <p className="text-white text-base font-semibold lg:block hidden min-w-[100px] absolute left-1/2 top-[130%] -translate-x-1/2  group-hover:top-[140%] transition-all duration-500">
+            <p className="text-white eco-words  text-base font-semibold lg:block hidden min-w-[100px] absolute left-[20%] top-[130%] -translate-x-1/2  group-hover:top-[140%] transition-all duration-500">
               Warehouses
             </p>
-            <p className="text-white text-center text-base font-semibold lg:block hidden min-w-[130px] absolute right-full -bottom-[20%] group-hover:right-[110%] group-hover:-bottom-[30%] transition-all duration-500">
+            <p className="text-white eco-words  text-center text-base font-semibold lg:block hidden min-w-[130px] absolute right-full -bottom-[20%] group-hover:right-[110%] group-hover:-bottom-[30%] transition-all duration-500">
               Health Care <br /> Units
             </p>
             <div className="absolute -inset-[4px] bg-blueGr -z-10 rounded-full group-hover:bg-hoverSol"></div>{" "}
@@ -217,13 +217,13 @@ const Ecosystem = () => {
                 Naplozz <br /> Marketplace
               </span>
             </p>
-            <p className="text-white  text-center  text-base lg:block hidden font-semibold absolute left-[120%] bottom-[50%] group-hover:left-[130%] group-hover:bottom-[60%] transition-all duration-500">
+            <p className="text-white eco-words   text-center  text-base lg:block hidden font-semibold absolute left-[120%] bottom-[50%] group-hover:left-[130%] group-hover:bottom-[60%] transition-all duration-500">
               Accomodation <br /> units
             </p>
-            <p className="text-white text-base font-semibold lg:block hidden min-w-[100px] absolute left-[150%] bottom-[0%] -translate-x-1/2 group-hover:left-[160%] group-hover:-bottom-[10%] transition-all duration-500">
+            <p className="text-white eco-words  text-base font-semibold lg:block hidden min-w-[100px] absolute left-[120%] -bottom-[10%]  group-hover:left-[130%] group-hover:-bottom-[10%] transition-all duration-500">
               Street Foods
             </p>
-            <p className="text-white text-center text-base font-semibold lg:block hidden min-w-[130px] absolute right-[0%] top-[120%] -translate-y-1/2 group-hover:-right-[10%] group-hover:top-[130%] transition-all duration-500">
+            <p className="text-white eco-words  text-center text-base font-semibold lg:block hidden min-w-[130px] absolute right-[0%] top-[120%] -translate-y-1/2 group-hover:-right-[10%] group-hover:top-[130%] transition-all duration-500">
               Cafes
             </p>
             <div className="absolute -inset-[4px] bg-blueGr -z-10 rounded-full group-hover:bg-hoverSol"></div>
