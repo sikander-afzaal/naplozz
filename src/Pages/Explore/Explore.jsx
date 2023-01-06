@@ -6,6 +6,7 @@ import SignUp from "./SignUp";
 import Solutions from "./Solutions";
 import Token from "./Token";
 import Tokenomics from "./Tokenomics";
+import Utilities from "./Utilities";
 import Whitepaper from "./Whitepaper";
 
 const Explore = () => {
@@ -15,6 +16,7 @@ const Explore = () => {
       <Solutions />
       <Token />
       <Flow />
+      <Utilities />
       <Programs />
       <Tokenomics />
       <Whitepaper />
