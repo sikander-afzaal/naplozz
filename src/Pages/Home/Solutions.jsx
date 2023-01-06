@@ -117,7 +117,7 @@ const Features = () => {
           <img
             ref={bead}
             src="/set2.png"
-            className="absolute max-w-[110px] right-0 bottom-full -z-10"
+            className="absolute bead max-w-[110px] right-0 bottom-full -z-10"
             alt=""
           />
           <img

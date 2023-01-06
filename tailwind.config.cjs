@@ -14,6 +14,9 @@ module.exports = {
       fontFamily: {
         sans: ["Gilroy", ...defaultTheme.fontFamily.sans],
       },
+      animation: {
+        "bounce-slow": "bounce 5s ease-in-out infinite",
+      },
       boxShadow: {
         hoverShadow: "0px 0px 20px #7BCBE8",
       },
