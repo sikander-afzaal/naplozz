@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* {loader && <Loader />} */}
+      {loader && <Loader />}
       <Header />
       <Routes>
         <Route element={<Home />} path="/" />

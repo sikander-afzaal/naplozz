@@ -19,43 +19,43 @@ const Ecosystem = () => {
   const leftBox = useRef();
   const rightBox = useRef();
 
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   const timeLine = gsap.timeline({
-  //     defaults: { duration: 0.5, ease: Circ.easeOut },
-  //     scrollTrigger: {
-  //       trigger: container.current,
-  //       start: "top 30%",
-  //     },
-  //   });
-  //   const timeLine2 = gsap.timeline({
-  //     defaults: { duration: 0.5, ease: Circ.easeOut },
-  //     scrollTrigger: {
-  //       trigger: container2.current,
-  //       start: "top 50%",
-  //     },
-  //   });
-  //   timeLine
-  //     .fromTo(heading.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
-  //     .fromTo(para.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
-  //     .fromTo(bead.current, { opacity: 0 }, { opacity: 1 })
-  //     .fromTo(
-  //       [
-  //         centerEco.current,
-  //         eco1.current,
-  //         eco2.current,
-  //         eco3.current,
-  //         eco4.current,
-  //         eco5.current,
-  //         eco6.current,
-  //       ],
-  //       { opacity: 0 },
-  //       { opacity: 1, stagger: 0.3, duration: 0.2 }
-  //     );
-  //   timeLine2
-  //     .fromTo(leftBox.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
-  //     .fromTo(rightBox.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
-  // }, []);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeLine = gsap.timeline({
+      defaults: { duration: 0.5, ease: Circ.easeOut },
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top 30%",
+      },
+    });
+    const timeLine2 = gsap.timeline({
+      defaults: { duration: 0.5, ease: Circ.easeOut },
+      scrollTrigger: {
+        trigger: container2.current,
+        start: "top 50%",
+      },
+    });
+    timeLine
+      .fromTo(heading.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
+      .fromTo(para.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
+      .fromTo(bead.current, { opacity: 0 }, { opacity: 1 })
+      .fromTo(
+        [
+          centerEco.current,
+          eco1.current,
+          eco2.current,
+          eco3.current,
+          eco4.current,
+          eco5.current,
+          eco6.current,
+        ],
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.3, duration: 0.2 }
+      );
+    timeLine2
+      .fromTo(leftBox.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
+      .fromTo(rightBox.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
+  }, []);
   return (
     <div
       ref={container}
