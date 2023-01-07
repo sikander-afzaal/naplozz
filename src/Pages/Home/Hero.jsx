@@ -48,7 +48,7 @@ const Hero = () => {
         ref={shadow}
         className="w-[80%] lg:w-[800px] bg-greenRadial absolute opacity-50 -z-10 blur-[125px] left-0 lg:-left-[400px]  h-[800px] "
       ></div>
-      <div className="contain xl:flex-row flex-col justify-between overflow-visible items-center gap-[40px] sm:gap-[60px] xl:gap-5">
+      <div className="contain xl:flex-row flex-col justify-around overflow-visible items-center gap-[40px] sm:gap-[60px] xl:gap-5">
         <div className="flex xl:-mt-[130px] justify-start items-center text-center xl:text-left xl:items-start xl:max-w-[560px] max-w-[600px] flex-col gap-5">
           <h2
             ref={heading}
