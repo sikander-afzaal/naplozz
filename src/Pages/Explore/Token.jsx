@@ -8,7 +8,11 @@ const Token = () => {
         >
           <div className="relative isolate">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  h-[465px] opacity-10 blur-[125px] bg-[#0262F7] w-full r max-w-[430px] -z-10"></div>
-            <img src="/explore/token.png" className="w-full lg:w-auto" alt="" />
+            <img
+              src="/explore/token.png"
+              className="w-full lg:w-auto mid:max-w-full max-w-full lg:max-w-[400px]"
+              alt=""
+            />
           </div>
           <div className="flex justify-start items-center text-center lg:text-left lg:items-start flex-col max-w-[430px]">
             <img

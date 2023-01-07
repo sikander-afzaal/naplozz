@@ -50,7 +50,7 @@ const Programs = () => {
           />
           <img
             src="/explore/sub.png"
-            className="w-full max-w-[615px] object-contain"
+            className="w-full max-w-[500px] mid:max-w-[615px] object-contain"
             alt=""
           />
           <div className="flex justify-start xl:items-start text-center xl:text-left max-w-[550px] items-center flex-col gap-5">

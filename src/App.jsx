@@ -14,19 +14,19 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  useEffect(() => {
-    const body = document.querySelector("html");
-    body.style.overflow = "hidden";
-    setTimeout(() => {
-      body.style.overflow = "auto";
-      setLoader(false);
-    }, 4500);
-  }, []);
+  // useEffect(() => {
+  //   const body = document.querySelector("html");
+  //   body.style.overflow = "hidden";
+  //   setTimeout(() => {
+  //     body.style.overflow = "auto";
+  //     setLoader(false);
+  //   }, 4500);
+  // }, []);
 
   return (
     <div className="App">
       <ProgressBar gradient gradientColor="#33FDFF" color="#8715E6" />
-      {loader && <Loader />}
+      {/* {loader && <Loader />} */}
       <Header />
       <Routes>
         <Route element={<Home />} path="/" />

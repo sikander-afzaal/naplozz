@@ -7,17 +7,74 @@ const Roadmap = () => {
   const shadow = useRef();
   const mainCont = useRef();
   const grid = useRef();
+  const list1Dot = useRef();
+  const list1Heading = useRef();
+  const list1 = useRef();
+  const list2Dot = useRef();
+  const list2Heading = useRef();
+  const list2 = useRef();
+  const list3Dot = useRef();
+  const list3Heading = useRef();
+  const list3 = useRef();
+  const list4Dot = useRef();
+  const list4Heading = useRef();
+  const list4 = useRef();
+  const list5Dot = useRef();
+  const list5Heading = useRef();
+  const list5 = useRef();
+  const list6Dot = useRef();
+  const list6Heading = useRef();
+  const list6 = useRef();
+  const line = useRef();
   useEffect(() => {
     const timeline = gsap.timeline({ defaults: { duration: 3 }, repeat: -1 });
     timeline
+      //first shadow moves
+      //then line moves
+      //then the list appears
       .to(shadow.current, { left: "0.5%", opacity: 1 })
+      .fromTo(line.current, { width: 0 }, { width: "4%", duration: 1 })
+      .fromTo(
+        [list1Dot.current, list1Heading.current, list1.current],
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.4, duration: 1 }
+      )
       .to(shadow.current, { left: "17.5%", opacity: 1 })
+      .to(line.current, { width: "22.5%", duration: 1 })
+      .fromTo(
+        [list2Dot.current, list2Heading.current, list2.current],
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.4, duration: 1 }
+      )
       .to(shadow.current, { left: "35%", opacity: 1 })
+      .to(line.current, { width: "40%", duration: 1 })
+      .fromTo(
+        [list3Dot.current, list3Heading.current, list3.current],
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.4, duration: 1 }
+      )
       .to(shadow.current, { left: "52.5%", opacity: 1 })
+      .to(line.current, { width: "60.5%", duration: 1 })
+      .fromTo(
+        [list4Dot.current, list4Heading.current, list4.current],
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.4, duration: 1 }
+      )
       .to(shadow.current, { left: "70%", opacity: 1 })
+      .to(line.current, { width: "76%", duration: 1 })
+      .fromTo(
+        [list5Dot.current, list5Heading.current, list5.current],
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.4, duration: 1 }
+      )
       .to(shadow.current, { left: "87.5%", opacity: 1 })
-      .to(shadow.current, { opacity: 0, left: "87.5%" })
-      .to(shadow.current, { opacity: 0, left: "0.5%" });
+      .to(line.current, { width: "100%", duration: 1 })
+      .fromTo(
+        [list6Dot.current, list6Heading.current, list6.current],
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.4, duration: 1 }
+      )
+      .to(shadow.current, { opacity: 0, left: "87.5%" });
 
     Draggable.create(grid.current, {
       type: "x",
@@ -48,13 +105,24 @@ const Roadmap = () => {
             >
               <div className="bg-[#ff519f] w-[60px] h-[60px] -z-10 blur-[15px]"></div>
             </div>
-            <div className="absolute top-[23.5px] -z-10 left-0 w-full h-[2px] bg-roadmapLine -translate-y-1/2"></div>
+            <div
+              ref={line}
+              className="absolute top-[23.5px] -z-10 left-0 w-full h-[2px] bg-roadmapLine -translate-y-1/2"
+            ></div>
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
-              <div className="rounded-full bg-[#FF519f] w-4 h-4 relative">
+              <div
+                ref={list1Dot}
+                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+              >
                 <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
-              <h4 className="text-xl text-white font-bold">2021</h4>
-              <ol className="list-none flex justify-start items-start flex-col gap-3">
+              <h4 ref={list1Heading} className="text-xl text-white font-bold">
+                2021
+              </h4>
+              <ol
+                ref={list1}
+                className="list-none flex justify-start items-start flex-col gap-3"
+              >
                 <li className="text-base font-normal text-white">1 Planning</li>
                 <li className="text-base font-normal text-white">
                   2 Preparation
@@ -71,11 +139,19 @@ const Roadmap = () => {
               </ol>
             </div>
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
-              <div className="rounded-full bg-[#FF519f] w-4 h-4 relative">
+              <div
+                ref={list2Dot}
+                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+              >
                 <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
-              <h4 className="text-xl text-white font-bold">2022</h4>
-              <ol className="list-none flex justify-start items-start flex-col gap-3">
+              <h4 ref={list2Heading} className="text-xl text-white font-bold">
+                2022
+              </h4>
+              <ol
+                ref={list2}
+                className="list-none flex justify-start items-start flex-col gap-3"
+              >
                 <li className="text-base font-normal text-white">
                   1 Custom log
                 </li>
@@ -97,11 +173,19 @@ const Roadmap = () => {
               </ol>
             </div>
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
-              <div className="rounded-full bg-[#FF519f] w-4 h-4 relative">
+              <div
+                ref={list3Dot}
+                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+              >
                 <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
-              <h4 className="text-xl text-white font-bold">2023/1</h4>
-              <ol className="list-none flex justify-start items-start flex-col gap-3">
+              <h4 ref={list3Heading} className="text-xl text-white font-bold">
+                2023/1
+              </h4>
+              <ol
+                ref={list3}
+                className="list-none flex justify-start items-start flex-col gap-3"
+              >
                 <li className="text-base font-normal text-white">
                   1 Token creation and integration
                 </li>
@@ -123,11 +207,19 @@ const Roadmap = () => {
               </ol>
             </div>
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
-              <div className="rounded-full bg-[#FF519f] w-4 h-4 relative">
+              <div
+                ref={list4Dot}
+                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+              >
                 <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
-              <h4 className="text-xl text-white font-bold">2023/2</h4>
-              <ol className="list-none flex justify-start items-start flex-col gap-3">
+              <h4 ref={list4Heading} className="text-xl text-white font-bold">
+                2023/2
+              </h4>
+              <ol
+                ref={list4}
+                className="list-none flex justify-start items-start flex-col gap-3"
+              >
                 <li className="text-base font-normal text-white">
                   1 Tutorials and video guideds
                 </li>
@@ -146,11 +238,19 @@ const Roadmap = () => {
               </ol>
             </div>
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
-              <div className="rounded-full bg-[#FF519f] w-4 h-4 relative">
+              <div
+                ref={list5Dot}
+                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+              >
                 <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
-              <h4 className="text-xl text-white font-bold">2024/1</h4>
-              <ol className="list-none flex justify-start items-start flex-col gap-3">
+              <h4 ref={list5Heading} className="text-xl text-white font-bold">
+                2024/1
+              </h4>
+              <ol
+                ref={list5}
+                className="list-none flex justify-start items-start flex-col gap-3"
+              >
                 <li className="text-base font-normal text-white">
                   1 Naplozz Marketplace
                 </li>
@@ -169,11 +269,19 @@ const Roadmap = () => {
               </ol>
             </div>
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
-              <div className="rounded-full bg-[#FF519f] w-4 h-4 relative">
+              <div
+                ref={list6Dot}
+                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+              >
                 <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
-              <h4 className="text-xl text-white font-bold">2024/2</h4>
-              <ol className="list-none flex justify-start items-start flex-col gap-3">
+              <h4 ref={list6Heading} className="text-xl text-white font-bold">
+                2024/2
+              </h4>
+              <ol
+                ref={list6}
+                className="list-none flex justify-start items-start flex-col gap-3"
+              >
                 <li className="text-base font-normal text-white">
                   1 Software integrations
                 </li>

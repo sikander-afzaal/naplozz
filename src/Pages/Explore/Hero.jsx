@@ -37,7 +37,7 @@ const Hero = () => {
         <img
           src="/explore/hero-img.png"
           alt=""
-          className="max-w-[400px] xl:max-w-[550px] mid:max-w-[700px] w-full object-contain"
+          className="max-w-[400px] xl:max-w-[500px] mid:max-w-[700px] w-full object-contain"
         />
       </div>
     </div>
