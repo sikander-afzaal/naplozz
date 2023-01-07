@@ -23,6 +23,7 @@ const Roadmap = () => {
       type: "x",
       bounds: mainCont.current,
       inertia: true,
+      cursor: "initial",
     });
   }, []);
 
