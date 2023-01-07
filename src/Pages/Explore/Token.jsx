@@ -2,7 +2,10 @@ const Token = () => {
   return (
     <div className="wrapper mt-[80px] lg:mt-[120px]">
       <div className="contain flex-col justify-start items-center">
-        <div className="flex w-full lg:flex-row flex-col gap-[40px] sm:gap-[80px] lg:gap-0 justify-between items-center">
+        <div
+          id="token"
+          className="flex w-full lg:flex-row flex-col gap-[40px] sm:gap-[80px] lg:gap-0 justify-between items-center"
+        >
           <div className="relative isolate">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  h-[465px] opacity-10 blur-[125px] bg-[#0262F7] w-full r max-w-[430px] -z-10"></div>
             <img src="/explore/token.png" className="w-full lg:w-auto" alt="" />

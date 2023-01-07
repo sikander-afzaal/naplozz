@@ -1,4 +1,31 @@
+import gsap from "gsap";
+import { Draggable } from "gsap/all";
+import { useEffect, useRef } from "react";
+
 const Roadmap = () => {
+  gsap.registerPlugin(Draggable);
+  const shadow = useRef();
+  const mainCont = useRef();
+  const grid = useRef();
+  useEffect(() => {
+    const timeline = gsap.timeline({ defaults: { duration: 3 }, repeat: -1 });
+    timeline
+      .to(shadow.current, { left: "0.5%", opacity: 1 })
+      .to(shadow.current, { left: "17.5%", opacity: 1 })
+      .to(shadow.current, { left: "35%", opacity: 1 })
+      .to(shadow.current, { left: "52.5%", opacity: 1 })
+      .to(shadow.current, { left: "70%", opacity: 1 })
+      .to(shadow.current, { left: "87.5%", opacity: 1 })
+      .to(shadow.current, { opacity: 0, left: "87.5%" })
+      .to(shadow.current, { opacity: 0, left: "0.5%" });
+
+    Draggable.create(grid.current, {
+      type: "x",
+      bounds: mainCont.current,
+      inertia: true,
+    });
+  }, []);
+
   return (
     <div className="wrapper mt-[100px] lg:mt-[200px] relative">
       <div className="absolute left-1/2 bottom-[50%] -translate-x-1/2 bg-[#a50498] blur-[250px] w-full max-w-[1268px] h-[636px] opacity-[0.15] -z-10"></div>
@@ -6,8 +33,20 @@ const Roadmap = () => {
         <h2 className="text-white md:text-left text-center text-[40px] sm:text-[48px] font-bold">
           Roadmap
         </h2>
-        <div className="overflow-x-auto roadmap w-full">
-          <div className="grid w-max pb-6  grid-cols-6 pl-5 gap-[100px] sm:gap-x-[140px]  pt-4 mt-7 relative">
+        <div
+          ref={mainCont}
+          className="overflow-x-hidden roadmap w-full pl-[30px] pt-[30px]"
+        >
+          <div
+            ref={grid}
+            className="grid w-max pb-6  grid-cols-6 pl-5 gap-[100px] sm:gap-x-[140px]  pt-4 mt-7 relative"
+          >
+            <div
+              ref={shadow}
+              className="absolute bg-[#400091] left-[0.5%] top-[0px] blur-[30px] isolate w-[40px] h-[40px] rounded-full"
+            >
+              <div className="bg-[#ff519f] w-[60px] h-[60px] -z-10 blur-[15px]"></div>
+            </div>
             <div className="absolute top-[23.5px] -z-10 left-0 w-full h-[2px] bg-roadmapLine -translate-y-1/2"></div>
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
               <div className="rounded-full bg-[#FF519f] w-4 h-4 relative">

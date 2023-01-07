@@ -1,4 +1,50 @@
+import { useEffect, useRef, useState } from "react";
+import GradientButton from "../../Components/GradientButton";
+
 const Whitepaper = () => {
+  const [timerDays, setTimerDays] = useState("00");
+  const [timerHours, setTimerHours] = useState("00");
+  const [timerMinutes, setTimerMinutes] = useState("00");
+  const [timerSeconds, setTimerSeconds] = useState("00");
+  let interval = useRef();
+  const startTimer = () => {
+    let end = new Date("2/06/2023 3:00 PM");
+    interval = setInterval(() => {
+      let _second = 1000;
+      let _minute = _second * 60;
+      let _hour = _minute * 60;
+      let _day = _hour * 24;
+      let now = new Date();
+      let nowUTC = new Date(
+        now.getUTCFullYear(),
+        now.getUTCMonth(),
+        now.getUTCDate(),
+        now.getUTCHours(),
+        now.getUTCMinutes(),
+        now.getUTCSeconds()
+      );
+      let distance = end - nowUTC;
+      var days = Math.floor(distance / _day);
+      var hours = Math.floor((distance % _day) / _hour);
+      var minutes = Math.floor((distance % _hour) / _minute);
+      var seconds = Math.floor((distance % _minute) / _second);
+      if (distance < 0) {
+        clearInterval(interval.current);
+        return;
+      } else {
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+        setTimerSeconds(seconds);
+      }
+    });
+  };
+  useEffect(() => {
+    startTimer();
+    return () => {
+      clearInterval(interval.current);
+    };
+  });
   return (
     <div className="wrapper mt-[100px]  relative">
       <div className="absolute -right-[20%] -top-[15%] sm:-top-[25%] blur-[250px] bg-[#141338] -z-10 w-full max-w-[720px] h-[1039px]"></div>
@@ -31,31 +77,6 @@ const Whitepaper = () => {
           </div>
         </div>
         <div className="flex justify-start items-center gap-7 flex-col ">
-          <div className="relative isolate max-w-[500px] w-full bg-[#050505] rounded-[30px]  ">
-            <div className="absolute bg-blueGr -inset-[1px] -z-10 rounded-[30px]"></div>
-            <div className="bg-[#050505] flex justify-start items-start gap-5 p-6 flex-col w-full rounded-[30px]">
-              <h4 className="text-[#b3b3b3] text-2xl font-bold">
-                Sale coming soon
-              </h4>
-              <div className="w-full justify-between  flex items-center gap-3">
-                <div className="flex justify-center sm:w-auto w-full items-stretch gap-2">
-                  <div className="h-[45px] sm:h-[64px] w-full sm:min-w-[64px] max-w-[64px] bg-[#b3b3b3] rounded-xl"></div>
-                  <div className="h-[45px] sm:h-[64px] w-full sm:min-w-[64px] max-w-[64px] bg-[#b3b3b3] rounded-xl"></div>
-                </div>
-                <div className="flex justify-center sm:w-auto w-full items-stretch gap-2">
-                  <div className="h-[45px] sm:h-[64px] w-full sm:min-w-[64px] max-w-[64px] bg-[#b3b3b3] rounded-xl"></div>
-                  <div className="h-[45px] sm:h-[64px] w-full sm:min-w-[64px] max-w-[64px] bg-[#b3b3b3] rounded-xl"></div>
-                </div>
-                <div className="flex justify-center sm:w-auto w-full items-stretch gap-2">
-                  <div className="h-[45px] sm:h-[64px] w-full sm:min-w-[64px] max-w-[64px] bg-[#b3b3b3] rounded-xl"></div>
-                  <div className="h-[45px] sm:h-[64px] w-full sm:min-w-[64px] max-w-[64px] bg-[#b3b3b3] rounded-xl"></div>
-                </div>
-              </div>
-              <p className="text-[#b3b3b3] text-lg font-medium">
-                Sed vitae orci vitae felis elementum lobortis.{" "}
-              </p>
-            </div>
-          </div>
           <div className="flex justify-start items-center pb-0 flex-col w-full bg-blackGr2 rounded-[30px] border-[1px] max-w-[500px] py-5 sm:py-[30px] px-5 sm:px-[50px] border-sold border-[#b3b3b3]  gap-[30px]">
             <h2 className="text-white font-semibold text-[26px]">
               Token value calculator
@@ -108,9 +129,63 @@ const Whitepaper = () => {
             <div className="flex justify-center text-center items-center flex-col gap-4">
               <p className="text-white text-xl">Amount</p>
               <h5 className="font-bold text-pink text-2xl">$80</h5>
-              <button className="bg-black -mt-[20px] translate-y-1/2 text-white border-none rounded-md h-[40px] w-[172px] text-base font-medium">
+              <button className="bg-black -mt-[50px] translate-y-[120%] text-white border-none rounded-md h-[40px] w-[172px] text-base font-medium">
                 Calculate
               </button>
+            </div>
+          </div>
+          <div className="relative isolate max-w-[500px] mt-[30px] w-full bg-[#050505] rounded-[30px]  ">
+            <div className="absolute bg-blueGr -inset-[1px] -z-10 rounded-[30px]"></div>
+            <div className="bg-[#050505] flex justify-start items-center gap-5 p-6 flex-col w-full rounded-[30px]">
+              <h4 className="text-[#b3b3b3] text-center text-2xl font-bold">
+                Sale coming soon
+              </h4>
+              <div className="w-full justify-between  flex items-center gap-3">
+                <div className="flex justify-center sm:w-auto w-full items-center">
+                  <div className="h-[45px] sm:h-[64px] w-full flex justify-center items-center sm:min-w-[64px] max-w-[64px] bg-transparent rounded-xl">
+                    <p className="gr-text text-[30px] mr-1 sm:m-0 sm:text-[40px] font-bold">
+                      {timerDays < 10 ? "0" + timerDays : timerDays}
+                    </p>
+                  </div>
+                  <p className="text-white text-sm mt-[10px] sm:mt-[20px]">
+                    Days
+                  </p>
+                </div>
+                <div className="flex justify-center sm:w-auto w-full items-center">
+                  <div className="h-[45px] sm:h-[64px] w-full flex justify-center items-center sm:min-w-[64px] max-w-[64px] bg-transparent rounded-xl">
+                    <p className="gr-text text-[30px] mr-1 sm:m-0 sm:text-[40px] font-bold">
+                      {timerHours < 10 ? "0" + timerHours : timerHours}
+                    </p>
+                  </div>{" "}
+                  <p className="text-white text-sm mt-[10px] sm:mt-[20px]">
+                    Hrs
+                  </p>
+                </div>
+                <div className="flex justify-center sm:w-auto w-full items-center">
+                  <div className="h-[45px] sm:h-[64px] w-full flex justify-center items-center sm:min-w-[64px] max-w-[64px] bg-transparent rounded-xl">
+                    <p className="gr-text text-[30px] mr-1 sm:m-0 sm:text-[40px] font-bold">
+                      {timerMinutes < 10 ? "0" + timerMinutes : timerMinutes}
+                    </p>
+                  </div>{" "}
+                  <p className="text-white text-sm mt-[10px] sm:mt-[20px]">
+                    Mins
+                  </p>
+                </div>
+                <div className="flex justify-center sm:w-auto w-full items-center">
+                  <div className="h-[45px] sm:h-[64px] w-full flex justify-center items-center sm:min-w-[64px] max-w-[64px] bg-transparent rounded-xl">
+                    <p className="gr-text text-[30px] mr-1 sm:m-0 sm:text-[40px] font-bold">
+                      {timerSeconds < 10 ? "0" + timerSeconds : timerSeconds}
+                    </p>
+                  </div>{" "}
+                  <p className="text-white text-sm mt-[10px] sm:mt-[20px]">
+                    Secs
+                  </p>
+                </div>
+              </div>
+              <GradientButton
+                text="Join Whitelist"
+                classes="w-[150px] h-[50px] hover:w-[200px]"
+              />
             </div>
           </div>
         </div>

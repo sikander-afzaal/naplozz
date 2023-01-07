@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { useScrollDirection } from "../hooks/scrollDirection";
 
 const Header = () => {
@@ -241,16 +242,17 @@ const Header = () => {
                   >
                     Solution
                   </Link>
-                  <Link
+                  <HashLink
                     onClick={() => {
                       setDropDown(false);
                       setHeaderToggle(false);
                     }}
+                    smooth
                     className="text-lg"
-                    to={"/explore"}
+                    to={"/explore#token"}
                   >
                     Nap Token
-                  </Link>
+                  </HashLink>
                 </div>
               )}
             </div>

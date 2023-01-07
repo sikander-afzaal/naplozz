@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <ProgressBar gradient gradientColor="#33FDFF" color="#8715E6" />
-      {loader && <Loader />}
+      {/* {loader && <Loader />} */}
       <Header />
       <Routes>
         <Route element={<Home />} path="/" />

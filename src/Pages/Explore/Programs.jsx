@@ -1,7 +1,22 @@
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+
 const Programs = () => {
+  const shadow = useRef();
+  useEffect(() => {
+    gsap.fromTo(
+      shadow.current,
+      { y: "30%" },
+      { y: "-30%", duration: 8, repeat: -1, yoyo: true }
+    );
+  }, []);
+
   return (
     <div className="wrapper mt-[100px] relative isolate">
-      <div className="absolute -z-10 opacity-70 blur-[400px] w-full max-w-[1600px] h-[700px] bg-[#3f3f6e] top-[20%] -left-[40%]"></div>
+      <div
+        ref={shadow}
+        className="absolute -z-10 opacity-90 blur-[400px] w-full max-w-[1600px] h-[700px] bg-[#3f3f6e] top-[10%] -left-[40%]"
+      ></div>
       <div className="absolute -z-10 opacity-[0.15] blur-[250px] w-full max-w-[1028px] h-[1028px] bg-[#A50498] top-[70%] -translate-x-1/2 left-[50%]"></div>
       <div className="contain flex-col justify-start items-center gap-0 xl:gap-[40px]">
         <div className="w-full gap-5 xl:gap-0 xl:flex-row flex-col flex justify-between items-center">

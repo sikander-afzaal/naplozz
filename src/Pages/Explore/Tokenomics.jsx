@@ -23,7 +23,7 @@ const Tokenomics = () => {
               <p className="text-xl font-bold text-white">Discount$</p>
               <p className="text-xl font-bold text-white">%On TGE</p>
               <p className="text-xl font-bold text-white">Cliff</p>
-              <p className="text-xl font-bold text-white">Visiting</p>
+              <p className="text-xl font-bold text-white">Vesting</p>
             </div>
             <TokenomicsRow
               pool="Preseed Round"

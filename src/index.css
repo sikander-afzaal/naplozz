@@ -72,7 +72,7 @@ html {
   scroll-behavior: smooth;
 }
 .explore {
-  animation: move 30s ease-in-out 0s infinite alternate;
+  animation: move 40s ease-in-out 0s infinite alternate;
 }
 .eco-words {
   animation: float 5s ease-in-out 0s infinite alternate;
@@ -107,4 +107,13 @@ html {
   to {
     transform: translateX(8px) translateY(8px);
   }
+}
+.roadmap::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.roadmap {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
