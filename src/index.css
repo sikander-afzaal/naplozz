@@ -6,7 +6,7 @@
     @apply flex justify-start items-center flex-col w-full;
   }
   .contain {
-    @apply flex w-full max-w-[1315px]   px-5 2xl:max-w-[1400px];
+    @apply flex w-full max-w-[1200px]   px-5 2xl:max-w-[1400px];
   }
 }
 @layer components {
