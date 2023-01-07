@@ -256,9 +256,9 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <a
+            <Link
               onClick={() => setHeaderToggle(false)}
-              href="#"
+              to="/ecosystem"
               className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
             >
               Ecosystem{" "}
@@ -266,7 +266,7 @@ const Header = () => {
                 icon={faChevronDown}
                 className="text-inherit text-xs"
               />
-            </a>
+            </Link>
             <a
               onClick={() => setHeaderToggle(false)}
               href="#"

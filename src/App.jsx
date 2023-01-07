@@ -6,6 +6,7 @@ import Footer from "./Layout/Footer";
 import Header from "./Layout/Header";
 import Explore from "./Pages/Explore/Explore";
 import Home from "./Pages/Home/Home";
+import Eco from "./Pages/Ecosystem/Eco";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<Explore />} path="/explore" />
+        <Route element={<Eco />} path="/ecosystem" />
       </Routes>
       <Footer />
     </div>
