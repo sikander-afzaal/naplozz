@@ -19,7 +19,7 @@ const Flow = () => {
         ></div>
         <img
           src="/explore/token-flow.png"
-          className="w-full max-w-[600px] object-contain"
+          className="w-full max-w-[600px] xl:max-w-[550px] object-contain"
           alt=""
         />
         <div className="flex justify-start items-start flex-col gap-5">

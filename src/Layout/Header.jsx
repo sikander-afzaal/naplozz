@@ -86,12 +86,12 @@ const Header = () => {
                 y2="41.1945"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-opacity="0" />
-                <stop offset="0.23" stop-color="#003345" stop-opacity="0.27" />
-                <stop offset="0.51" stop-color="#016E93" stop-opacity="0.58" />
-                <stop offset="0.74" stop-color="#0199CC" stop-opacity="0.81" />
-                <stop offset="0.91" stop-color="#01B3F0" stop-opacity="0.95" />
-                <stop offset="1" stop-color="#01BDFD" />
+                <stop stopOpacity="0" />
+                <stop offset="0.23" stopColor="#003345" stopOpacity="0.27" />
+                <stop offset="0.51" stopColor="#016E93" stopOpacity="0.58" />
+                <stop offset="0.74" stopColor="#0199CC" stopOpacity="0.81" />
+                <stop offset="0.91" stopColor="#01B3F0" stopOpacity="0.95" />
+                <stop offset="1" stopColor="#01BDFD" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_410_8152"
@@ -101,12 +101,12 @@ const Header = () => {
                 y2="21.8194"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-opacity="0" />
-                <stop offset="0.23" stop-color="#003345" stop-opacity="0.27" />
-                <stop offset="0.51" stop-color="#016E93" stop-opacity="0.58" />
-                <stop offset="0.74" stop-color="#0199CC" stop-opacity="0.81" />
-                <stop offset="0.91" stop-color="#01B3F0" stop-opacity="0.95" />
-                <stop offset="1" stop-color="#01BDFD" />
+                <stop stopOpacity="0" />
+                <stop offset="0.23" stopColor="#003345" stopOpacity="0.27" />
+                <stop offset="0.51" stopColor="#016E93" stopOpacity="0.58" />
+                <stop offset="0.74" stopColor="#0199CC" stopOpacity="0.81" />
+                <stop offset="0.91" stopColor="#01B3F0" stopOpacity="0.95" />
+                <stop offset="1" stopColor="#01BDFD" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_410_8152"
@@ -116,12 +116,12 @@ const Header = () => {
                 y2="37.9468"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-opacity="0" />
-                <stop offset="0.23" stop-color="#003345" stop-opacity="0.27" />
-                <stop offset="0.51" stop-color="#016E93" stop-opacity="0.58" />
-                <stop offset="0.74" stop-color="#0199CC" stop-opacity="0.81" />
-                <stop offset="0.91" stop-color="#01B3F0" stop-opacity="0.95" />
-                <stop offset="1" stop-color="#01BDFD" />
+                <stop stopOpacity="0" />
+                <stop offset="0.23" stopColor="#003345" stopOpacity="0.27" />
+                <stop offset="0.51" stopColor="#016E93" stopOpacity="0.58" />
+                <stop offset="0.74" stopColor="#0199CC" stopOpacity="0.81" />
+                <stop offset="0.91" stopColor="#01B3F0" stopOpacity="0.95" />
+                <stop offset="1" stopColor="#01BDFD" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_410_8152"
@@ -131,8 +131,8 @@ const Header = () => {
                 y2="3.73645"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#33FDFF" />
-                <stop offset="1" stop-color="#424CFF" />
+                <stop stopColor="#33FDFF" />
+                <stop offset="1" stopColor="#424CFF" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_410_8152"
@@ -142,12 +142,12 @@ const Header = () => {
                 y2="8.65451"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-opacity="0" />
-                <stop offset="0.16" stop-color="#011E2C" stop-opacity="0.19" />
-                <stop offset="0.46" stop-color="#02537A" stop-opacity="0.53" />
-                <stop offset="0.72" stop-color="#037BB3" stop-opacity="0.79" />
-                <stop offset="0.9" stop-color="#0493D7" stop-opacity="0.94" />
-                <stop offset="1" stop-color="#049CE4" />
+                <stop stopOpacity="0" />
+                <stop offset="0.16" stopColor="#011E2C" stopOpacity="0.19" />
+                <stop offset="0.46" stopColor="#02537A" stopOpacity="0.53" />
+                <stop offset="0.72" stopColor="#037BB3" stopOpacity="0.79" />
+                <stop offset="0.9" stopColor="#0493D7" stopOpacity="0.94" />
+                <stop offset="1" stopColor="#049CE4" />
               </linearGradient>
             </defs>
           </svg>
