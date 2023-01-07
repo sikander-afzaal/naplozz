@@ -47,7 +47,7 @@ const Solutions = () => {
         <div className="absolute right-0 z-20 top-1/2 -translate-y-1/2 xl:translate-x-1/2 bg-[rgb(179,179,179)]   w-4 h-4 rotate-45 rounded-full"></div>
       </div>
       {/* //top and bottom liness ---------------- */}
-      <div className="absolute -left-[30%] -top-[30%] bg-[#A50498] opacity-[0.24] blur-[250px] w-[80%] max-w-[1064px] h-[700px] -z-20"></div>
+      <div className="absolute -left-[30%] -top-[10%] bg-[#A50498] opacity-[0.24] blur-[250px] w-[80%] max-w-[1064px] h-[700px] -z-20"></div>
       <div className="contain flex-col xl:flex-row justify-between gap-10 xl:gap-[100px] items-center xl:items-start">
         <div className="flex justify-start sm:w-auto w-full items-center xl:items-start flex-col gap-10 xl:gap-20">
           <h2 className="text-[50px] font-bold text-white">Solutions</h2>

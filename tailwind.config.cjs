@@ -40,6 +40,8 @@ module.exports = {
           "linear-gradient(116.22deg, #7BCBE8 1.27%, #8715E6 49.07%, #33FDFF 103.24%)",
         blackGr2:
           "linear-gradient(180deg, rgba(2, 2, 2, 0.5) 0%, rgba(17, 19, 22, 0.5) 100%)",
+        blackRadial:
+          " radial-gradient(89.04% 91.97% at 50% -4.12%, #000000 0%, rgba(0, 0, 0, 0) 100%)",
       },
       colors: {
         btnBg: "#14133B",
