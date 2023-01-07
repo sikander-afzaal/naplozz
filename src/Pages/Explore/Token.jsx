@@ -6,11 +6,11 @@ const Token = () => {
           id="token"
           className="flex w-full lg:flex-row flex-col gap-[40px] sm:gap-[80px] lg:gap-0 justify-between items-center"
         >
-          <div className="relative isolate">
+          <div className="relative isolate flex justify-start items-center w-full">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  h-[465px] opacity-10 blur-[125px] bg-[#0262F7] w-full r max-w-[430px] -z-10"></div>
             <img
               src="/explore/token.png"
-              className="w-full lg:w-auto mid:max-w-full max-w-full lg:max-w-[400px]"
+              className="w-full lg:w-auto mid:max-w-full lg:mx-auto lg:pr-[200px] max-w-full lg:max-w-[400px]"
               alt=""
             />
           </div>
