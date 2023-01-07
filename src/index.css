@@ -71,7 +71,7 @@ html {
   scroll-behavior: smooth;
 }
 .explore {
-  animation: move 60s ease-in-out 0s infinite alternate;
+  animation: move 70s ease-in-out 0s infinite alternate;
 }
 .eco-words {
   animation: float 5s ease-in-out 0s infinite alternate;
