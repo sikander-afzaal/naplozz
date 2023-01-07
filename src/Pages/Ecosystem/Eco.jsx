@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import SignUp from "./Signup";
+import SignUp from "./SignUp";
 
 const Eco = () => {
   return (
