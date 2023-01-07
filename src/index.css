@@ -80,23 +80,23 @@ html {
 @keyframes move {
   0% {
     top: 0;
-    left: -25%;
+    left: -40%;
   }
   25% {
-    top: -25%;
-    left: -25%;
+    top: -35%;
+    left: -40%;
   }
   50% {
-    top: -25%;
+    top: -40%;
     left: 10%;
   }
   75% {
-    top: -25%;
-    left: -25%;
+    top: -40%;
+    left: -40%;
   }
   100% {
     top: 0;
-    left: -25%;
+    left: -40%;
   }
 }
 @keyframes float {

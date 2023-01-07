@@ -153,7 +153,7 @@ const Utilities = () => {
             <div className="absolute -inset-[1px] bg-blueGr -z-20 rounded-[40px] group-hover:opacity-0 transition-all duration-500"></div>
             <div className="absolute -inset-[1px] bg-btnGr opacity-0 -z-20 rounded-[40px] group-hover:opacity-100 transition-all duration-500"></div>
           </div>
-          <h2 className="gr-text relative max-w-[600px]  text-[35px] sm:text-[50px] lg:text-[55px] mid:text-[72px] font-bold md:text-right text-center">
+          <h2 className="gr-text leading-[1.1] lg:leading-[70px] relative max-w-[600px]  text-[35px] sm:text-[50px] lg:text-[55px] mid:text-[72px] font-bold md:text-right text-center">
             Employees invited by the owners or managers
             <img
               ref={line5}
@@ -170,7 +170,7 @@ const Utilities = () => {
           alt=""
         />
         <div className="w-full justify-start md:flex-row flex-col items-center gap-[40px] md:gap-[120px] flex">
-          <h2 className="gr-text relative max-w-[600px]  text-[35px] sm:text-[50px] lg:text-[55px] mid:text-[72px] font-bold md:text-left text-center">
+          <h2 className="gr-text leading-[1.1] lg:leading-[73px] relative max-w-[600px]  text-[35px] sm:text-[50px] lg:text-[55px] mid:text-[72px] font-bold md:text-left text-center">
             For the people without Naplozz subscription
             <img
               ref={line7}

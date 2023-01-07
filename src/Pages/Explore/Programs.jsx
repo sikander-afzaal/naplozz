@@ -21,9 +21,14 @@ const Programs = () => {
       <div className="absolute -z-10  blur-[162.5px] w-full max-w-[1752px] h-[716px] bg-blackRadial top-[0%] -translate-x-1/2 left-[50%]"></div>
       <div className="absolute -z-10  blur-[162.5px] w-full max-w-[1932px] h-[1006px] bg-blackRadial top-[20%] -translate-x-1/2 left-[50%]"></div>
       <div className="contain flex-col justify-start items-center gap-0 xl:gap-[40px]">
-        <div className="w-full gap-5 xl:gap-0 xl:flex-row flex-col flex justify-between items-center">
-          <div className="flex justify-start xl:items-start text-center xl:text-left max-w-[550px] items-center flex-col gap-5">
-            <h3 className="text-[#FF866d] font-bold text-[40px] sm:text-[48px]">
+        <div className="w-full gap-5 xl:gap-0 xl:flex-row flex-col flex justify-between items-center xl:items-start">
+          <div className="flex relative justify-start xl:mt-[70px] xl:items-start text-center xl:text-left max-w-[550px] items-center flex-col gap-6">
+            <img
+              className="absolute left-[15%] top-[20%] -z-20 opacity-50"
+              src="/explore/ball.png"
+              alt=""
+            />
+            <h3 className="text-[#FF866d] font-bold text-[40px] mid:text-[48px]">
               NAP Buyback Program
             </h3>
             <p className="text-white text-lg sm:text-xl font-medium">
@@ -61,7 +66,7 @@ const Programs = () => {
               className="w-full bead max-w-[60px] sm:max-w-[100px] self-end"
               alt=""
             />
-            <h3 className="text-[#FF866d] font-bold text-[40px] sm:text-[48px]">
+            <h3 className="text-[#FF866d] font-bold text-[40px] mid:text-[48px]">
               Naplozz Subscription with NAP Token
             </h3>
             <p className="text-white text-lg sm:text-xl font-medium opacity-[0.62]">
@@ -84,7 +89,7 @@ const Programs = () => {
         </div>
         <div className="w-full relative gap-5 mt-[70px] xl:mt-[100px] xl:gap-0 xl:flex-row flex-col flex justify-between items-center">
           <div className="flex justify-start xl:items-start text-center xl:text-left max-w-[550px] items-center flex-col gap-5">
-            <h3 className="text-[#FF866d] font-bold text-[40px] sm:text-[48px]">
+            <h3 className="text-[#FF866d] font-bold text-[40px] mid:text-[48px]">
               Burn
             </h3>
             <p className="text-white text-lg sm:text-xl font-medium">

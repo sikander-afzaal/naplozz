@@ -56,7 +56,7 @@ const Solutions = () => {
               onClick={() => setTab("task")}
               className={`flex rounded-full border-2 border-solid cursor-pointer transition-all duration-500 ${
                 tab === "task" ? "border-[#544683]" : "border-transparent"
-              } px-5 w-full min-w-0 xl:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
+              } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
               <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
                 01
@@ -72,7 +72,7 @@ const Solutions = () => {
               onClick={() => setTab("user")}
               className={`flex rounded-full border-2 border-solid cursor-pointer transition-all duration-500 ${
                 tab === "user" ? "border-[#544683]" : "border-transparent"
-              } px-5 w-full min-w-0 xl:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
+              } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
               <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
                 02
@@ -88,7 +88,7 @@ const Solutions = () => {
               onClick={() => setTab("log")}
               className={`flex rounded-full border-2 border-solid cursor-pointer transition-all duration-500 ${
                 tab === "log" ? "border-[#544683]" : "border-transparent"
-              } px-5 w-full min-w-0 xl:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
+              } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
               <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
                 03
@@ -104,7 +104,7 @@ const Solutions = () => {
               onClick={() => setTab("wizard")}
               className={`flex rounded-full border-2 border-solid cursor-pointer transition-all duration-500 ${
                 tab === "wizard" ? "border-[#544683]" : "border-transparent"
-              } px-5 w-full min-w-0 xl:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
+              } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
               <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
                 04
@@ -120,7 +120,7 @@ const Solutions = () => {
               onClick={() => setTab("audit")}
               className={`flex rounded-full border-2 border-solid cursor-pointer transition-all duration-500 ${
                 tab === "audit" ? "border-[#544683]" : "border-transparent"
-              } px-5 w-full min-w-0 xl:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
+              } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
               <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
                 05
@@ -136,7 +136,7 @@ const Solutions = () => {
               onClick={() => setTab("comms")}
               className={`flex rounded-full border-2 border-solid cursor-pointer transition-all duration-500 ${
                 tab === "comms" ? "border-[#544683]" : "border-transparent"
-              } px-5 w-full min-w-0 xl:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
+              } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
               <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
                 06
@@ -148,7 +148,7 @@ const Solutions = () => {
                 Communication
               </span>
             </div>
-            <div className="flex rounded-full border-2 border-solid pointer-events-none border-transparent px-5 w-full min-w-0 xl:min-w-[460px] h-[72px]  justify-start items-center gap-5">
+            <div className="flex rounded-full border-2 border-solid pointer-events-none border-transparent px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5">
               <span className="text-[rgba(255,81,159,0.3)] font-bold text-lg xl:text-[24px]">
                 07
               </span>
