@@ -1,24 +1,23 @@
 import {
   faDiscord,
   faFacebook,
-  faFacebookF,
   faLinkedin,
   faMedium,
   faTelegram,
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+// import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
     <div className="wrapper mt-[60px] lg:mt-[100px] relative">
-      <FontAwesomeIcon
+      {/* <FontAwesomeIcon
         onClick={() => window.scrollTo(0, 0)}
         icon={faArrowUp}
         className="absolute right-5 bottom-[85%] sm:bottom-5 rounded-full w-5 sm:w-7 h-5 sm:h-7 grid place-items-center p-3 box-border cursor-pointer bg-btnBg  text-white text-3xl"
-      />
+      /> */}
       <div className="contain pt-[40px] sm:pt-[60px] pb-5 justify-start items-center flex-col">
         <footer className="w-full grid grid-cols-2 grid-rows-2 sm:flex sm:flex-col lg:flex-row justify-between items-center sm:items-start gap-5">
           <svg
