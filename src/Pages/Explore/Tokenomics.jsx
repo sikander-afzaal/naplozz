@@ -36,30 +36,90 @@ const Tokenomics = () => {
               visiting={10}
             />
             <TokenomicsRow
-              pool="Preseed Round"
-              percentage="6.00%"
-              tgs="12 000 000"
-              price="$0.014"
-              discount="76.67 %"
-              tge="6.0 %"
-              cliff={4}
-              visiting={10}
+              pool="Seed Round"
+              percentage="7.00%"
+              tgs="14 000 000"
+              price="$0.020"
+              discount="66.67 %"
+              tge="7.0 %"
+              cliff={3}
+              visiting={8}
             />
             <TokenomicsRow
-              pool="Preseed Round"
-              percentage="6.00%"
-              tgs="12 000 000"
-              price="$0.014"
-              discount="76.67 %"
-              tge="6.0 %"
-              cliff={4}
-              visiting={10}
+              pool="Private Round"
+              percentage="12.00%"
+              tgs="24 000 000"
+              price="$0.035"
+              discount="41.67 %"
+              tge="10.0 %"
+              cliff={1}
+              visiting={6}
+            />
+            <TokenomicsRow
+              pool="Public Round"
+              percentage="3.00%"
+              tgs="6 000 000"
+              price="$0.060"
+              discount="0.00 %"
+              tge="20.0 %"
+              cliff={0}
+              visiting={3}
+            />
+            <TokenomicsRow
+              pool="EcoSystem Pool"
+              percentage="18.00%"
+              tgs="36 000 000"
+              price=""
+              discount=""
+              tge="0.0 %"
+              cliff={0}
+              visiting={36}
+            />
+            <TokenomicsRow
+              pool="Staking & Reserve"
+              percentage="10.00%"
+              tgs="20 000 000"
+              price=""
+              discount=""
+              tge="1.0 %"
+              cliff={0}
+              visiting={24}
+            />
+            <TokenomicsRow
+              pool="Team"
+              percentage="15.00%"
+              tgs="30 000 000"
+              price=""
+              discount=""
+              tge="0.0 %"
+              cliff={12}
+              visiting={24}
+            />
+            <TokenomicsRow
+              pool="Liquidity"
+              percentage="20.00%"
+              tgs="40 000 000"
+              price=""
+              discount=""
+              tge="16.0 %"
+              cliff={0}
+              visiting={24}
+            />
+            <TokenomicsRow
+              pool="General Reserve"
+              percentage="9.00%"
+              tgs="18 000 000"
+              price=""
+              discount=""
+              tge="0.0 %"
+              cliff={12}
+              visiting={24}
             />
             <div className="w-full min-w-[1200px]  grid-cols-8 grid relative py-4">
               <div className="w-full h-[2px] bg-tableBorder absolute top-full  left-0 z-10"></div>
-              <p className="text-lg font-semibold text-white">Total</p>
-              <p className="text-lg font-semibold text-white">100.00 %</p>
-              <p className="text-lg font-semibold text-white">200 000 000</p>
+              <p className="text-lg font-medium text-white">Total</p>
+              <p className="text-lg font-medium text-white">100.00 %</p>
+              <p className="text-lg font-medium text-white">200 000 000</p>
             </div>
           </div>
         </div>
@@ -145,14 +205,14 @@ const TokenomicsRow = ({
 }) => {
   return (
     <div className="grid min-w-[1200px] grid-cols-8 gap-5 w-full py-5">
-      <p className="text-lg font-semibold text-white">{pool}</p>
-      <p className="text-lg font-semibold text-white">{percentage}</p>
-      <p className="text-lg font-semibold text-white">{tgs}</p>
-      <p className="text-lg font-semibold text-white">{price}</p>
-      <p className="text-lg font-semibold text-white">{discount}</p>
-      <p className="text-lg font-semibold text-white">{tge}</p>
-      <p className="text-lg font-semibold text-white">{cliff}</p>
-      <p className="text-lg font-semibold text-white">{visiting}</p>
+      <p className="text-lg font-medium text-white">{pool}</p>
+      <p className="text-lg font-medium text-white">{percentage}</p>
+      <p className="text-lg font-medium text-white">{tgs}</p>
+      <p className="text-lg font-medium text-white">{price}</p>
+      <p className="text-lg font-medium text-white">{discount}</p>
+      <p className="text-lg font-medium text-white">{tge}</p>
+      <p className="text-lg font-medium text-white">{cliff}</p>
+      <p className="text-lg font-medium text-white">{visiting}</p>
     </div>
   );
 };

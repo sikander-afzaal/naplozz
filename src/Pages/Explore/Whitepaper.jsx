@@ -61,9 +61,13 @@ const Whitepaper = () => {
               <p className="text-xl text-white font-medium">
                 Use it to access the documentation for Naplozz
               </p>
-              <button className="bg-transparent border-[1px] border-solid border-white text-white h-[41px] w-[207px] rounded-full uppercase hover:bg-pink hover:border-pink  transition-all duration-500 cursor-pointer text-sm font-bold leading-[1]">
+              <a
+                href="https://docs.naplozz.io/"
+                target={"blank"}
+                className="bg-transparent grid place-items-center border-[1px] border-solid border-white text-white h-[41px] w-[207px] rounded-full uppercase hover:bg-pink hover:border-pink  transition-all duration-500 cursor-pointer text-sm font-bold leading-[1]"
+              >
                 Go to Documentation
-              </button>
+              </a>
             </div>
           </div>
           <div className="flex justify-start sm:text-left text-center mt-[40px] lg:mt-[70px] xl:mt-[220px] items-start flex-col">
