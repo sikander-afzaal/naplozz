@@ -11,8 +11,8 @@ const Hero = () => {
         alt=""
       />
       <div className="absolute explore -left-[20%] top-0 bg-greenRadial -z-10 w-full max-w-[854px] h-[804px] blur-[111px] mix-blend-screen"></div>
-      <div className="contain  flex-col xl:flex-row   justify-between items-center xl:items-start">
-        <div className="flex justify-start items-center pt-[150px] text-center xl:text-left xl:items-start xl:max-w-none max-w-[600px] flex-col gap-5">
+      <div className="contain  flex-col xl:flex-row   justify-around items-center xl:items-start">
+        <div className="flex justify-start items-center pt-[150px] text-center xl:text-left xl:items-start xl:max-w-[550px] max-w-[600px] flex-col gap-5">
           <h2 className="font-bold leading-[1.2]  mid:leading-[92px] text-[40px] sm:text-[55px] xl:text-[63px] text-white">
             <span className="gr-text">Naplozz App</span> the paperless record
             keeper
@@ -25,7 +25,7 @@ const Hero = () => {
             for paper. <span className="text-pink">Just click and swipe!</span>
           </p>
           <GradientButton
-            classes={"w-[151px] h-[55px] hover:w-[190px]"}
+            classes={"w-[151px] h-[55px] hover:w-[220px]"}
             text={
               <>
                 Get Started
@@ -37,7 +37,7 @@ const Hero = () => {
         <img
           src="/explore/hero-img.png"
           alt=""
-          className="max-w-[400px] xl:max-w-[500px] mid:max-w-[700px] w-full object-contain"
+          className="max-w-[400px] xl:max-w-[500px] mid:max-w-[600px] w-full object-contain"
         />
       </div>
     </div>

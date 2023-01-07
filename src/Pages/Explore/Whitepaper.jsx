@@ -70,7 +70,7 @@ const Whitepaper = () => {
               </a>
             </div>
           </div>
-          <div className="flex justify-start sm:text-left text-center mt-[40px] lg:mt-[70px] xl:mt-[220px] items-start flex-col">
+          <div className="flex justify-start sm:text-left text-center mt-[40px] lg:mt-[70px] xl:mt-[180px] items-start flex-col">
             <h2 className="gr-text font-bold text-[35px] sm:text-[60px] xl:text-[65px] mid:text-[70px] leading-[1.4]">
               The Naplozz ecosystem is designed to grow steadily,
             </h2>

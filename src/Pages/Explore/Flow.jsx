@@ -6,8 +6,8 @@ const Flow = () => {
   useEffect(() => {
     gsap.fromTo(
       shadow.current,
-      { opacity: 0.15 },
-      { opacity: 0, duration: 4, repeat: -1, yoyo: true }
+      { opacity: 0.2 },
+      { opacity: 0, duration: 2, repeat: -1, yoyo: true }
     );
   }, []);
   return (

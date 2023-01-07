@@ -182,7 +182,7 @@ const Utilities = () => {
           <div className="flex group justify-center max-w-none w-full xl:max-w-[515px]  items-center relative isolate rounded-[40px]">
             <ul className="w-full bg-black list-none p-5 h-full flex justify-start rounded-[40px] items-start flex-col gap-4">
               <li className="text-[#f9f9f9]  font-medium text-base sm:text-xl">
-                <span className="gr-text">⦁</span> They can use Naplozz staking
+                <span className="gr-text">⦁</span> They can use Naplozz stalking
                 wallet.
               </li>
               <li className="text-[#f9f9f9] font-medium text-base md:text-lg lg:text-xl">

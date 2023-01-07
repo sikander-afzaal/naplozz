@@ -45,7 +45,7 @@ const Programs = () => {
         <div className="w-full gap-5 xl:gap-0 xl:flex-row flex-col-reverse flex justify-between items-center relative isolate">
           <img
             src="/explore/ball.png"
-            className="absolute max-w-[100px] xl:block hidden -left-[10%] top-0 -z-10"
+            className="absolute bead max-w-[100px] xl:block hidden -left-[10%] top-0 -z-10"
             alt=""
           />
           <img
@@ -56,7 +56,7 @@ const Programs = () => {
           <div className="flex justify-start xl:items-start text-center xl:text-left max-w-[550px] items-center flex-col gap-5">
             <img
               src="/explore/ball.png"
-              className="w-full max-w-[60px] sm:max-w-[100px] self-end"
+              className="w-full bead max-w-[60px] sm:max-w-[100px] self-end"
               alt=""
             />
             <h3 className="text-[#FF866d] font-bold text-[40px] sm:text-[48px]">
@@ -98,7 +98,7 @@ const Programs = () => {
             </p>
           </div>
           <img
-            className="absolute sm:block hidden right-[0%] top-full w-full max-w-[80px]"
+            className="absolute bead sm:block hidden right-[0%] top-full w-full max-w-[80px]"
             alt=""
             src="/explore/ball.png"
           />

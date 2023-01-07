@@ -12,7 +12,7 @@ const Tokenomics = () => {
           <h2 className="text-white text-[40px] sm:text-[48px] font-bold">
             Tokenomics
           </h2>
-          <div className="flex overflow-x-auto justify-start items-start flex-col gap-5 w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] ">
+          <div className="flex roadmap overflow-x-auto justify-start items-start flex-col gap-5 w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] ">
             <div className="grid min-w-[1200px] grid-cols-8 gap-5 w-full py-5 relative">
               <div className="w-full h-[2px] bg-tableBorder absolute bottom-full left-0 z-10"></div>
               <div className="w-full h-[2px] bg-tableBorder absolute top-full left-0 z-10"></div>

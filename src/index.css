@@ -6,7 +6,7 @@
     @apply flex justify-start items-center flex-col w-full;
   }
   .contain {
-    @apply flex w-full max-w-[1315px] lg:max-w-[90%] lg:px-0 px-5 2xl:max-w-[1400px];
+    @apply flex w-full max-w-[1315px]  px-5 2xl:max-w-[1400px];
   }
 }
 @layer components {
@@ -39,8 +39,7 @@ body {
 }
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
-body,
-.roadmap {
+body {
   scrollbar-width: thin;
   scrollbar-color: #14133b #060610;
 }
@@ -72,7 +71,7 @@ html {
   scroll-behavior: smooth;
 }
 .explore {
-  animation: move 40s ease-in-out 0s infinite alternate;
+  animation: move 60s ease-in-out 0s infinite alternate;
 }
 .eco-words {
   animation: float 5s ease-in-out 0s infinite alternate;
@@ -84,15 +83,15 @@ html {
     left: -20%;
   }
   25% {
-    top: -20%;
+    top: -25%;
     left: -20%;
   }
   50% {
-    top: -10%;
+    top: -25%;
     left: 10%;
   }
   75% {
-    top: -10%;
+    top: -25%;
     left: -20%;
   }
   100% {

@@ -17,7 +17,7 @@ const Token = () => {
           <div className="flex justify-start items-center text-center lg:text-left lg:items-start flex-col max-w-[430px]">
             <img
               src="/explore/ball.png"
-              className="self-end max-w-[70px] lg:max-w-[100px] object-contain"
+              className="self-end bead max-w-[70px] lg:max-w-[100px] object-contain"
               alt=""
             />
             <h2 className="text-white text-[40px] sm:text-[48px] font-bold">
@@ -32,11 +32,11 @@ const Token = () => {
             </p>
           </div>
         </div>
-        <div className="flex xl:flex-row flex-col mt-[70px] sm:mt-[100px] justify-between w-full items-center gap-[50px] xl:gap-6">
+        <div className="flex xl:flex-row flex-col mt-[70px] sm:mt-[110px] justify-between w-full items-start gap-[50px] xl:gap-6">
           <div className="flex justify-start items-center text-center xl:text-left xl:items-start flex-col max-w-[530px]">
             <img
               src="/explore/ball.png"
-              className="self-start mb-5 ml-5 max-w-[40px] object-contain"
+              className="self-start bead mb-5 ml-5 max-w-[40px] object-contain"
               alt=""
             />
             <h2 className="text-white text-[40px] sm:text-[48px] font-bold">

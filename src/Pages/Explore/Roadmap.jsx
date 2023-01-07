@@ -1,11 +1,12 @@
 import gsap from "gsap";
-import { Draggable } from "gsap/all";
-import { useEffect, useRef } from "react";
+import { Draggable, ScrollTrigger } from "gsap/all";
+import { useEffect, useRef, useState } from "react";
 
 const Roadmap = () => {
-  gsap.registerPlugin(Draggable);
+  const [animation1Completed, setAnimation1Completed] = useState(false);
   const shadow = useRef();
   const mainCont = useRef();
+  const wrapper = useRef();
   const grid = useRef();
   const list1Dot = useRef();
   const list1Heading = useRef();
@@ -27,12 +28,34 @@ const Roadmap = () => {
   const list6 = useRef();
   const line = useRef();
   useEffect(() => {
-    const timeline = gsap.timeline({ defaults: { duration: 3 }, repeat: -1 });
+    gsap.registerPlugin(ScrollTrigger, Draggable);
+    const timeline = gsap.timeline({
+      defaults: { duration: 3 },
+      scrollTrigger: {
+        trigger: wrapper.current,
+        start: "top 30%",
+      },
+      onStart: () => {
+        timeline2.pause();
+      },
+      onComplete: () => {
+        setAnimation1Completed(true);
+        timeline2.restart();
+      },
+    });
+    //for just the pink shadow so it repeats after the first anim is done
+    const timeline2 = gsap.timeline({
+      defaults: { duration: 3 },
+      repeat: -1,
+    });
+    ////////////////////////////////
+    timeline2.pause();
+    //timeline 1----------------------------------------------
     timeline
       //first shadow moves
       //then line moves
       //then the list appears
-      .to(shadow.current, { left: "0.5%", opacity: 1 })
+      .to(shadow.current, { left: "0.5%", opacity: 1, duration: 0 })
       .fromTo(line.current, { width: 0 }, { width: "4%", duration: 1 })
       .fromTo(
         [list1Dot.current, list1Heading.current, list1.current],
@@ -76,6 +99,16 @@ const Roadmap = () => {
       )
       .to(shadow.current, { opacity: 0, left: "87.5%" });
 
+    timeline2
+      .to(shadow.current, { left: "0.5%", opacity: 1 })
+      .to(shadow.current, { left: "17.5%", opacity: 1 })
+      .to(shadow.current, { left: "35%", opacity: 1 })
+      .to(shadow.current, { left: "52.5%", opacity: 1 })
+      .to(shadow.current, { left: "70%", opacity: 1 })
+      .to(shadow.current, { left: "87.5%", opacity: 1 })
+      .to(shadow.current, { opacity: 0, left: "87.5%" })
+      .to(shadow.current, { opacity: 0, left: "0.5%" });
+
     Draggable.create(grid.current, {
       type: "x",
       bounds: mainCont.current,
@@ -85,7 +118,7 @@ const Roadmap = () => {
   }, []);
 
   return (
-    <div className="wrapper mt-[100px] lg:mt-[200px] relative">
+    <div ref={wrapper} className="wrapper mt-[100px] lg:mt-[200px] relative">
       <div className="absolute left-1/2 bottom-[50%] -translate-x-1/2 bg-[#a50498] blur-[250px] w-full max-w-[1268px] h-[636px] opacity-[0.15] -z-10"></div>
       <div className="contain flex-col gap-5 justify-start items-center sm:items-start">
         <h2 className="text-white md:text-left text-center text-[40px] sm:text-[48px] font-bold">
