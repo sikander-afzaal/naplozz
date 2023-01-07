@@ -21,7 +21,7 @@ const Utilities = () => {
         trigger: container.current,
         start: "top 25%",
         end: "+=2000",
-        scrub: 3,
+        scrub: 1,
       },
     });
     timeLine
