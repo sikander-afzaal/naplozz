@@ -36,7 +36,7 @@ const Roadmap = () => {
         </h2>
         <div
           ref={mainCont}
-          className="overflow-x-hidden roadmap w-full pl-[30px] pt-[30px]"
+          className="overflow-x-scroll roadmap w-full pl-[30px] pt-[30px]"
         >
           <div
             ref={grid}
