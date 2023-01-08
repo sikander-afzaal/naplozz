@@ -22,6 +22,8 @@ module.exports = {
         hoverShadow: "0px 0px 20px #7BCBE8",
       },
       backgroundImage: {
+        marketplace:
+          "linear-gradient(116.22deg, #7BCBE8 1.27%, #8715E6 49.07%, #33FDFF 103.24%)",
         roadmapLine:
           "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.895833) 10.1%, #FFFFFF 87.32%, rgba(255, 255, 255, 0) 96.91%)",
         tableBorder:

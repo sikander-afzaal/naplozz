@@ -51,7 +51,7 @@ const Hero = () => {
           </h3>
           <img
             src="/education/ball-set.png"
-            className="absolute top-0 -right-[5%] -z-10 xl:block hidden"
+            className="absolute top-0 bead -right-[5%] -z-10 xl:block hidden"
             alt=""
           />
         </div>

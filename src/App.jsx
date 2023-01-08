@@ -8,6 +8,8 @@ import Explore from "./Pages/Explore/Explore";
 import Home from "./Pages/Home/Home";
 import Eco from "./Pages/Ecosystem/Eco";
 import Education from "./Pages/Education/Education";
+import Marketplace from "./Pages/Marketplace/Marketplace";
+import Chain from "./Pages/Chain/Chain";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -34,6 +36,8 @@ function App() {
         <Route element={<Explore />} path="/explore" />
         <Route element={<Eco />} path="/ecosystem" />
         <Route element={<Education />} path="/education" />
+        <Route element={<Marketplace />} path="/marketplace" />
+        <Route element={<Chain />} path="/chain" />
       </Routes>
       <Footer />
     </div>
