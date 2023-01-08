@@ -166,12 +166,12 @@ const Solutions = () => {
         </div>
         {/* {tab data -------------------------------} */}
         <div className="flex justify-start items-center xl:items-start pt-[60px] flex-col gap-5 w-full">
-          <p className="text-[#B3B3B3] max-w-[900px] xl:max-w-[700px] xl:text-left text-center font-semibold text-lg md:text-[23px] leading-[1.4]">
+          <p className="text:lg sm:text-xl font-medium text-[#b3b3b3]">
             {DATA[tab].desc}
           </p>
           {tab === "user" && (
             <>
-              <p className="text-[#B3B3B3] max-w-[900px] xl:max-w-[700px] xl:text-left text-center font-semibold text-lg md:text-[23px] leading-[1.4]">
+              <p className="text:lg sm:text-xl font-medium text-[#b3b3b3]">
                 {DATA[tab].sub}
               </p>
               <ul className="flex flex-wrap list-none justify-start items-center gap-5">

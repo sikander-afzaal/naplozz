@@ -16,6 +16,7 @@ module.exports = {
       },
       animation: {
         "bounce-slow": "bounce 5s ease-in-out infinite",
+        "bounce-slow-delayed": "bounce 5s 1.3s ease-in-out infinite",
       },
       boxShadow: {
         hoverShadow: "0px 0px 20px #7BCBE8",

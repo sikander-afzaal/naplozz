@@ -1,22 +1,8 @@
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
-
 const Flow = () => {
-  const shadow = useRef();
-  useEffect(() => {
-    gsap.fromTo(
-      shadow.current,
-      { opacity: 0.2 },
-      { opacity: 0, duration: 2, repeat: -1, yoyo: true }
-    );
-  }, []);
   return (
     <div className="wrapper mt-[100px] sm:mt-[150px] ">
       <div className="contain flex-col xl:flex-row justify-center items-center xl:items-start gap-[60px] isolate relative">
-        <div
-          ref={shadow}
-          className="absolute w-full  -z-10 left-0 top-0 sm:top-1/2 sm:-translate-y-1/2 bg-pink blur-[115px] opacity-[0.15] max-w-[1130px] h-[600px]"
-        ></div>
+        <div className="absolute w-full  -z-10 left-0 top-0 sm:top-1/2 sm:-translate-y-1/2 bg-pink blur-[115px] opacity-[0.15] max-w-[1130px] h-[600px]"></div>
         <img
           src="/explore/token-flow.png"
           className="w-full max-w-[600px] xl:max-w-[550px] object-contain"

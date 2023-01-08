@@ -63,7 +63,7 @@ const Programs = () => {
           <div className="flex justify-start xl:items-start text-center xl:text-left max-w-[550px] items-center flex-col gap-5">
             <img
               src="/explore/ball.png"
-              className="w-full bead max-w-[60px] sm:max-w-[100px] self-end"
+              className="w-full bead-delayed max-w-[60px] sm:max-w-[100px] self-end"
               alt=""
             />
             <h3 className="text-[#FF866d] font-bold text-[40px] mid:text-[48px]">

@@ -14,7 +14,10 @@
     @apply bg-blueGr bg-clip-text text-transparent;
   }
   .bead {
-    @apply hover:translate-y-5 animate-bounce-slow  transition-all duration-[2s];
+    @apply hover:translate-y-5  animate-bounce-slow  transition-all duration-[2s];
+  }
+  .bead-delayed {
+    @apply hover:translate-y-5  animate-bounce-slow-delayed  transition-all duration-[2s];
   }
 }
 @font-face {
