@@ -14,7 +14,7 @@ const Flow = () => {
   return (
     <div className="wrapper mt-[100px] sm:mt-[150px] ">
       <div className="contain flex-col xl:flex-row justify-center items-center xl:items-start gap-[60px] isolate relative">
-        <div className="relative">
+        <div className="relative w-full">
           <img
             src="/explore/token-flow-no-glow.png"
             className="w-full max-w-[600px] opacity-80 xl:max-w-[550px] object-contain"
