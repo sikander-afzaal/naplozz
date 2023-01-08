@@ -55,6 +55,10 @@ const Ecosystem = () => {
     timeLine2
       .fromTo(leftBox.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
       .fromTo(rightBox.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
+    return () => {
+      timeLine.kill();
+      timeLine2.kill();
+    };
   }, []);
   return (
     <div

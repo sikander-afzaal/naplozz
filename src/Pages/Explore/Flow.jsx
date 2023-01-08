@@ -12,7 +12,8 @@ const Flow = () => {
   }, []);
 
   return (
-    <div className="wrapper mt-[100px] sm:mt-[150px] ">
+    <div className="wrapper mt-[100px] relative sm:mt-[150px] ">
+      <div className="absolute w-full -z-10 left-[20%] top-0 sm:top-1/2 sm:-translate-y-1/2 bg-pink blur-[115px] opacity-[0.15] max-w-[1130px] h-[600px]"></div>
       <div className="contain flex-col xl:flex-row justify-center items-center xl:items-start gap-[60px] isolate relative">
         <div className="relative w-full">
           <img

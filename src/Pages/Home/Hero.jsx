@@ -3,7 +3,7 @@ import GradientButton from "../../Components/GradientButton";
 //gsap
 import gsap, { Circ } from "gsap";
 
-const Hero = () => {
+const Hero = ({ loader }) => {
   const heading = useRef();
   const sub = useRef();
   const para = useRef();
@@ -11,35 +11,33 @@ const Hero = () => {
   const img = useRef();
   const shadow = useRef();
   useEffect(() => {
-    setTimeout(() => {
-      const timeLine = gsap.timeline({
-        defaults: { duration: 0.5, ease: Circ.easeOut },
-      });
-      timeLine.fromTo(
-        heading.current,
-        { opacity: 0, x: -80 },
-        { opacity: 1, x: 0 }
-      );
-      timeLine.fromTo(sub.current, { opacity: 0, y: 80 }, { opacity: 1, y: 0 });
-      timeLine.fromTo(
-        para.current,
-        { opacity: 0, x: -80 },
-        { opacity: 1, x: 0 }
-      );
-      timeLine.fromTo(btn.current, { opacity: 0, y: 80 }, { opacity: 1, y: 0 });
-      timeLine.fromTo(img.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
+    const timeLine = gsap.timeline({
+      defaults: { duration: 0.5, ease: Circ.easeOut },
+      delay: loader ? 6.5 : 0,
+    });
+    timeLine.fromTo(
+      heading.current,
+      { opacity: 0, x: -80 },
+      { opacity: 1, x: 0 }
+    );
+    timeLine.fromTo(sub.current, { opacity: 0, y: 80 }, { opacity: 1, y: 0 });
+    timeLine.fromTo(para.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 });
+    timeLine.fromTo(btn.current, { opacity: 0, y: 80 }, { opacity: 1, y: 0 });
+    timeLine.fromTo(img.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
 
-      gsap.fromTo(
-        shadow.current,
-        { scale: 1 },
-        {
-          scale: 0.8,
-          yoyo: true,
-          repeat: -1,
-          duration: 2,
-        }
-      );
-    }, 4500);
+    gsap.fromTo(
+      shadow.current,
+      { scale: 1 },
+      {
+        scale: 0.8,
+        yoyo: true,
+        repeat: -1,
+        duration: 2,
+      }
+    );
+    return () => {
+      timeLine.kill();
+    };
   }, []);
 
   return (

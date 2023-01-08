@@ -79,6 +79,11 @@ const Features = () => {
         { opacity: 0, y: 90 },
         { opacity: 1, y: 0, stagger: 0.3 }
       );
+    return () => {
+      timeLine.kill();
+      timeLine2.kill();
+      timeLine3.kill();
+    };
   }, []);
 
   return (

@@ -38,6 +38,9 @@ const Helps = () => {
         { y: 90, opacity: 0, scale: 0 },
         { y: 0, opacity: 1, scale: 1 }
       );
+    return () => {
+      timeLine.kill();
+    };
   }, []);
   return (
     <div ref={container} className="wrapper mt-[80px] lg:mt-[150px]">

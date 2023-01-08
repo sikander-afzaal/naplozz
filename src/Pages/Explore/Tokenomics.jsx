@@ -13,17 +13,17 @@ const Tokenomics = () => {
             Tokenomics
           </h2>
           <div className="flex max-w-[1100px] roadmap overflow-x-auto justify-start items-start flex-col  w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] ">
-            <div className="grid min-w-[1100px] grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] gap-5 w-full py-5 relative">
+            <div className="grid min-w-[1100px] grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] gap-5 w-full py-4 relative">
               <div className="w-full h-[2px] bg-tableBorder absolute bottom-full left-0 z-10"></div>
               <div className="w-full h-[2px] bg-tableBorder absolute top-full left-0 z-10"></div>
-              <p className="text-xl font-bold text-white">Pool</p>
-              <p className="text-xl font-bold text-white">Percentage</p>
-              <p className="text-xl font-bold text-white">%TGS</p>
-              <p className="text-xl font-bold text-white">Price</p>
-              <p className="text-xl font-bold text-white">Discount$</p>
-              <p className="text-xl font-bold text-white">%On TGE</p>
-              <p className="text-xl font-bold text-white">Cliff</p>
-              <p className="text-xl font-bold text-white">Vesting</p>
+              <p className="text-xl font-semibold text-white">Pool</p>
+              <p className="text-xl font-semibold text-white">Percentage</p>
+              <p className="text-xl font-semibold text-white">%TGS</p>
+              <p className="text-xl font-semibold text-white">Price</p>
+              <p className="text-xl font-semibold text-white">Discount$</p>
+              <p className="text-xl font-semibold text-white">%On TGE</p>
+              <p className="text-xl font-semibold text-white">Cliff</p>
+              <p className="text-xl font-semibold text-white">Vesting</p>
             </div>
             <TokenomicsRow
               pool="Preseed Round"
@@ -115,7 +115,7 @@ const Tokenomics = () => {
               cliff={12}
               visiting={24}
             />
-            <div className="w-full min-w-[1100px]  grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] grid relative py-4">
+            <div className="w-full min-w-[1100px]  grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] grid relative py-3">
               <div className="w-full h-[2px] bg-tableBorder absolute top-full  left-0 z-10"></div>
               <p className="text-lg font-medium text-white">Total</p>
               <p className="text-lg font-medium text-white">100.00 %</p>
@@ -204,7 +204,7 @@ const TokenomicsRow = ({
   visiting,
 }) => {
   return (
-    <div className="grid min-w-[1100px] grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] gap-5 w-full py-5">
+    <div className="grid min-w-[1100px] grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] gap-5 w-full py-3">
       <p className="text-lg font-medium text-white">{pool}</p>
       <p className="text-lg font-medium text-white">{percentage}</p>
       <p className="text-lg font-medium text-white">{tgs}</p>

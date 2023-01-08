@@ -166,6 +166,11 @@ const Solutions = () => {
         </div>
         {/* {tab data -------------------------------} */}
         <div className="flex justify-start items-center xl:items-start pt-[60px] flex-col gap-5 w-full">
+          <img
+            src={DATA[tab].img}
+            className="object-contain  w-full max-w-[900px] xl:max-w-[760px]"
+            alt=""
+          />
           <p className="text:lg sm:text-xl font-medium text-[#b3b3b3]">
             {DATA[tab].desc}
           </p>
@@ -188,11 +193,6 @@ const Solutions = () => {
               </ul>
             </>
           )}
-          <img
-            src={DATA[tab].img}
-            className="object-contain  w-full max-w-[900px] xl:max-w-[760px]"
-            alt=""
-          />
         </div>
       </div>
     </div>

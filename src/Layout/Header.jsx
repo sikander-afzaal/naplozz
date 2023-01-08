@@ -14,8 +14,10 @@ const Header = () => {
   const scrollDirection = useScrollDirection();
   const [headerToggle, setHeaderToggle] = useState(false);
   const [bg, setBg] = useState(false);
-  const [dropDown, setDropDown] = useState(false);
+  const [dropDownExplore, setDropDownExplore] = useState(false);
+  const [dropDownEco, setDropDownEco] = useState(false);
   useEffect(() => {
+    //header bg when you scroll
     const showBg = () => {
       if (window.scrollY > 60) {
         setBg(true);
@@ -28,7 +30,7 @@ const Header = () => {
       window.removeEventListener("scroll", showBg);
     };
   }, []);
-
+  //header movement depending on scroll
   useEffect(() => {
     const body = document.querySelector("html");
     if (headerToggle) {
@@ -219,22 +221,22 @@ const Header = () => {
           <div className="flex justify-start items-center head:w-auto w-full sm:items-start flex-col head:flex-row head:items-center gap-6 mid:gap-4 xl:gap-5">
             <div className="flex head:w-auto w-full justify-start items-center sm:items-start flex-col relative">
               <button
-                onClick={() => setDropDown((prev) => !prev)}
+                onClick={() => setDropDownExplore((prev) => !prev)}
                 className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
               >
                 Explore{" "}
                 <FontAwesomeIcon
                   icon={faChevronDown}
                   className={`text-inherit transition-transform text-xs ${
-                    dropDown ? "rotate-180" : ""
+                    dropDownExplore ? "rotate-180" : ""
                   }`}
                 />
               </button>
-              {dropDown && (
+              {dropDownExplore && (
                 <div className="static mt-5 head:m-0 head:absolute px-5 py-3 gap-2 flex justify-center items-center sm:items-start flex-col w-full head:w-max bg-black text-white border-2 border-solid border-[#b3b3b3] rounded-xl top-[140%] left-1/2 head:-translate-x-1/2">
                   <Link
                     onClick={() => {
-                      setDropDown(false);
+                      setDropDownExplore(false);
                       setHeaderToggle(false);
                     }}
                     to={"/explore"}
@@ -244,7 +246,7 @@ const Header = () => {
                   </Link>
                   <HashLink
                     onClick={() => {
-                      setDropDown(false);
+                      setDropDownExplore(false);
                       setHeaderToggle(false);
                     }}
                     smooth

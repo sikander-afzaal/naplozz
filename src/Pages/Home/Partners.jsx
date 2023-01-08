@@ -29,6 +29,9 @@ const Partners = () => {
       .fromTo(heading.current, { y: -90, opacity: 0 }, { y: 0, opacity: 1 })
       .fromTo(para.current, { y: 90, opacity: 0 }, { y: 0, opacity: 1 })
       .fromTo(partners.current, { y: 90, opacity: 0 }, { y: 0, opacity: 1 });
+    return () => {
+      timeLine.kill();
+    };
   }, []);
 
   return (
