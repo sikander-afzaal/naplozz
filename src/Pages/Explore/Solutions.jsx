@@ -190,7 +190,7 @@ const Solutions = () => {
           )}
           <img
             src={DATA[tab].img}
-            className="object-contain xl:-ml-[70px] w-full max-w-[900px] xl:max-w-[760px]"
+            className="object-contain  w-full max-w-[900px] xl:max-w-[760px]"
             alt=""
           />
         </div>

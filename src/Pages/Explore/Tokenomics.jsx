@@ -12,8 +12,8 @@ const Tokenomics = () => {
           <h2 className="text-white text-[40px] sm:text-[48px] font-bold">
             Tokenomics
           </h2>
-          <div className="flex roadmap overflow-x-auto justify-start items-start flex-col gap-0 w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] ">
-            <div className="grid min-w-[1200px] grid-cols-8 gap-5 w-full py-5 relative">
+          <div className="flex max-w-[1100px] roadmap overflow-x-auto justify-start items-start flex-col  w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] ">
+            <div className="grid min-w-[1100px] grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] gap-5 w-full py-5 relative">
               <div className="w-full h-[2px] bg-tableBorder absolute bottom-full left-0 z-10"></div>
               <div className="w-full h-[2px] bg-tableBorder absolute top-full left-0 z-10"></div>
               <p className="text-xl font-bold text-white">Pool</p>
@@ -115,7 +115,7 @@ const Tokenomics = () => {
               cliff={12}
               visiting={24}
             />
-            <div className="w-full min-w-[1200px]  grid-cols-8 grid relative py-4">
+            <div className="w-full min-w-[1100px]  grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] grid relative py-4">
               <div className="w-full h-[2px] bg-tableBorder absolute top-full  left-0 z-10"></div>
               <p className="text-lg font-medium text-white">Total</p>
               <p className="text-lg font-medium text-white">100.00 %</p>
@@ -204,7 +204,7 @@ const TokenomicsRow = ({
   visiting,
 }) => {
   return (
-    <div className="grid min-w-[1200px] grid-cols-8 gap-5 w-full py-5">
+    <div className="grid min-w-[1100px] grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] gap-5 w-full py-5">
       <p className="text-lg font-medium text-white">{pool}</p>
       <p className="text-lg font-medium text-white">{percentage}</p>
       <p className="text-lg font-medium text-white">{tgs}</p>
