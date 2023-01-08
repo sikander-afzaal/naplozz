@@ -221,8 +221,15 @@ const Header = () => {
           <div className="flex justify-start items-center head:w-auto w-full sm:items-start flex-col head:flex-row head:items-center gap-6 mid:gap-4 xl:gap-5">
             <div className="flex head:w-auto w-full justify-start items-center sm:items-start flex-col relative">
               <button
-                onClick={() => setDropDownExplore((prev) => !prev)}
-                className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
+                onClick={() => {
+                  setDropDownEco(false);
+                  setDropDownExplore((prev) => !prev);
+                }}
+                className={`no-underline flex justify-start items-center gap-2 ${
+                  dropDownExplore
+                    ? "text-white"
+                    : "text-[rgba(255,255,255,0.8)]"
+                } hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium`}
               >
                 Explore{" "}
                 <FontAwesomeIcon
@@ -238,6 +245,7 @@ const Header = () => {
                     onClick={() => {
                       setDropDownExplore(false);
                       setHeaderToggle(false);
+                      setDropDownEco(false);
                     }}
                     to={"/explore"}
                     className="text-lg"
@@ -248,6 +256,7 @@ const Header = () => {
                     onClick={() => {
                       setDropDownExplore(false);
                       setHeaderToggle(false);
+                      setDropDownEco(false);
                     }}
                     smooth
                     className="text-lg"
@@ -258,35 +267,106 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link
-              onClick={() => setHeaderToggle(false)}
-              to="/ecosystem"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
-            >
-              Ecosystem{" "}
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className="text-inherit text-xs"
-              />
-            </Link>
+            <div className="flex head:w-auto w-full justify-start items-center sm:items-start flex-col relative">
+              <button
+                onClick={() => {
+                  setDropDownExplore(false);
+                  setDropDownEco((prev) => !prev);
+                }}
+                className={`no-underline flex justify-start items-center gap-2 ${
+                  dropDownEco ? "text-white" : "text-[rgba(255,255,255,0.8)]"
+                } hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium`}
+              >
+                Ecosystem{" "}
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`text-inherit transition-transform text-xs ${
+                    dropDownEco ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {dropDownEco && (
+                <div className="static mt-5 head:m-0 head:absolute px-5 py-3 gap-2 flex justify-center items-center sm:items-start flex-col w-full head:w-max bg-black text-white border-2 border-solid border-[#b3b3b3] rounded-xl top-[140%] left-1/2 head:-translate-x-1/2">
+                  <Link
+                    onClick={() => {
+                      setDropDownExplore(false);
+                      setDropDownEco(false);
+                      setHeaderToggle(false);
+                    }}
+                    to={"/ecosystem"}
+                    className="text-lg"
+                  >
+                    Nap Star
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setDropDownExplore(false);
+                      setDropDownEco(false);
+                      setHeaderToggle(false);
+                    }}
+                    smooth
+                    className="text-lg"
+                    to={"/education"}
+                  >
+                    Nap Education
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setDropDownExplore(false);
+                      setDropDownEco(false);
+                      setHeaderToggle(false);
+                    }}
+                    smooth
+                    className="text-lg"
+                    to={"/marketplace"}
+                  >
+                    Nap Marketplace
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setDropDownExplore(false);
+                      setDropDownEco(false);
+                      setHeaderToggle(false);
+                    }}
+                    smooth
+                    className="text-lg"
+                    to={"/chain"}
+                  >
+                    Nap Chain
+                  </Link>
+                </div>
+              )}
+            </div>
             <a
-              onClick={() => setHeaderToggle(false)}
+              onClick={() => {
+                setDropDownEco(false);
+                setDropDownExplore(false);
+                setHeaderToggle(false);
+              }}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               Industries{" "}
             </a>
             <a
-              onClick={() => setHeaderToggle(false)}
+              onClick={() => {
+                setDropDownEco(false);
+                setDropDownExplore(false);
+                setHeaderToggle(false);
+              }}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               Blog
             </a>
             <a
-              onClick={() => setHeaderToggle(false)}
+              onClick={() => {
+                setDropDownEco(false);
+                setDropDownExplore(false);
+                setHeaderToggle(false);
+              }}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               Pricing
               <FontAwesomeIcon
@@ -295,16 +375,24 @@ const Header = () => {
               />
             </a>
             <a
-              onClick={() => setHeaderToggle(false)}
+              onClick={() => {
+                setDropDownEco(false);
+                setDropDownExplore(false);
+                setHeaderToggle(false);
+              }}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               About us
             </a>
             <a
-              onClick={() => setHeaderToggle(false)}
+              onClick={() => {
+                setDropDownEco(false);
+                setDropDownExplore(false);
+                setHeaderToggle(false);
+              }}
               href="#"
-              className="no-underline flex justify-start items-center gap-2 text-white text-lg head:text-base xl:text-base font-medium"
+              className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               Contact
             </a>
