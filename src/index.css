@@ -72,6 +72,7 @@ body::-webkit-scrollbar-thumb {
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-block: 60px;
 }
 .explore {
   animation: move 70s ease-in-out 0s infinite alternate;
