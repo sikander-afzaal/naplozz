@@ -23,7 +23,7 @@ const Utilities = () => {
       scrollTrigger: {
         trigger: container.current,
         start: "top 25%",
-        end: "+=100%",
+        end: "+=2000",
         scrub: 1,
       },
     });
