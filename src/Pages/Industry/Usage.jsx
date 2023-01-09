@@ -3,7 +3,40 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Usage = () => {
   return (
-    <div className="wrapper mt-[100px] lg:mt-[130px]">
+    <div className="wrapper mt-[100px] lg:mt-[130px] relative">
+      <img
+        src="/explore/ball.png"
+        className="absolute right-0 sm:right-[10%] mid:right-[20%] blur-[88px] w-full max-w-[500px] -z-10 top-[3%] sm:top-[5%]"
+        alt=""
+      />
+      <img
+        src="/explore/ball.png"
+        className="absolute right-[5%] mid:right-[10%] blur-[7.5px] w-full max-w-[100px] sm:max-w-[250px] -z-10 top-[11%]"
+        alt=""
+      />
+      <img
+        src="/explore/ball.png"
+        className="absolute translate-x-1/2 right-[0%]  blur-[106px] object-contain w-full max-w-[750px] -z-10  top-[26%]"
+        alt=""
+      />{" "}
+      <img
+        src="/explore/ball.png"
+        className="absolute left-[25%] blur-[90px] w-full max-w-[500px] -z-10 top-[52%]"
+        alt=""
+      />{" "}
+      <img
+        src="/industry/side.png"
+        className="absolute left-[0%]  -z-10  top-[64%]"
+        alt=""
+      />{" "}
+      {/* //shadows ------------------------ */}
+      <div className="absolute w-full max-w-[852px] h-[852px] rounded-full left-0 top-[13%] opacity-[0.24] -z-10 blur-[134px] bg-[#a50498]"></div>
+      <div className="absolute w-full max-w-[1110px] h-[360px] rounded-full -translate-x-1/2 left-0 top-[37%] opacity-[0.5] -z-10 blur-[131px] bg-[#2BD1FF]"></div>
+      <div className="absolute w-full max-w-[1077px] h-[380px] rounded-full translate-x-1/2 right-0 top-[42.5%] opacity-[0.47] -z-10 blur-[159px] -rotate-[17.61deg] bg-greenishGr"></div>
+      <div className="absolute w-full max-w-[1077px] h-[380px] rounded-full translate-x-1/2 right-0 top-[78.5%] opacity-[0.47] -z-10 blur-[159px] -rotate-[17.61deg] bg-greenishGr"></div>
+      <div className="absolute w-full max-w-[828px] h-[877px] rounded-full right-0 top-[74.5%] opacity-[0.19] -z-10 blur-[103px]  bg-[#FF519F]"></div>
+      <div className="absolute w-full max-w-[946px] h-[242px] rounded-full left-0 -translate-x-[20%] top-[89%] opacity-[0.42] -z-10 blur-[130px]  bg-[#E04ADC]"></div>
+      {/* //shadows end ------------------------ */}
       <div className="contain flex-col justify-start items-center gap-5">
         <h2 className="gr-text text-[45px] sm:text-[72px] font-bold text-center">
           Industry Usage

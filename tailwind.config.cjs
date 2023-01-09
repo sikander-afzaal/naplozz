@@ -39,6 +39,7 @@ module.exports = {
           "linear-gradient(116.22deg, #7BCBE8 1.27%, #8715E6 49.07%, #33FDFF 103.24%)",
         blackGr:
           "linear-gradient(180deg, rgba(2, 2, 2, 0.8) 0%, rgba(4, 5, 6, 0.8) 100%)",
+        greenishGr: "linear-gradient(37.99deg, #33FDFF 6.33%, #424CFF 87.33%)",
         hoverSol:
           "linear-gradient(116.22deg, #7BCBE8 1.27%, #8715E6 49.07%, #33FDFF 103.24%)",
         blackGr2:
