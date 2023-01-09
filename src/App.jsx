@@ -11,6 +11,7 @@ import Education from "./Pages/Education/Education";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import Chain from "./Pages/Chain/Chain";
 import Industry from "./Pages/Industry/Industry";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -19,31 +20,32 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
   useEffect(() => {
+    const body = document.querySelector("html");
+    body.style.overflow = "hidden";
     setTimeout(() => {
       setLoader(false);
     }, 6700);
+    setTimeout(() => {
+      body.style.overflow = "auto";
+    }, 6200);
   }, []);
 
   return (
     <div className="App">
       <ProgressBar gradient gradientColor="#33FDFF" color="#8715E6" />
-      {loader ? (
-        <Loader />
-      ) : (
-        <>
-          <Header />
-          <Routes>
-            <Route element={<Home />} path="/" />
-            <Route element={<Explore />} path="/explore" />
-            <Route element={<Eco />} path="/ecosystem" />
-            <Route element={<Education />} path="/education" />
-            <Route element={<Marketplace />} path="/marketplace" />
-            <Route element={<Chain />} path="/chain" />
-            <Route element={<Industry />} path="/industry" />
-          </Routes>
-          <Footer />
-        </>
-      )}
+      {loader && <Loader />}
+
+      <Header />
+      <Routes>
+        <Route element={<Home loader={loader} />} path="/" />
+        <Route element={<Explore loader={loader} />} path="/explore" />
+        <Route element={<Eco />} path="/ecosystem" />
+        <Route element={<Education />} path="/education" />
+        <Route element={<Marketplace />} path="/marketplace" />
+        <Route element={<Chain />} path="/chain" />
+        <Route element={<Industry />} path="/industry" />
+      </Routes>
+      <Footer />
     </div>
   );
 }

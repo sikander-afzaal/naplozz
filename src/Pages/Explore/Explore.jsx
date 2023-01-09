@@ -9,10 +9,10 @@ import Tokenomics from "./Tokenomics";
 import Utilities from "./Utilities";
 import Whitepaper from "./Whitepaper";
 
-const Explore = () => {
+const Explore = ({ loader }) => {
   return (
     <>
-      <Hero />
+      <Hero loader={loader} />
       <Solutions />
       <Token />
       <Flow />

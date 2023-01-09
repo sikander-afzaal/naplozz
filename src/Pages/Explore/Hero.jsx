@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-const Hero = () => {
+const Hero = ({ loader }) => {
   const heading = useRef();
   const para = useRef();
   const button = useRef();
@@ -12,6 +12,7 @@ const Hero = () => {
   useEffect(() => {
     const timeLine = gsap.timeline({
       defaults: { duration: 0.5 },
+      delay: loader ? 6.9 : 0.5,
     });
     timeLine
       .fromTo(heading.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })

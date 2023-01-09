@@ -16,12 +16,16 @@ const Utilities = () => {
   const line10 = useRef();
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000);
     const timeLine = gsap.timeline({
       scrollTrigger: {
         trigger: container.current,
         start: "top 25%",
-        end: "+=2000",
+        end: "+=100%",
         scrub: 1,
+        markers: true,
       },
     });
     timeLine
@@ -51,12 +55,18 @@ const Utilities = () => {
         { scaleX: 0, transformOrigin: "left" },
         { scaleX: 1 }
       );
+    return () => {
+      timeLine.kill();
+    };
   }, []);
 
   return (
-    <div ref={container} className="wrapper relative mt-[80px] md:mt-[160px]">
+    <div className="wrapper relative mt-[80px] md:mt-[160px]">
       <div className="absolute opacity-10 w-full left-1/2 -translate-x-1/2 top-[40%] -z-10 blur-[250px] bg-[#a50498] max-w-[1028px] h-[1028px]"></div>
-      <div className="contain flex-col gap-[60px] md:gap-[0px] justify-start items-center  md:items-start">
+      <div
+        ref={container}
+        className="contain util flex-col gap-[60px] md:gap-[0px] justify-start items-center  md:items-start"
+      >
         <h2 className="gr-text text-[40px] sm:text-[48px] md:m-0 -mb-5 font-bold">
           Token utilities
         </h2>

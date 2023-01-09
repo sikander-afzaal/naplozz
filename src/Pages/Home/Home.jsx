@@ -4,10 +4,10 @@ import Helps from "./Helps";
 import Hero from "./Hero";
 import Partners from "./Partners";
 
-const Home = () => {
+const Home = ({ loader }) => {
   return (
     <div>
-      <Hero />
+      <Hero loader={loader} />
       <Ecosystem />
       <Solutions />
       <Partners />

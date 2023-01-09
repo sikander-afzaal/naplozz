@@ -4,7 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Flow = () => {
   const glow = useRef();
-  const container = useRef();
+  const container2 = useRef();
   const img = useRef();
   const heading = useRef();
   const para = useRef();
@@ -16,8 +16,8 @@ const Flow = () => {
     const timeLine = gsap.timeline({
       defaults: { duration: 0.5 },
       scrollTrigger: {
-        trigger: container.current,
-        top: "top 20%",
+        trigger: container2.current,
+        start: "top 20%",
       },
     });
     timeLine
@@ -45,7 +45,10 @@ const Flow = () => {
   }, []);
 
   return (
-    <div ref={container} className="wrapper mt-[100px] relative sm:mt-[150px] ">
+    <div
+      ref={container2}
+      className="wrapper mt-[100px] relative sm:mt-[150px] "
+    >
       <div className="absolute w-full -z-10 left-[20%] top-0 sm:top-1/2 sm:-translate-y-1/2 bg-pink blur-[115px] opacity-[0.15] max-w-[1130px] h-[600px]"></div>
       <div className="contain flex-col xl:flex-row justify-center items-center xl:items-start gap-[60px] isolate relative">
         <div ref={img} className="relative w-full">
