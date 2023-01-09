@@ -240,7 +240,7 @@ const Header = () => {
                 />
               </button>
               {dropDownExplore && (
-                <div className="static mt-5 head:m-0 head:absolute px-5 py-3 gap-2 flex justify-center items-center sm:items-start flex-col w-full head:w-max bg-black text-white border-2 border-solid border-[#b3b3b3] rounded-xl top-[140%] left-1/2 head:-translate-x-1/2">
+                <div className="static mt-5 head:m-0 head:absolute px-5 py-3 gap-2 flex justify-center items-center sm:items-start flex-col w-full head:w-max bg-black text-white border-[1px] border-solid border-[#b3b3b3] rounded top-[140%] left-1/2 head:-translate-x-1/2">
                   <Link
                     onClick={() => {
                       setDropDownExplore(false);
@@ -248,7 +248,7 @@ const Header = () => {
                       setDropDownEco(false);
                     }}
                     to={"/explore"}
-                    className="text-lg"
+                    className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
                   >
                     Solution
                   </Link>
@@ -259,7 +259,7 @@ const Header = () => {
                       setDropDownEco(false);
                     }}
                     smooth
-                    className="text-lg"
+                    className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
                     to={"/explore#token"}
                   >
                     Nap Token
@@ -286,7 +286,7 @@ const Header = () => {
                 />
               </button>
               {dropDownEco && (
-                <div className="static mt-5 head:m-0 head:absolute px-5 py-3 gap-2 flex justify-center items-center sm:items-start flex-col w-full head:w-max bg-black text-white border-2 border-solid border-[#b3b3b3] rounded-xl top-[140%] left-1/2 head:-translate-x-1/2">
+                <div className="static mt-5 head:m-0 head:absolute px-5 py-3 gap-2 flex justify-center items-center sm:items-start flex-col w-full head:w-max bg-black text-white border-[1px] border-solid border-[#b3b3b3] rounded top-[140%] left-1/2 head:-translate-x-1/2">
                   <Link
                     onClick={() => {
                       setDropDownExplore(false);
@@ -294,7 +294,7 @@ const Header = () => {
                       setHeaderToggle(false);
                     }}
                     to={"/ecosystem"}
-                    className="text-lg"
+                    className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
                   >
                     Nap Star
                   </Link>
@@ -305,7 +305,7 @@ const Header = () => {
                       setHeaderToggle(false);
                     }}
                     smooth
-                    className="text-lg"
+                    className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
                     to={"/education"}
                   >
                     Nap Education
@@ -317,7 +317,7 @@ const Header = () => {
                       setHeaderToggle(false);
                     }}
                     smooth
-                    className="text-lg"
+                    className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
                     to={"/marketplace"}
                   >
                     Nap Marketplace
@@ -329,7 +329,7 @@ const Header = () => {
                       setHeaderToggle(false);
                     }}
                     smooth
-                    className="text-lg"
+                    className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
                     to={"/chain"}
                   >
                     Nap Chain

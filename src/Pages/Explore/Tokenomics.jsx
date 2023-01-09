@@ -67,7 +67,7 @@ const Tokenomics = () => {
               <div className="w-full h-[2px] bg-tableBorder absolute top-full left-0 z-10"></div>
               <p className="text-xl font-semibold text-white">Pool</p>
               <p className="text-xl font-semibold text-white">Percentage</p>
-              <p className="text-xl font-semibold text-white">%TGS</p>
+              <p className="text-xl font-semibold text-white">NAP</p>
               <p className="text-xl font-semibold text-white">Price</p>
               <p className="text-xl font-semibold text-white">Discount$</p>
               <p className="text-xl font-semibold text-white">%On TGE</p>
