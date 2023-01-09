@@ -11,12 +11,12 @@ const Hero = () => {
       />
       <div className="contain flex-col justify-start items-start">
         <div className="flex xl:flex-row gap-[40px] xl:gap-0 flex-col mt-[30px] sm:mt-[60px] justify-between items-center sm:items-start w-full ">
-          <div className="flex max-w-full xl:max-w-[750px] justify-start items-center text-center sm:text-left sm:items-start flex-col gap-5">
+          <div className="flex max-w-full xl:max-w-[850px] justify-start items-center text-center sm:text-left sm:items-start flex-col gap-5">
             <h2 className="font-bold text-center sm:text-left leading-[1.2] xl:leading-[88px] text-[35px] sm:text-[55px] xl:text-[63px] mid:text-[68px]  text-white">
               <span className="gr-text">Naplozz education platform</span> and
               help desk
             </h2>
-            <p className="text-[rgba(255,255,255,9.76)] font-medium text-lg sm:text-xl">
+            <p className="text-[rgba(255,255,255,9.76)] xl:max-w-[600px] font-medium text-lg sm:text-xl">
               Imagine a world where you can train and educate your employees in
               all the fields of work safety and labor, fire- and food safety.
               Imagine a platform that allows you to hold internal education and
@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
           <img
             src="/education/rocket.png"
-            className="w-full max-w-[550px]"
+            className="w-full max-w-[450px]"
             alt=""
           />
         </div>
@@ -55,7 +55,7 @@ const Hero = () => {
             alt=""
           />
         </div>
-        <h2 className="text-[25px] sm:text-[30px] md:text-left text-center md:text-[40px] mid:text-[48px] mt-[60px] sm:mt-[80px] md:mt-[170px] md:mb-[80px] leading-[1]  lg:leading-[0] text-white font-bold">
+        <h2 className="text-[25px] sm:text-[30px] md:text-left text-center md:text-[40px] mid:text-[48px] mt-[60px] sm:mt-[80px] md:mt-[120px] md:mb-[40px] leading-[1]  lg:leading-[0] text-white font-bold">
           We believe in giving back <br className="lg:block hidden" /> by
           sharing our knowledge{" "}
           <span className="gr-text text-[40px] sm:text-[50px] md:text-[70px] mid:text-[90px] font-bold leading-[1.3]">
