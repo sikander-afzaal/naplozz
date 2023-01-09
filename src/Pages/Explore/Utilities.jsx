@@ -25,7 +25,6 @@ const Utilities = () => {
         start: "top 25%",
         end: "+=100%",
         scrub: 1,
-        markers: true,
       },
     });
     timeLine
