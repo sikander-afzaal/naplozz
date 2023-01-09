@@ -1,12 +1,21 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import GradientButton from "../../Components/GradientButton";
 
 const Whitepaper = () => {
+  //timer
   const [timerDays, setTimerDays] = useState("00");
   const [timerHours, setTimerHours] = useState("00");
   const [timerMinutes, setTimerMinutes] = useState("00");
   const [timerSeconds, setTimerSeconds] = useState("00");
   let interval = useRef();
+  const container = useRef();
+  const whitepaper = useRef();
+  const calculator = useRef();
+  const heading = useRef();
+  const para = useRef();
+  const timer = useRef();
   const startTimer = () => {
     let end = new Date("2/06/2023 3:00 PM");
     interval = setInterval(() => {
@@ -45,12 +54,44 @@ const Whitepaper = () => {
       clearInterval(interval.current);
     };
   });
+  //timer ends
+
+  //animations starts
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeLine = gsap.timeline({
+      defaults: { duration: 0.5 },
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top 30%",
+      },
+    });
+    timeLine
+      .fromTo(whitepaper.current, { x: -50, opacity: 0 }, { x: 0, opacity: 1 })
+      .fromTo(calculator.current, { x: 50, opacity: 0 }, { x: 0, opacity: 1 })
+      .fromTo(
+        [heading.current, para.current],
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.4 }
+      )
+      .fromTo(timer.current, { x: 50, opacity: 0 }, { x: 0, opacity: 1 });
+
+    return () => {
+      timeLine.kill();
+    };
+  }, []);
+
+  //animations ends
+
   return (
-    <div className="wrapper mt-[100px]  relative">
+    <div ref={container} className="wrapper mt-[100px]  relative">
       <div className="absolute -right-[20%] -top-[15%] sm:-top-[25%] blur-[250px] bg-[#141338] -z-10 w-full max-w-[720px] h-[1039px]"></div>
       <div className="contain justify-center lg:flex-row flex-col items-center lg:items-start gap-[60px] lg:gap-[30px]">
         <div className="flex justify-start items-start flex-col w-full ">
-          <div className="flex justify-start items-start flex-col w-full bg-[#050505] rounded-[30px] border-[1px] border-sold border-[#b3b3b3] overflow-hidden gap-3">
+          <div
+            ref={whitepaper}
+            className="flex justify-start items-start flex-col w-full bg-[#050505] rounded-[30px] border-[1px] border-sold border-[#b3b3b3] overflow-hidden gap-3"
+          >
             <img
               src="/explore/whitepaper.png"
               className="w-full object-contain"
@@ -71,17 +112,26 @@ const Whitepaper = () => {
             </div>
           </div>
           <div className="flex justify-start sm:text-left text-center mt-[40px] lg:mt-[70px] xl:mt-[180px] items-start flex-col">
-            <h2 className="gr-text font-bold text-[35px] sm:text-[60px] xl:text-[60px] mid:text-[70px] leading-[1.4]">
+            <h2
+              ref={heading}
+              className="gr-text font-bold text-[35px] sm:text-[60px] xl:text-[60px] mid:text-[70px] leading-[1.4]"
+            >
               The Naplozz ecosystem is designed to grow steadily,
             </h2>
-            <p className="text-lg sm:text-[26px] text-white font-bold">
+            <p
+              ref={para}
+              className="text-lg sm:text-[26px] text-white font-bold"
+            >
               creating value for the NAP tokens and ensuring they are always in
               use.
             </p>
           </div>
         </div>
         <div className="flex justify-start items-center gap-7 flex-col ">
-          <div className="flex justify-start items-center pb-0 flex-col w-full bg-blackGr2 rounded-[30px] border-[1px] max-w-[500px] py-5 sm:py-[30px] px-5 sm:px-[50px] border-sold border-[#b3b3b3]  gap-[30px]">
+          <div
+            ref={calculator}
+            className="flex justify-start items-center pb-0 flex-col w-full bg-blackGr2 rounded-[30px] border-[1px] max-w-[500px] py-5 sm:py-[30px] px-5 sm:px-[50px] border-sold border-[#b3b3b3]  gap-[30px]"
+          >
             <h2 className="text-white font-semibold text-[26px]">
               Token value calculator
             </h2>
@@ -138,7 +188,10 @@ const Whitepaper = () => {
               </button>
             </div>
           </div>
-          <div className="relative isolate max-w-[500px] mt-[30px] w-full bg-[#050505] rounded-[30px]  ">
+          <div
+            ref={timer}
+            className="relative isolate max-w-[500px] mt-[30px] w-full bg-[#050505] rounded-[30px]  "
+          >
             <div className="absolute bg-blueGr -inset-[1px] -z-10 rounded-[30px]"></div>
             <div className="bg-[#050505] flex justify-start items-center gap-5 p-6 flex-col w-full rounded-[30px]">
               <h4 className="text-[#b3b3b3] text-center text-2xl font-bold">

@@ -12,34 +12,36 @@ import Marketplace from "./Pages/Marketplace/Marketplace";
 import Chain from "./Pages/Chain/Chain";
 
 function App() {
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   useEffect(() => {
-    const body = document.querySelector("html");
-    body.style.overflow = "hidden";
     setTimeout(() => {
-      body.style.overflow = "auto";
       setLoader(false);
-    }, 6500);
+    }, 6700);
   }, []);
 
   return (
     <div className="App">
       <ProgressBar gradient gradientColor="#33FDFF" color="#8715E6" />
-      {loader && <Loader />}
-      <Header />
-      <Routes>
-        <Route element={<Home loader={loader} />} path="/" />
-        <Route element={<Explore />} path="/explore" />
-        <Route element={<Eco />} path="/ecosystem" />
-        <Route element={<Education />} path="/education" />
-        <Route element={<Marketplace />} path="/marketplace" />
-        <Route element={<Chain />} path="/chain" />
-      </Routes>
-      <Footer />
+      {loader ? (
+        <Loader />
+      ) : (
+        <>
+          <Header />
+          <Routes>
+            <Route element={<Home />} path="/" />
+            <Route element={<Explore />} path="/explore" />
+            <Route element={<Eco />} path="/ecosystem" />
+            <Route element={<Education />} path="/education" />
+            <Route element={<Marketplace />} path="/marketplace" />
+            <Route element={<Chain />} path="/chain" />
+          </Routes>
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

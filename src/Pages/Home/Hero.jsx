@@ -3,7 +3,7 @@ import GradientButton from "../../Components/GradientButton";
 //gsap
 import gsap, { Circ } from "gsap";
 
-const Hero = ({ loader }) => {
+const Hero = () => {
   const heading = useRef();
   const sub = useRef();
   const para = useRef();
@@ -13,7 +13,6 @@ const Hero = ({ loader }) => {
   useEffect(() => {
     const timeLine = gsap.timeline({
       defaults: { duration: 0.5, ease: Circ.easeOut },
-      delay: loader ? 6.5 : 0,
     });
     timeLine.fromTo(
       heading.current,
@@ -41,7 +40,7 @@ const Hero = ({ loader }) => {
   }, []);
 
   return (
-    <div className="wrapper  mt-[130px] xl:mt-[100px] relative isolate">
+    <div className="wrapper  mt-[130px] min-h-[600px] xl:mt-[100px] relative isolate">
       <div
         ref={shadow}
         className="w-[80%] lg:w-[800px] bg-greenRadial absolute opacity-50 -z-10 blur-[125px] left-0 lg:-left-[400px]  h-[800px] "

@@ -1,6 +1,49 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
 const Tokenomics = () => {
+  const container = useRef();
+  const heading1 = useRef();
+  const table1 = useRef();
+  const table2 = useRef();
+  const pie = useRef();
+  const heading2 = useRef();
+  const chart = useRef();
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeLine = gsap.timeline({
+      defaults: { duration: 0.5 },
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top 30%",
+      },
+    });
+
+    timeLine
+      .fromTo(
+        [heading1.current, table1.current],
+        { opacity: 0, y: -50 },
+        { y: 0, opacity: 1, stagger: 0.4 }
+      )
+      .fromTo(
+        [table2.current, pie.current],
+        { opacity: 0, y: 50 },
+        { y: 0, opacity: 1, stagger: 0.4 }
+      )
+      .fromTo(
+        [heading2.current, chart.current],
+        { opacity: 0, y: -50 },
+        { y: 0, opacity: 1, stagger: 0.4 }
+      );
+
+    return () => {
+      timeLine.kill();
+    };
+  }, []);
+
   return (
-    <div className="wrapper mt-[100px] relative isolate">
+    <div ref={container} className="wrapper mt-[100px] relative isolate">
       <img
         src="/explore/token-bg.png"
         alt=""
@@ -9,10 +52,16 @@ const Tokenomics = () => {
       <div className="absolute opacity-50 w-full -left-[30%]  -top-[13%] -z-10 blur-[250px] bg-greenRadial max-w-[804px] h-[804px]"></div>
       <div className="contain flex-col items-center justify-center">
         <div className="flex justify-start items-start flex-col w-full gap-5">
-          <h2 className="text-white text-[40px] sm:text-[48px] font-bold">
+          <h2
+            ref={heading1}
+            className="text-white text-[40px] sm:text-[48px] font-bold"
+          >
             Tokenomics
           </h2>
-          <div className="flex max-w-[1100px] roadmap overflow-x-auto justify-start items-start flex-col  w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] ">
+          <div
+            ref={table1}
+            className="flex max-w-[1100px] roadmap overflow-x-auto justify-start items-start flex-col  w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] "
+          >
             <div className="grid min-w-[1100px] grid-cols-[1.5fr__1fr__1fr__1fr__1fr__1fr__1fr__1fr] gap-5 w-full py-4 relative">
               <div className="w-full h-[2px] bg-tableBorder absolute bottom-full left-0 z-10"></div>
               <div className="w-full h-[2px] bg-tableBorder absolute top-full left-0 z-10"></div>
@@ -125,7 +174,10 @@ const Tokenomics = () => {
         </div>
         <div className="flex  mt-[80px] xl:mt-[150px] xl:flex-row flex-col justify-between items-center gap-[60px] xl:gap-5 w-full">
           <div className="absolute -z-10 opacity-[0.24] -right-[30%] top-[30%] w-full max-w-[1064px] h-[700px] bg-[#a50498] blur-[250px]"></div>
-          <div className="flex overflow-x-auto justify-start items-start flex-col gap-0  max-w-[550px] w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] relative">
+          <div
+            ref={table2}
+            className="flex overflow-x-auto justify-start items-start flex-col gap-0  max-w-[550px] w-full py-5 px-6 bg-[#05050F] border-2 border-solid border-[#b3b3b3] rounded-[30px] relative"
+          >
             <div className="grid  grid-cols-2 gap-5 w-full py-5 items-center relative">
               <div className="w-full h-[2px] bg-tableBorder absolute bottom-full left-0 z-10"></div>
               <div className="w-full h-[2px] bg-tableBorder absolute top-full left-0 z-10"></div>
@@ -171,16 +223,21 @@ const Tokenomics = () => {
             <div className="w-full h-[2px] bg-tableBorder absolute bottom-[3%] left-0 z-10"></div>
           </div>
           <img
+            ref={pie}
             src="/explore/pie-chart.png"
             className="object-contain w-full max-w-[570px]"
             alt=""
           />
         </div>
         <div className="flex relative z-10 w-full justify-start items-start flex-col gap-10 mt-[80px] xl:mt-[130px]">
-          <h2 className="text-white md:text-left text-center text-[40px] sm:text-[48px] font-bold">
+          <h2
+            ref={heading2}
+            className="text-white md:text-left text-center text-[40px] sm:text-[48px] font-bold"
+          >
             Cumulative Vesting diagram
           </h2>
           <img
+            ref={chart}
             src="/explore/chart.png"
             className="w-full object-contain"
             alt=""
