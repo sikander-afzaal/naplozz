@@ -374,17 +374,17 @@ const Header = () => {
                 className="text-inherit text-xs"
               />
             </a>
-            <a
+            <Link
               onClick={() => {
                 setDropDownEco(false);
                 setDropDownExplore(false);
                 setHeaderToggle(false);
               }}
-              href="#"
+              to="/about"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               About us
-            </a>
+            </Link>
             <a
               onClick={() => {
                 setDropDownEco(false);

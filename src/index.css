@@ -77,6 +77,9 @@ html {
 .explore {
   animation: move 70s ease-in-out 0s infinite alternate;
 }
+.team {
+  animation: move-reverse 70s ease-in-out 0s infinite alternate;
+}
 .eco-words {
   animation: float 5s ease-in-out 0s infinite alternate;
 }
@@ -101,6 +104,28 @@ html {
   100% {
     top: 0;
     left: -40%;
+  }
+}
+@keyframes move-reverse {
+  0% {
+    top: 0;
+    right: -30%;
+  }
+  25% {
+    top: -75%;
+    right: -30%;
+  }
+  50% {
+    top: -75%;
+    right: 10%;
+  }
+  75% {
+    top: -75%;
+    right: -30%;
+  }
+  100% {
+    top: 0;
+    right: -30%;
   }
 }
 @keyframes float {

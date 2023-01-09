@@ -11,6 +11,7 @@ import Education from "./Pages/Education/Education";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import Chain from "./Pages/Chain/Chain";
 import Industry from "./Pages/Industry/Industry";
+import About from "./Pages/About/About";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -44,6 +45,7 @@ function App() {
         <Route element={<Marketplace />} path="/marketplace" />
         <Route element={<Chain />} path="/chain" />
         <Route element={<Industry />} path="/industry" />
+        <Route element={<About />} path="/about" />
       </Routes>
       <Footer />
     </div>
