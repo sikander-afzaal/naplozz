@@ -1,5 +1,11 @@
+import Usage from "./Usage";
+
 const Industry = () => {
-  return <div>Industry</div>;
+  return (
+    <div>
+      <Usage />
+    </div>
+  );
 };
 
 export default Industry;

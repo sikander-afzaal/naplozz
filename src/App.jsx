@@ -11,7 +11,6 @@ import Education from "./Pages/Education/Education";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import Chain from "./Pages/Chain/Chain";
 import Industry from "./Pages/Industry/Industry";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -19,6 +18,7 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+  //loader functionality
   useEffect(() => {
     const body = document.querySelector("html");
     body.style.overflow = "hidden";

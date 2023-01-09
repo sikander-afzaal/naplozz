@@ -118,7 +118,10 @@ const Roadmap = () => {
   }, []);
 
   return (
-    <div ref={wrapper} className="wrapper mt-[100px] lg:mt-[200px] relative">
+    <div
+      ref={wrapper}
+      className="wrapper mt-[100px] lg:mt-[200px] z-10 relative"
+    >
       <div className="absolute left-1/2 bottom-[50%] -translate-x-1/2 bg-[#a50498] blur-[250px] w-full max-w-[1268px] h-[636px] opacity-[0.15] -z-10"></div>
       <div className="contain flex-col gap-5 justify-start items-center sm:items-start">
         <h2 className="text-white md:text-left text-center text-[40px] sm:text-[48px] font-bold">
