@@ -10,9 +10,10 @@ import Eco from "./Pages/Ecosystem/Eco";
 import Education from "./Pages/Education/Education";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import Chain from "./Pages/Chain/Chain";
+import Industry from "./Pages/Industry/Industry";
 
 function App() {
-  const [loader, setLoader] = useState(false);
+  const [loader, setLoader] = useState(true);
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,6 +39,7 @@ function App() {
             <Route element={<Education />} path="/education" />
             <Route element={<Marketplace />} path="/marketplace" />
             <Route element={<Chain />} path="/chain" />
+            <Route element={<Industry />} path="/industry" />
           </Routes>
           <Footer />
         </>
