@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 import GradientButton from "../../Components/GradientButton";
 //gsap
 import gsap, { Circ } from "gsap";
@@ -10,9 +10,10 @@ const Hero = () => {
   const btn = useRef();
   const img = useRef();
   const shadow = useRef();
-  useEffect(() => {
+  useLayoutEffect(() => {
     const timeLine = gsap.timeline({
       defaults: { duration: 0.5, ease: Circ.easeOut },
+      delay: 0.5,
     });
     timeLine.fromTo(
       heading.current,
@@ -40,7 +41,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="wrapper  mt-[130px] min-h-[600px] xl:mt-[100px] relative isolate">
+    <div className="wrapper  mt-[130px] xl:min-h-screen min-h-[600px] xl:mt-[100px] relative isolate">
       <div
         ref={shadow}
         className="w-[80%] lg:w-[800px] bg-greenRadial absolute opacity-50 -z-10 blur-[125px] left-0 lg:-left-[400px]  h-[800px] "
@@ -49,7 +50,7 @@ const Hero = () => {
         <div className="flex xl:-mt-[130px] justify-start items-center text-center xl:text-left xl:items-start xl:max-w-[560px] max-w-[600px] flex-col gap-5">
           <h2
             ref={heading}
-            className="font-bold leading-[1.2] xl:leading-[88px] text-[40px] sm:text-[55px] xl:text-[63px] mid:text-[68px] text-white"
+            className="font-bold opacity-0 leading-[1.2] xl:leading-[88px] text-[40px] sm:text-[55px] xl:text-[63px] mid:text-[68px] text-white"
           >
             Smart Quality{" "}
             <span className="gr-text">
@@ -61,13 +62,13 @@ const Hero = () => {
           </h2>
           <p
             ref={para}
-            className="text-[rgba(255,255,255,0.76)] xl:-mt-7 text-base sm:text-xl font-medium"
+            className="opacity-0 text-[rgba(255,255,255,0.76)] xl:-mt-7 text-base sm:text-xl font-medium"
           >
             Naplozz is a quality management and data tracking application
             utilizing the innovative technology of the blockchain to help
             businesses function more efficiently.{" "}
           </p>
-          <div ref={btn}>
+          <div ref={btn} className="opacity-0">
             <GradientButton
               classes={"w-[151px] h-[55px] hover:w-[190px]"}
               text={" Get Started"}
@@ -77,7 +78,7 @@ const Hero = () => {
         <img
           ref={img}
           src="/hero-phone.png"
-          className="w-full object-contain max-w-[500px] mid:max-w-[600px]"
+          className="w-full opacity-0 object-contain max-w-[500px] mid:max-w-[600px]"
           alt=""
         />
       </div>
