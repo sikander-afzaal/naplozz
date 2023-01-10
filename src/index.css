@@ -145,3 +145,6 @@ html {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.review-slider .splide__slide {
+  padding: 1px;
+}
