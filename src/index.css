@@ -148,3 +148,19 @@ html {
 .review-slider .splide__slide {
   padding: 1px;
 }
+.white-dot {
+  list-style: none;
+}
+.white-dot li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.white-dot li::before {
+  content: "";
+  border-radius: 50%;
+  min-width: 7px;
+  min-height: 7px;
+  background-color: white;
+}
