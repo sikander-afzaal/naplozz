@@ -12,6 +12,7 @@ import Marketplace from "./Pages/Marketplace/Marketplace";
 import Chain from "./Pages/Chain/Chain";
 import Industry from "./Pages/Industry/Industry";
 import About from "./Pages/About/About";
+import Faq from "./Pages/Faq/Faq";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -46,6 +47,7 @@ function App() {
         <Route element={<Chain />} path="/chain" />
         <Route element={<Industry />} path="/industry" />
         <Route element={<About />} path="/about" />
+        <Route element={<Faq />} path="/faq" />
       </Routes>
       <Footer />
     </div>
