@@ -25,7 +25,7 @@ const Ecosystem = () => {
       defaults: { duration: 0.5, ease: Circ.easeOut },
       scrollTrigger: {
         trigger: container.current,
-        start: "top 30%",
+        start: "top 40%",
       },
     });
     const timeLine2 = gsap.timeline({
@@ -63,7 +63,7 @@ const Ecosystem = () => {
   return (
     <div
       ref={container}
-      className="wrapper mt-[60px]  sm:mt-[100px] isolate relative"
+      className="wrapper mt-[70px]  sm:mt-[0px] isolate relative"
     >
       <div className="absolute -left-[20%] lg:block hidden opacity-70 w-[1064px] h-[700px] -z-10 -top-[10%] bg-[#360D39] blur-[250px]"></div>
       <div className="contain flex-col items-start justify-start">

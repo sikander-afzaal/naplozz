@@ -77,8 +77,8 @@ const Hero = ({ loader }) => {
         </div>
         <img
           ref={img}
-          src="/hero-phone.png"
-          className="w-full opacity-0 object-contain max-w-[500px] mid:max-w-[600px]"
+          src="/hero-phone.gif"
+          className="w-full opacity-0 object-contain max-w-[650px] mid:max-w-[700px]"
           alt=""
         />
       </div>

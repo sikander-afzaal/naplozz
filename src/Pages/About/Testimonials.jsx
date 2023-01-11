@@ -52,42 +52,30 @@ const Testimonials = () => {
             <ReviewBox
               PrevArrow={PrevArrow}
               NextArrow={NextArrow}
-              name="Hashlogics"
-              links={{ twitter: "#", linkedin: "#" }}
-              desc=" In aliquam metus ante, a
-            laoreet lorem faucibus ac. Vestibulum mauris mauris, gravida non
-            suscipit non, lacinia ut metus. Integer quam erat, malesuada in
-            lacus et, lobortis auctor elit. Proin lacinia, magna in egestas
-            ultrices, turpis libero pellentesque orci, interdum tempor orci
-            justo eget elit."
+              name="Patrik Panácz (A Grund)"
+              img="/part3.png"
+              desc="he online logging with Naplozz makes it easier for us to close units and check workflows. The assessment of colleagues and their tasks can be traced.
+              Reminding annual / semi-year / quarterly logs to be less frequent greatly reduced our error opportunities."
             />
           </SplideSlide>
           <SplideSlide>
             <ReviewBox
               PrevArrow={PrevArrow}
               NextArrow={NextArrow}
-              name="Hashlogics"
-              links={{ twitter: "#", linkedin: "#" }}
-              desc=" In aliquam metus ante, a
-            laoreet lorem faucibus ac. Vestibulum mauris mauris, gravida non
-            suscipit non, lacinia ut metus. Integer quam erat, malesuada in
-            lacus et, lobortis auctor elit. Proin lacinia, magna in egestas
-            ultrices, turpis libero pellentesque orci, interdum tempor orci
-            justo eget elit."
+              name="Patrik Panácz (A Grund)"
+              img="/part3.png"
+              desc="he online logging with Naplozz makes it easier for us to close units and check workflows. The assessment of colleagues and their tasks can be traced.
+              Reminding annual / semi-year / quarterly logs to be less frequent greatly reduced our error opportunities."
             />
           </SplideSlide>
           <SplideSlide>
             <ReviewBox
               PrevArrow={PrevArrow}
               NextArrow={NextArrow}
-              name="Hashlogics"
-              links={{ twitter: "#", linkedin: "#" }}
-              desc=" In aliquam metus ante, a
-            laoreet lorem faucibus ac. Vestibulum mauris mauris, gravida non
-            suscipit non, lacinia ut metus. Integer quam erat, malesuada in
-            lacus et, lobortis auctor elit. Proin lacinia, magna in egestas
-            ultrices, turpis libero pellentesque orci, interdum tempor orci
-            justo eget elit."
+              name="Patrik Panácz (A Grund)"
+              img="/part3.png"
+              desc="he online logging with Naplozz makes it easier for us to close units and check workflows. The assessment of colleagues and their tasks can be traced.
+              Reminding annual / semi-year / quarterly logs to be less frequent greatly reduced our error opportunities."
             />
           </SplideSlide>
         </Splide>
@@ -98,15 +86,9 @@ const Testimonials = () => {
 
 export default Testimonials;
 
-const ReviewBox = ({
-  name,
-  desc,
-  PrevArrow,
-  NextArrow,
-  links: { twitter, linkedin },
-}) => {
+const ReviewBox = ({ img, name, desc, PrevArrow, NextArrow }) => {
   return (
-    <div className=" w-full max-w-[420px] lg:max-w-[820px] relative">
+    <div className="h-full w-full max-w-[420px] lg:max-w-[820px] relative">
       <div className="grid grid-cols-1 lg:grid-cols-[auto__1fr] px-6 pb-[60px] pt-[30px] lg:py-[40px] gap-x-10 relative rounded-[30px] bg-black w-full h-full">
         {/* arrows---------------- */}
         <FontAwesomeIcon
@@ -120,7 +102,7 @@ const ReviewBox = ({
           className="absolute right-[20px] text-[#B3B3B3] bottom-[20px] text-2xl cursor-pointer"
         />
         {/* arrows---------------- */}
-        <img className="lg:block hidden" src="/about/review.png" alt="" />
+        <img className="lg:block hidden" src={img} alt="" />
         <div className="flex justify-start items-center sm:text-left text-center sm:items-start flex-col gap-3">
           <h3 className="text-white text-[23px] font-semibold">{name}</h3>
           <h3 className="text-[#b3b3b3] text-[20px] font-medium">Company</h3>
@@ -131,22 +113,6 @@ const ReviewBox = ({
             <span className="text-[42px]">"</span> {desc}{" "}
             <span className="text-[42px]">"</span>
           </p>
-          <div className="flex justify-start items-center gap-4">
-            <a
-              href={linkedin}
-              target="blank"
-              className="rounded-full w-8 h-8 bg-[#0262F7] text-white p-3 flex justify-center items-center"
-            >
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
-            <a
-              className="rounded-full w-8 h-8 bg-[#0262F7] text-white p-3 flex justify-center items-center"
-              href={twitter}
-              target="blank"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-          </div>
         </div>
       </div>
       <div className="absolute -z-10 rounded-[30px] bg-btnGr -inset-[1px]"></div>
