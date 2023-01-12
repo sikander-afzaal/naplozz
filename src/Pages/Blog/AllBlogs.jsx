@@ -1,11 +1,65 @@
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import BlogCard from "../../Components/BlogCard";
 
 const AllBlogs = () => {
+  const BLOGS = [
+    {
+      img: "/blogs/hero-bg.png",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
+      head: "Types of Database",
+      date: "23 December 2022",
+    },
+    {
+      img: "/blogs/hero-bg.png",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
+      head: "Types of Database",
+      date: "23 December 2022",
+    },
+    {
+      img: "/blogs/hero-bg.png",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
+      head: "Types of Database",
+      date: "23 December 2022",
+    },
+    {
+      img: "/blogs/hero-bg.png",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
+      head: "Types of Database",
+      date: "23 December 2022",
+    },
+    {
+      img: "/blogs/hero-bg.png",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
+      head: "Types of Database",
+      date: "23 December 2022",
+    },
+    {
+      img: "/blogs/hero-bg.png",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
+      head: "Types of Database",
+      date: "23 December 2022",
+    },
+    {
+      img: "/blogs/hero-bg.png",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
+      head: "Types of Database",
+      date: "23 December 2022",
+    },
+    {
+      img: "/blogs/hero-bg.png",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
+      head: "Types of Database",
+      date: "23 December 2022",
+    },
+  ];
   const [selectedTab, setSelectedTab] = useState("All");
   return (
-    <div className="wrapper mt-[60px]">
+    <div className="wrapper mt-[60px] relative">
+      <div className="absolute top-[5%] left-0 -translate-x-1/2 bg-[#A50498] blur-[250px] w-[1064px] h-[688px] opacity-[0.24] -z-10"></div>
+      <div className="absolute top-[25%] right-0 translate-x-1/2 bg-[#A50498] blur-[250px] w-[1064px] h-[688px] opacity-[0.24] -z-10"></div>
+      <div className="absolute bottom-0 right-0 translate-x-1/2 bg-[#0262F7] blur-[250px] w-[1064px] h-[688px] opacity-[0.1] -z-10"></div>
       <div className="contain flex-col justify-start items-start gap-7">
         <div className="flex xl:flex-row flex-col justify-between items-center gap-8 xl:gap-0 w-full">
           <div className="flex lg:flex-nowrap flex-wrap justify-center md:justify-start lg:justify-around xl:w-auto w-full xl:justify-start items-center gap-4">
@@ -42,6 +96,11 @@ const AllBlogs = () => {
               className="w-full border-0 outline-0 h-full bg-transparent text-[#B3B3B3] text-xl font-normal"
             />
           </div>
+        </div>
+        <div className="grid w-full mt-[40px] grid-cols-1 md:grid-cols-2 place-items-center xl:grid-cols-3 auto-rows-fr gap-[40px]">
+          {BLOGS.map((elem, idx) => {
+            return <BlogCard {...elem} key={idx + "bloc"} />;
+          })}
         </div>
       </div>
     </div>
