@@ -165,3 +165,34 @@ html {
   min-height: 7px;
   background-color: white;
 }
+.rangeslider__fill {
+  background-color: #ff519f !important;
+}
+.rangeslider__handle {
+  background-color: #ff529f !important;
+  border: 5px solid white !important;
+  box-shadow: 0px 0px 19px #ff519f !important;
+}
+.rangeslider__handle::after {
+  display: none;
+}
+.rangeslider {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+.rangeslider__labels {
+  position: absolute !important;
+  left: 0;
+  top: 2px;
+  height: 12px !important;
+  transform: translateY(-50%) !important;
+  width: 100%;
+  pointer-events: none;
+}
+.rangeslider__label-item {
+  background-color: rgba(255, 255, 255, 0.38) !important;
+  width: 2px !important;
+  height: 100% !important;
+  top: 29% !important;
+  transform: translateY(-50%);
+  bottom: initial !important;
+}

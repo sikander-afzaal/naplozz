@@ -15,6 +15,7 @@ import About from "./Pages/About/About";
 import Faq from "./Pages/Faq/Faq";
 import Info from "./Pages/Info/Info";
 import Blog from "./Pages/Blog/Blog";
+import Pricing from "./Pages/Pricing/Pricing";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -52,6 +53,7 @@ function App() {
         <Route element={<Faq />} path="/faq" />
         <Route element={<Info />} path="/info" />
         <Route element={<Blog />} path="/blogs" />
+        <Route element={<Pricing />} path="/pricing" />
       </Routes>
       <Footer />
     </div>
