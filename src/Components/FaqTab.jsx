@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const FaqTab = ({ question, answer }) => {
+const FaqTab = ({ question, answer, list, note }) => {
   const [active, setActive] = useState(false);
   return (
     <div className="flex relative border-b-[1px] max-w-[800px] border-solid border-black pb-8 pt-8 justify-start items-start flex-col w-full">
-      <div className="w-[90%] absolute bottom-0 left-1/2 -translate-x-1/2 opacity-50 bg-[rgb(179,179,179)]  h-[1px]">
+      <div className="w-[100%] absolute bottom-0 left-1/2 -translate-x-1/2 opacity-50 bg-[rgb(179,179,179)]  h-[1px]">
         <div className="absolute left-0 z-20 top-1/2 -translate-y-1/2 xl:-translate-x-1/2 bg-[rgb(179,179,179)]   w-2 h-2 rotate-45"></div>
         <div className="absolute right-0 z-20 top-1/2 -translate-y-1/2 xl:translate-x-1/2 bg-[rgb(179,179,179)] rounded-full   w-2 h-2 rotate-45"></div>
       </div>
@@ -52,13 +52,34 @@ const FaqTab = ({ question, answer }) => {
         </h3>
       </div>
       <div
-        className={`flex justify-start overflow-hidden transition-all duration-500 items-start ${
-          active ? "max-h-[2000px]" : "max-h-0"
+        className={`flex justify-start gap-2 flex-col overflow-hidden transition-all duration-500 items-start ${
+          active ? "max-h-[5000px]" : "max-h-0"
         }`}
       >
-        <p className="text-base sm:text-xl text-[#B3B3B3] max-w-[800px] opacity-70">
-          {answer}
-        </p>
+        {answer && (
+          <p className="text-base sm:text-xl text-[#B3B3B3] max-w-[800px] opacity-70">
+            {answer}
+          </p>
+        )}
+        {list && (
+          <ul className="white-dot">
+            {list.map((elem, idx) => {
+              return (
+                <li
+                  className="text-base sm:text-xl text-[#B3B3B3] max-w-[800px] opacity-70"
+                  key={idx + elem}
+                >
+                  {elem}
+                </li>
+              );
+            })}
+          </ul>
+        )}{" "}
+        {note && (
+          <p className="text-base sm:text-xl text-[#B3B3B3] max-w-[800px] opacity-70">
+            {note}
+          </p>
+        )}
       </div>
     </div>
   );

@@ -154,11 +154,12 @@ html {
 .white-dot li {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 .white-dot li::before {
   content: "";
+  margin-top: 8px;
   border-radius: 50%;
   min-width: 7px;
   min-height: 7px;
