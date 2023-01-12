@@ -14,6 +14,7 @@ import Industry from "./Pages/Industry/Industry";
 import About from "./Pages/About/About";
 import Faq from "./Pages/Faq/Faq";
 import Info from "./Pages/Info/Info";
+import Blog from "./Pages/Blog/Blog";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -50,6 +51,7 @@ function App() {
         <Route element={<About />} path="/about" />
         <Route element={<Faq />} path="/faq" />
         <Route element={<Info />} path="/info" />
+        <Route element={<Blog />} path="/blogs" />
       </Routes>
       <Footer />
     </div>

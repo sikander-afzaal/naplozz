@@ -22,6 +22,7 @@ module.exports = {
         hoverShadow: "0px 0px 20px #7BCBE8",
       },
       backgroundImage: {
+        blogGr: "linear-gradient(180deg, rgba(5, 5, 15, 0) 0%, #05050F 77.08%)",
         marketplace:
           "linear-gradient(116.22deg, #7BCBE8 1.27%, #8715E6 49.07%, #33FDFF 103.24%)",
         roadmapLine:
