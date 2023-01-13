@@ -53,9 +53,12 @@ const SubscribeBox = ({
             );
           })}
         </div>
-        <p className="font-semibold cursor-pointer text-[#ff519f] mt-2">
+        <a
+          href="#detailed"
+          className="font-semibold cursor-pointer text-[#ff519f] mt-2"
+        >
           View Detailed Pricing
-        </p>
+        </a>
         <a
           href="http://app.naplozz.io"
           target="blank"

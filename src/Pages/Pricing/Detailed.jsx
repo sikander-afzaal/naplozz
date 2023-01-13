@@ -181,7 +181,7 @@ const Detailed = () => {
     },
   ];
   return (
-    <div className="wrapper mt-[70px] xl:mt-[100px] relative">
+    <div id="detailed" className="wrapper mt-[70px] xl:mt-[100px] relative">
       <div className="absolute right-0 translate-x-1/2 -top-[8%] -z-10 w-full h-[217px] blur-[130px] bg-bluishGr max-w-[1709px]"></div>
       <div className="absolute left-0 -translate-x-1/2 top-[10%] -z-10 w-full h-[1000px] bg-[#A50498] blur-[250px] opacity-[0.25]  max-w-[1709px]"></div>
       <div className="contain flex-col  justify-start items-center sm:items-start gap-5">
