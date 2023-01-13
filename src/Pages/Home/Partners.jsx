@@ -80,6 +80,11 @@ const Partners = () => {
           <img src="/part8.png" className="hover:brightness-200" alt="" />
           <img src="/part9.png" className="hover:brightness-200" alt="" />
           <img src="/part10.png" className="hover:brightness-200" alt="" />
+          <img
+            src="/part11.svg"
+            className="hover:brightness-200 max-h-[50px] brightness-75 max-w-[150px]"
+            alt=""
+          />
         </div>
       </div>
     </div>
