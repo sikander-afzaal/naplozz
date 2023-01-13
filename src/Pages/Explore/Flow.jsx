@@ -46,6 +46,7 @@ const Flow = () => {
 
   return (
     <div
+      id="flow"
       ref={container2}
       className="wrapper mt-[100px] relative sm:mt-[150px] "
     >

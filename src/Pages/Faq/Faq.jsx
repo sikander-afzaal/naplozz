@@ -1,5 +1,6 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import FaqTab from "../../Components/FaqTab";
 import GradientButton from "../../Components/GradientButton";
 
@@ -243,15 +244,17 @@ const Faq = () => {
             Can’t find the answer you are looking for? Contact our friendly
             team.
           </p>
-          <GradientButton
-            classes={"w-[145px] h-[55px] hover:w-[170px] mt-2"}
-            text={
-              <>
-                Contact us
-                <FontAwesomeIcon icon={faChevronRight} className="text-sm" />
-              </>
-            }
-          />
+          <Link to="/contact">
+            <GradientButton
+              classes={"w-[145px] h-[55px] hover:w-[170px] mt-2"}
+              text={
+                <>
+                  Contact us
+                  <FontAwesomeIcon icon={faChevronRight} className="text-sm" />
+                </>
+              }
+            />
+          </Link>
         </div>
       </div>
     </div>

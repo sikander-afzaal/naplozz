@@ -60,6 +60,7 @@ const Hero = ({ loader }) => {
                   <FontAwesomeIcon icon={faChevronRight} className="text-sm" />
                 </>
               }
+              link="http://app.naplozz.io/"
             />
           </div>
         </div>

@@ -5,9 +5,9 @@ import SubscribeBox from "../../Components/SubscribeBox";
 
 const Subscription = () => {
   const [planType, setPlanType] = useState("monthly");
-  const [value, setValue] = useState(0);
+  const [users, setUsers] = useState(0);
   const handleChange = (val) => {
-    setValue(val);
+    setUsers(val);
   };
   const horizontalLabels = {
     0: "",
@@ -121,13 +121,19 @@ const Subscription = () => {
             min={0}
             max={100}
             labels={horizontalLabels}
-            value={value}
+            value={users}
             onChange={handleChange}
           />
         </div>
         <div className="xl:flex grid grid-cols-1 sm:grid-cols-2 place-items-center mt-5  gap-10 xl:gap-5 justify-between w-full items-start">
           {PLANS__DATA.map((elem, idx) => {
-            return <SubscribeBox {...elem} key={idx + "plan" + elem.heading} />;
+            return (
+              <SubscribeBox
+                users={users}
+                {...elem}
+                key={idx + "plan" + elem.heading}
+              />
+            );
           })}
         </div>
         <p className="text-center text-[#FF519F] self-center mt-3">

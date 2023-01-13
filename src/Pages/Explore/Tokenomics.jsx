@@ -43,7 +43,11 @@ const Tokenomics = () => {
   }, []);
 
   return (
-    <div ref={container} className="wrapper mt-[100px] relative isolate">
+    <div
+      id="tokenomics"
+      ref={container}
+      className="wrapper mt-[100px] relative isolate"
+    >
       <img
         src="/explore/token-bg.png"
         alt=""

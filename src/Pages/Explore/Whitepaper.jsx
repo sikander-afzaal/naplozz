@@ -84,7 +84,11 @@ const Whitepaper = () => {
   //animations ends
 
   return (
-    <div ref={container} className="wrapper mt-[100px]  relative">
+    <div
+      id="whitepaper"
+      ref={container}
+      className="wrapper mt-[100px]  relative"
+    >
       <div className="absolute -right-[20%] -top-[15%] sm:-top-[25%] blur-[250px] bg-[#141338] -z-10 w-full max-w-[720px] h-[1039px]"></div>
       <div className="contain justify-center lg:flex-row flex-col items-center lg:items-start gap-[60px] lg:gap-[30px]">
         <div className="flex justify-start items-start flex-col w-full ">

@@ -83,6 +83,7 @@ const Solutions = () => {
 
   return (
     <div
+      id="solutions"
       ref={container}
       className="wrapper isolate py-[50px] xl:py-[100px] mt-[20px] relative"
     >

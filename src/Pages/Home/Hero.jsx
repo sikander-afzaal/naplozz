@@ -72,6 +72,7 @@ const Hero = ({ loader }) => {
             <GradientButton
               classes={"w-[151px] h-[55px] hover:w-[190px]"}
               text={" Get Started"}
+              link="http://app.naplozz.io/"
             />
           </div>
         </div>

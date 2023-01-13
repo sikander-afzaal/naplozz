@@ -1,4 +1,4 @@
-const SubscribeBox = ({ heading, price, perks, recommended }) => {
+const SubscribeBox = ({ heading, price, perks, recommended, users }) => {
   return (
     <div className="w-full max-w-full xl:max-w-[266px] xl:h-auto h-full mid:max-w-[306px] rounded-[30px]  relative">
       <div
@@ -23,6 +23,10 @@ const SubscribeBox = ({ heading, price, perks, recommended }) => {
               <p className="text-white opacity-[0.24]">/user/month*</p>
             </div>
             <p className="text-white opacity-[0.38]">min. 3 users</p>
+            <p className="text-white opacity-[0.38] my-1">Users: {users}</p>
+            <p className="text-white opacity-[0.38]">
+              Total Amount: {users * price}
+            </p>
           </div>
         )}
         <div className="flex justify-start items-start flex-col gap-4 w-full">

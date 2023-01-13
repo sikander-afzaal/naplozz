@@ -7,17 +7,13 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-// import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     <div className="wrapper mt-[60px] lg:mt-[100px] relative">
-      {/* <FontAwesomeIcon
-        onClick={() => window.scrollTo(0, 0)}
-        icon={faArrowUp}
-        className="absolute right-5 bottom-[85%] sm:bottom-5 rounded-full w-5 sm:w-7 h-5 sm:h-7 grid place-items-center p-3 box-border cursor-pointer bg-btnBg  text-white text-3xl"
-      /> */}
       <div className="contain pt-[40px] sm:pt-[60px] pb-5 justify-start items-center flex-col">
         <footer className="w-full grid grid-cols-2 grid-rows-2 sm:flex sm:flex-col lg:flex-row justify-between items-center sm:items-start gap-5">
           <svg
@@ -169,75 +165,131 @@ const Footer = () => {
 
           {/* <img src="/foot-logo.png" alt="" /> */}
           <div className=" flex justify-start items-center sm:items-start flex-col gap-5">
-            <a href="#" className="text-white text-base font-semibold">
+            <Link
+              to="/ecosystem"
+              smooth={true}
+              className="text-white text-base font-semibold"
+            >
               Ecosystem
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </Link>
+            <Link to="/blogs" className="text-white text-base font-semibold">
               Blog
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </Link>
+            <Link to="pricing" className="text-white text-base font-semibold">
               Pricing
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </Link>
+            <Link to="/about" className="text-white text-base font-semibold">
               About Us
-            </a>
+            </Link>
+            <Link to="/faq" className="text-white text-base font-semibold">
+              FAQ
+            </Link>
           </div>
           <div className="sm:flex hidden justify-start items-center sm:items-start flex-col gap-5">
-            <a href="#" className="text-white text-base font-semibold">
+            <HashLink
+              to="/explore#solutions"
+              className="text-white text-base font-semibold"
+            >
               Naplozz App
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/explore#solutions"
+              className="text-white text-base font-semibold"
+            >
               Naplozz Wizard
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/explore#solutions"
+              className="text-white text-base font-semibold"
+            >
               Task management
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/explore#solutions"
+              className="text-white text-base font-semibold"
+            >
               Log management
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/explore#solutions"
+              className="text-white text-base font-semibold"
+            >
               Naplozz Audit
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/explore#solutions"
+              className="text-white text-base font-semibold"
+            >
               Naplozz Attendance
-            </a>
+            </HashLink>
           </div>
           <div className=" flex justify-start items-center sm:items-start flex-col gap-5">
-            <a href="#" className="text-white text-base font-semibold">
+            <HashLink to="/" className="text-white text-base font-semibold">
               How it works
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/explore#flow"
+              className="text-white text-base font-semibold"
+            >
               Token flow
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/explore#tokenomics"
+              className="text-white text-base font-semibold"
+            >
               Tokenomics
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/explore#whitepaper"
+              className="text-white text-base font-semibold"
+            >
               White paper
-            </a>
+            </HashLink>
           </div>
           <div className=" sm:flex hidden justify-start items-center sm:items-start flex-col gap-5">
-            <a href="#" className="text-white text-base font-semibold">
+            <HashLink
+              to="/industry#catering"
+              className="text-white text-base font-semibold"
+            >
               Catering
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/industry#public_catering"
+              className="text-white text-base font-semibold"
+            >
               Public catering
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/industry#accommodation"
+              className="text-white text-base font-semibold"
+            >
               Accommodation
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/industry#food_producer"
+              className="text-white text-base font-semibold"
+            >
               Food producer
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/industry#food_retail"
+              className="text-white text-base font-semibold"
+            >
               Food retail
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              to="/industry#industrial_activity"
+              className="text-white text-base font-semibold"
+            >
               Industrial activity
-            </a>
-            <a href="#" className="text-white text-base font-semibold">
+            </HashLink>
+            <HashLink
+              onClick={() => window.scrollTo(0, 0)}
+              to="/industry"
+              className="text-white text-base font-semibold"
+            >
               See All
-            </a>
+            </HashLink>
           </div>
         </footer>
         <div className="flex flex-col w-full justify-center items-center gap-5 mt-14 sm:mt-5">

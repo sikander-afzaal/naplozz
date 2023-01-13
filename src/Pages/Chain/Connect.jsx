@@ -12,10 +12,14 @@ const Connect = () => {
         </h3>
         <h2 className="gr-text lg:block flex justify-start items-center gap-3 flex-col font-bold text-center lg:text-left leading-[1.1] text-[40px] sm:text-[60px] lg:text-[90px] max-w-[993px]">
           Let’s Connect.
-          <button className="rounded-full border-none lg:-translate-y-[40%] cursor-pointer bg-[#2BD1FF] w-[170px] h-[50px] text-[#141338] font-bold text-base inline-flex justify-center items-center gap-3">
+          <a
+            href="http://app.naplozz.io/"
+            target="blank"
+            className="rounded-full ml-2 border-none lg:-translate-y-[40%] cursor-pointer bg-[#2BD1FF] w-[170px] h-[50px] text-[#141338] font-bold text-base inline-flex justify-center items-center gap-3"
+          >
             Get Started{" "}
             <FontAwesomeIcon icon={faChevronRight} className="text-sm" />
-          </button>
+          </a>
         </h2>
       </div>
     </div>

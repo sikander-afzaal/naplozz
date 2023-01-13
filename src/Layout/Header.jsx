@@ -369,10 +369,6 @@ const Header = () => {
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               Pricing
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className="text-inherit text-xs"
-              />
             </Link>
             <Link
               onClick={() => {
@@ -385,17 +381,17 @@ const Header = () => {
             >
               About us
             </Link>
-            <a
+            <Link
               onClick={() => {
                 setDropDownEco(false);
                 setDropDownExplore(false);
                 setHeaderToggle(false);
               }}
-              href="#"
+              to="/contact"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               Contact
-            </a>
+            </Link>
           </div>
           <div className="flex justify-start items-center sm:items-start flex-col head:flex-row head:items-center  gap-6 head:gap-2 xl:gap-6">
             <button className="bg-transparent border-[1px] border-solid border-white text-white h-[41px] w-[104px] rounded-full hover:bg-pink hover:border-pink  transition-all duration-500 cursor-pointer text-lg font-medium">
