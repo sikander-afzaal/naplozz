@@ -20,7 +20,7 @@ const Team = () => {
       },
     },
     {
-      name: "Zsolt Hegyvar",
+      name: "Zsolt Hegyvari",
       role: " The Co-founder and Chairman",
       img: "/about/team2.png",
       desc: "Zsolt graduated in 2004 at the University of Economics in Pécs(Hungary). He established and succeeded several companies in various segments of the economy. He has nearly 30 years of experience as a managing director, of which the last 15 years he has been the leader of a significant Hungarian agricultural company group. ",
@@ -71,6 +71,15 @@ const Team = () => {
       },
     },
     {
+      name: "Virag Mendline Kiss",
+      role: "Web designer",
+      img: "/about/team7.png",
+      desc: "Working in the blockchain Industry since 2017. Managed blockchain events such as Blockchain Summit Dubai and Blockbali. Working with leading cryptocurrency projects. Helping projects grow in audience, investments, developments and partnerships.",
+      link: {
+        linkedin: "https://www.linkedin.com/in/leonardus-soeterbroek/",
+      },
+    },
+    {
       name: "Adeeb Ahmad ",
       role: "Senior web developer and advisor ",
       img: "/about/team6.png",
@@ -88,9 +97,10 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/nilesh-kikani-a1099242/ ",
       },
     },
+
     {
-      name: "Virag Mendline Kiss",
-      role: "Web designer",
+      name: "Leonardus Soeterbroek",
+      role: "BI Manager",
       img: "/about/team6.png",
       link: {
         linkedin: "https://www.linkedin.com/in/virag-mendline-kiss-073267247/",
@@ -98,7 +108,7 @@ const Team = () => {
     },
     {
       name: "Tas ",
-      role: "Community manager",
+      role: "Community Manager",
       img: "/about/team6.png",
       link: {
         twitter: "https://twitter.com/balogh_tas",

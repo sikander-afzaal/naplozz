@@ -89,7 +89,7 @@ const Subscription = () => {
           <h2 className="gr-text font-bold text-[40px] sm:text-left text-center sm:text-[45px] lg:text-[60px] xl:text-[90px]">
             Subscription Model
           </h2>
-          <div className="flex justify-between p-[3px] items-center gap-1 w-full rounded-full max-w-[206px] bg-black border-[1px] border-solid border-[#FF519F] h-[48px]">
+          <div className="flex relative justify-between p-[3px] items-center gap-1 w-full rounded-full max-w-[206px] bg-black border-[1px] border-solid border-[#FF519F] h-[48px]">
             <p
               onClick={() => setPlanType("monthly")}
               className={`${
@@ -110,6 +110,11 @@ const Subscription = () => {
             >
               Yearly
             </p>
+            {planType === "yearly" && (
+              <p className="text-[#FF519F] font-medium text-base absolute top-[120%] left-1/2 -translate-x-1/2">
+                20% Discount
+              </p>
+            )}
           </div>
         </div>
         <div className="flex justify-start items-start flex-col w-full">
@@ -118,7 +123,7 @@ const Subscription = () => {
           </p>
           <Slider
             className="w-full"
-            min={0}
+            min={3}
             max={100}
             labels={horizontalLabels}
             value={users}
@@ -131,6 +136,7 @@ const Subscription = () => {
               <SubscribeBox
                 users={users}
                 {...elem}
+                discount={planType === "yearly" ? true : false}
                 key={idx + "plan" + elem.heading}
               />
             );

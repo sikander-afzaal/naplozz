@@ -6,52 +6,18 @@ import BlogCard from "../../Components/BlogCard";
 const AllBlogs = () => {
   const BLOGS = [
     {
-      img: "/blogs/hero-bg.png",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
-      head: "Types of Database",
-      date: "23 December 2022",
+      img: "/blogs/blog1.webp",
+      desc: "Financial markets evolve and evolve rapidly. The crypto market is no different...",
+      head: "Crypto tokens and the blockchain: special new use cases",
+      date: "Dec 15, 2022",
+      id: 1,
     },
     {
-      img: "/blogs/hero-bg.png",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
-      head: "Types of Database",
-      date: "23 December 2022",
-    },
-    {
-      img: "/blogs/hero-bg.png",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
-      head: "Types of Database",
-      date: "23 December 2022",
-    },
-    {
-      img: "/blogs/hero-bg.png",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
-      head: "Types of Database",
-      date: "23 December 2022",
-    },
-    {
-      img: "/blogs/hero-bg.png",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
-      head: "Types of Database",
-      date: "23 December 2022",
-    },
-    {
-      img: "/blogs/hero-bg.png",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
-      head: "Types of Database",
-      date: "23 December 2022",
-    },
-    {
-      img: "/blogs/hero-bg.png",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
-      head: "Types of Database",
-      date: "23 December 2022",
-    },
-    {
-      img: "/blogs/hero-bg.png",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis dictum nisl id tristique.",
-      head: "Types of Database",
-      date: "23 December 2022",
+      img: "/blogs/blog2.webp",
+      desc: "I think many people have already asked this question. How to make money more efficiently with less work...",
+      head: "How do we optimize our work tasks?",
+      date: "Jul 23, 2022",
+      id: 2,
     },
   ];
   const [selectedTab, setSelectedTab] = useState("All");

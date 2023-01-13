@@ -6,9 +6,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gsap, { Circ } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ContactModal from "../../Components/ContactModal";
+import axios from "axios";
 
 const Helps = () => {
+  //for the form -------------
+  const [input, setInput] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    description: "",
+  });
   const [popup, setPopup] = useState(false);
+  //-------------------------------------------
   const container = useRef();
   const heading = useRef();
   const para = useRef();
@@ -44,6 +53,14 @@ const Helps = () => {
       timeLine.kill();
     };
   }, []);
+  //for the form -------
+  const changeHandler = (e) => {
+    const inputName = e.target.name;
+    const value = e.target.value;
+    setInput((prev) => {
+      return { ...prev, [inputName]: value };
+    });
+  };
   return (
     <>
       {popup && <ContactModal setModal={setPopup} />}
@@ -73,31 +90,65 @@ const Helps = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              setPopup(true);
+              if (
+                input.description &&
+                input.email &&
+                input.firstName &&
+                input.lastName
+              ) {
+                axios
+                  .post("https://apis.naplozz.hu/api/v1/users/sendmail", input)
+                  .then(() => setPopup(true))
+                  .catch(() => {
+                    alert("failed");
+                  })
+                  .finally(() => {
+                    setInput({
+                      firstName: "",
+                      lastName: "",
+                      email: "",
+                      description: "",
+                    });
+                  });
+              } else {
+                alert("Please fill the form");
+              }
             }}
             ref={form}
             className="flex border-solid border-[1px] border-[#b3b3b3] p-5 sm:p-8 rounded-2xl justify-start items-center flex-col gap-5 w-full"
           >
             <div className="flex sm:flex-row flex-col justify-center items-center w-full gap-5">
               <input
+                value={input.firstName}
+                onChange={changeHandler}
+                name="firstName"
                 type="text"
                 placeholder="First Name"
-                className="w-full h-[60px] text-base text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
+                className="w-full h-[60px] text-base text-white text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
               />
               <input
+                value={input.lastName}
+                onChange={changeHandler}
+                name="lastName"
                 type="text"
                 placeholder="Last Name"
-                className="w-full h-[60px] text-base text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
+                className="w-full h-[60px] text-base text-white text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
               />
             </div>
             <input
+              value={input.email}
+              onChange={changeHandler}
+              name="email"
               type="email"
               placeholder="Email"
-              className="w-full h-[60px] text-base text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
+              className="w-full h-[60px] text-base text-white text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
             />
             <textarea
+              value={input.description}
+              onChange={changeHandler}
+              name="description"
               placeholder="Enter your message here"
-              className="w-full h-[100px] pt-5 resize-none text-base text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
+              className="w-full h-[100px] text-white pt-5 resize-none text-base text-[rgba(163, 163, 163, 0.6)] bg-[rgba(13,13,13,0.5)] rounded-[20px] pl-5 "
             />
             <div ref={btn} className="self-end">
               <GradientButton

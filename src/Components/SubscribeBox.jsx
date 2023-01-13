@@ -1,4 +1,11 @@
-const SubscribeBox = ({ heading, price, perks, recommended, users }) => {
+const SubscribeBox = ({
+  heading,
+  price,
+  perks,
+  recommended,
+  users,
+  discount,
+}) => {
   return (
     <div className="w-full max-w-full xl:max-w-[266px] xl:h-auto h-full mid:max-w-[306px] rounded-[30px]  relative">
       <div
@@ -18,14 +25,14 @@ const SubscribeBox = ({ heading, price, perks, recommended, users }) => {
             <div className="flex justify-start items-center gap-1">
               <h2 className="text-white font-semibold flex justify-start gap-1 items-center text-[40px]">
                 <sup className="text-base font-normal self-start mt-3">$</sup>{" "}
-                {price}
+                {discount ? (price * 0.8).toFixed(2) : price}
               </h2>
               <p className="text-white opacity-[0.24]">/user/month*</p>
             </div>
             <p className="text-white opacity-[0.38]">min. 3 users</p>
             <p className="text-white opacity-[0.38] my-1">Users: {users}</p>
             <p className="text-white opacity-[0.38]">
-              Total Amount: {users * price}
+              Total Amount: ${(users * (price * 0.8)).toFixed(2)}
             </p>
           </div>
         )}
@@ -49,7 +56,11 @@ const SubscribeBox = ({ heading, price, perks, recommended, users }) => {
         <p className="font-semibold cursor-pointer text-[#ff519f] mt-2">
           View Detailed Pricing
         </p>
-        <button className="rounded-full text-[#141338] font-bold flex justify-center items-center gap-2 bg-[#2BD1FF] w-[170px] h-[51px] border-2 border-solid border-[#2BD1FF] hover:bg-transparent hover:text-white transition-all duration-500 cursor-pointer mt-5">
+        <a
+          href="http://app.naplozz.io"
+          target="blank"
+          className="rounded-full text-[#141338] font-bold flex justify-center items-center gap-2 bg-[#2BD1FF] w-[170px] h-[51px] border-2 border-solid border-[#2BD1FF] hover:bg-transparent hover:text-white transition-all duration-500 cursor-pointer mt-5"
+        >
           Get started{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +76,7 @@ const SubscribeBox = ({ heading, price, perks, recommended, users }) => {
               d="M8.25 4.5l7.5 7.5-7.5 7.5"
             />
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   );

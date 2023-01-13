@@ -57,7 +57,7 @@ function App() {
         <Route element={<Blog />} path="/blogs" />
         <Route element={<Pricing />} path="/pricing" />
         <Route element={<Contact />} path="/contact" />
-        <Route element={<BlogDetail />} path="/blog/:name" />
+        <Route element={<BlogDetail />} path="/blog/:id" />
       </Routes>
       <Footer />
     </div>
