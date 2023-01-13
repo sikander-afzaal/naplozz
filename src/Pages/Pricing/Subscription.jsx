@@ -5,7 +5,7 @@ import SubscribeBox from "../../Components/SubscribeBox";
 
 const Subscription = () => {
   const [planType, setPlanType] = useState("monthly");
-  const [users, setUsers] = useState(0);
+  const [users, setUsers] = useState(3);
   const handleChange = (val) => {
     setUsers(val);
   };
@@ -142,10 +142,6 @@ const Subscription = () => {
             );
           })}
         </div>
-        <p className="text-center text-[#FF519F] self-center mt-3">
-          *Plus 20% NAP token will be bought from the open market of each of the
-          payments by the subscriber.
-        </p>
       </div>
     </div>
   );

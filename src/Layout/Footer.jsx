@@ -167,7 +167,6 @@ const Footer = () => {
           <div className=" flex justify-start items-center sm:items-start flex-col gap-5">
             <Link
               to="/ecosystem"
-              smooth={true}
               className="text-white text-base font-semibold"
             >
               Ecosystem
