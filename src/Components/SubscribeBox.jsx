@@ -35,7 +35,7 @@ const SubscribeBox = ({
               Total Amount: ${(users * (price * 0.8)).toFixed(2)}
             </p>
             <p className="text-left text-[#FF519F] text-sm mt-2">
-              *you pay they will pay 10% with token and 90% with usd
+              *you will pay 10% with token and 90% with usd
             </p>
           </div>
         )}

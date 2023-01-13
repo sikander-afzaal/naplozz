@@ -1,5 +1,6 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -14,19 +15,19 @@ const Hero = () => {
       />
       <div className="contain  flex-col  z-20 gap-4 items-center md:text-left text-center md:items-start justify-start static md:absolute bottom-[10%] lg:bottom-[5%] left-1/2 md:-translate-x-1/2">
         <h2 className="text-white font-bold text-[35px] md:text-[48px]">
-          10 different types of Database
+          Crypto tokens and the blockchain: special new use cases
         </h2>
         <p className="text-base md:text-xl font-medium max-w-[700px] text-[#b3b3b3]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          iaculis dictum nisl id tristique.
+          Financial markets evolve and evolve rapidly. The crypto market is no
+          different...
         </p>
-        <a
-          href="#"
+        <Link
+          to="/blog/1"
           className="no-underline text-[#FF519F] font-medium text-xl md:text-base flex justify-start items-center gap-2"
         >
           View Post{" "}
           <FontAwesomeIcon icon={faArrowRight} className="text-white" />
-        </a>
+        </Link>
       </div>
     </div>
   );

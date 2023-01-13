@@ -2,7 +2,7 @@ const DATA = {
   1: {
     heading: "Crypto tokens and the blockchain: special new use cases",
     date: "Dec 15, 2022",
-    img: "/blogs/blog1.webp",
+    img: "/blogs/hero-bg.png",
     details: [
       {
         para: [

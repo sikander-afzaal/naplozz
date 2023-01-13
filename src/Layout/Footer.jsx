@@ -7,13 +7,19 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
-    <div className="wrapper mt-[60px] lg:mt-[100px] relative">
+    <div className="wrapper sm:p-0 pb-16  mt-[60px] lg:mt-[100px] relative">
+      <FontAwesomeIcon
+        onClick={() => window.scrollTo(0, 0)}
+        icon={faArrowUp}
+        className="absolute bg-btnGr rounded-full h-7 w-7 box-border p-3 cursor-pointer text-white  bottom-5 right-5"
+      />
       <div className="contain pt-[40px] sm:pt-[60px] pb-5 justify-start items-center flex-col">
         <footer className="w-full grid grid-cols-2 grid-rows-2 sm:flex sm:flex-col lg:flex-row justify-between items-center sm:items-start gap-5">
           <svg

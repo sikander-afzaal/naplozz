@@ -394,12 +394,20 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex justify-start items-center sm:items-start flex-col head:flex-row head:items-center  gap-6 head:gap-2 xl:gap-6">
-            <button className="bg-transparent border-[1px] border-solid border-white text-white h-[41px] w-[104px] rounded-full hover:bg-pink hover:border-pink  transition-all duration-500 cursor-pointer text-lg font-medium">
+            <a
+              href="http://app.naplozz.io/"
+              target={"blank"}
+              className="bg-transparent flex justify-center items-center border-[1px] border-solid border-white text-white h-[41px] w-[104px] rounded-full hover:bg-pink hover:border-pink  transition-all duration-500 cursor-pointer text-lg font-medium"
+            >
               Sign in
-            </button>
-            <button className="bg-white border-[1px] border-solid border-white text-black h-[41px] w-[104px] rounded-full hover:bg-transparent hover:text-white transition-all duration-500 cursor-pointer text-lg font-medium">
+            </a>
+            <a
+              href="http://app.naplozz.io/"
+              target={"blank"}
+              className="bg-white flex justify-center items-center border-[1px] border-solid border-white text-black h-[41px] w-[104px] rounded-full hover:bg-transparent hover:text-white transition-all duration-500 cursor-pointer text-lg font-medium"
+            >
               Log in
-            </button>
+            </a>
             <div className="flex justify-start items-center gap-3">
               <button className="flex justify-start items-center gap-2 cursor-pointer text-white text-base">
                 <FontAwesomeIcon icon={faGlobe} />{" "}

@@ -6,7 +6,7 @@ import BlogCard from "../../Components/BlogCard";
 const AllBlogs = () => {
   const BLOGS = [
     {
-      img: "/blogs/blog1.webp",
+      img: "/blogs/hero-bg.png",
       desc: "Financial markets evolve and evolve rapidly. The crypto market is no different...",
       head: "Crypto tokens and the blockchain: special new use cases",
       date: "Dec 15, 2022",
