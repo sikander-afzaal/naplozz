@@ -39,7 +39,7 @@ const SubscribeBox = ({
             <p className="text-white opacity-[0.38]">
               Total Amount: ${(users * (price * 0.8)).toFixed(2)}
             </p>
-            <p className="text-white opacity-[0.38] mt-2">
+            <p className="text-[#FF519F] opacity-[0.38] mt-2">
               Paid in $NAP token: $X{(0.1 * (users * (price * 0.8))).toFixed(2)}
             </p>
             <p className="text-left text-[#FF519F] text-sm mt-2">
