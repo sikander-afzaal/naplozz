@@ -7,11 +7,16 @@ const SubscribeBox = ({
   discount,
 }) => {
   return (
-    <div className="w-full max-w-full xl:max-w-[266px] xl:h-auto h-full mid:max-w-[306px] rounded-[30px]  relative">
+    <div className="w-full group max-w-full xl:max-w-[266px] xl:h-auto h-full mid:max-w-[306px] rounded-[30px]  relative">
       <div
-        className={`absolute bg-blueGr ${
+        className={`absolute transition-all duration-500 bg-blueGr ${
           recommended ? "-inset-[3px]" : "-inset-[1px]"
-        } rounded-[30px] -z-10`}
+        } rounded-[30px] -z-10 group-hover:opacity-0`}
+      ></div>
+      <div
+        className={`absolute transition-all duration-500 bg-btnGr ${
+          recommended ? "-inset-[3px]" : "-inset-[1px]"
+        } rounded-[30px] -z-10 opacity-0 group-hover:opacity-100`}
       ></div>
       {recommended && (
         <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-pinkGr w-[134px] h-[40px] text-white rounded-[10px] flex justify-center items-center -translate-y-1/2 text-base font-bold">
