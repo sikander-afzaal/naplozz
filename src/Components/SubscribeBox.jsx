@@ -29,7 +29,7 @@ const SubscribeBox = ({ heading, price, perks, recommended }) => {
           {perks.map((elem, idx) => {
             return (
               <p
-                key={idx + price + heading}
+                key={idx + heading}
                 className="flex text-white justify-start items-center gap-2 w-full"
               >
                 <img
