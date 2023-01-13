@@ -22,6 +22,8 @@ module.exports = {
         hoverShadow: "0px 0px 20px #7BCBE8",
       },
       backgroundImage: {
+        bluishGr:
+          " radial-gradient(47.1% 928.15% at 50% 50%, rgba(43, 209, 255, 0.68) 0%, rgba(43, 209, 255, 0) 100%)",
         blogGr: "linear-gradient(180deg, rgba(5, 5, 15, 0) 0%, #05050F 77.08%)",
         marketplace:
           "linear-gradient(116.22deg, #7BCBE8 1.27%, #8715E6 49.07%, #33FDFF 103.24%)",
@@ -47,6 +49,7 @@ module.exports = {
           "linear-gradient(180deg, rgba(2, 2, 2, 0.5) 0%, rgba(17, 19, 22, 0.5) 100%)",
         blackRadial:
           " radial-gradient(89.04% 91.97% at 50% -4.12%, #000000 0%, rgba(0, 0, 0, 0) 100%)",
+        pinkGr: "linear-gradient(180deg, #D54BD5 -65.38%, #9E62D0 100%)",
       },
       colors: {
         btnBg: "#14133B",
