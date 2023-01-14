@@ -63,7 +63,7 @@ const Testimonials = () => {
             rewind: true,
             gap: "40px",
             breakpoints: {
-              1024: {
+              480: {
                 autoWidth: false,
                 perPage: 1,
               },
