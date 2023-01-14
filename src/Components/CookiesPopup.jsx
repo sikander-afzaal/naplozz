@@ -30,7 +30,11 @@ const CookiesPopup = ({ setModal }) => {
         </p>
         <p className="font-semibold text-white">
           Please read our{" "}
-          <Link className="text-[#ff866d]" to="/info">
+          <Link
+            onClick={() => setModal(false)}
+            className="text-[#ff866d]"
+            to="/info"
+          >
             Privacy policy.
           </Link>
         </p>
