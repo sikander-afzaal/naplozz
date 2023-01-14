@@ -9,7 +9,7 @@ import Tokenomics from "./Tokenomics";
 import Utilities from "./Utilities";
 import Whitepaper from "./Whitepaper";
 
-const Explore = ({ loader }) => {
+const Explore = ({ loader, once, setOnce }) => {
   return (
     <>
       <Hero loader={loader} />
@@ -18,7 +18,7 @@ const Explore = ({ loader }) => {
       <Flow />
       <Utilities />
       <Programs />
-      <Tokenomics />
+      <Tokenomics once={once} setOnce={setOnce} />
       <Whitepaper />
       <Roadmap />
       <SignUp />

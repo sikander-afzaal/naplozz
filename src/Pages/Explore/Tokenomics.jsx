@@ -3,9 +3,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import GradientButton from "../../Components/GradientButton";
 import { useEffect, useRef, useState } from "react";
 
-const Tokenomics = () => {
+const Tokenomics = ({ once, setOnce }) => {
   const [disclaimer, setDisclaimer] = useState(false);
-  const [once, setOnce] = useState(false);
   const container = useRef();
   const heading1 = useRef();
   const table1 = useRef();

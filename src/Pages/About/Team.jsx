@@ -109,7 +109,7 @@ const Team = () => {
     {
       name: "Virag Mendline Kiss",
       role: "Web Designer",
-      img: "/about/blank.png",
+      img: "/about/team12.png",
       link: {
         linkedin: "https://www.linkedin.com/in/virag-mendline-kiss-073267247/",
       },
@@ -117,7 +117,7 @@ const Team = () => {
     {
       name: "Tas ",
       role: "Community Manager",
-      img: "/about/blank.png",
+      img: "/about/team11.png",
       link: {
         twitter: "https://twitter.com/balogh_tas",
       },

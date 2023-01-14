@@ -20,6 +20,7 @@ import Contact from "./Pages/Contact/Contact";
 import BlogDetail from "./Pages/BlogDetail/BlogDetail";
 
 function App() {
+  const [disclaimerOnce, setDisclaimerOnce] = useState(false);
   const [loader, setLoader] = useState(true);
   const { pathname } = useLocation();
   useEffect(() => {
@@ -45,7 +46,16 @@ function App() {
       <Header />
       <Routes>
         <Route element={<Home loader={loader} />} path="/" />
-        <Route element={<Explore loader={loader} />} path="/explore" />
+        <Route
+          element={
+            <Explore
+              loader={loader}
+              setOnce={setDisclaimerOnce}
+              once={disclaimerOnce}
+            />
+          }
+          path="/explore"
+        />
         <Route element={<Eco />} path="/ecosystem" />
         <Route element={<Education />} path="/education" />
         <Route element={<Marketplace />} path="/marketplace" />
