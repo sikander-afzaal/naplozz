@@ -61,6 +61,15 @@ const Team = () => {
       },
     },
     {
+      name: "Leonardus Soeterbroek",
+      role: "CMO",
+      img: "/about/team7.png",
+      desc: "Working in the blockchain Industry since 2017. Managed blockchain events such as Blockchain Summit Dubai and Blockbali. Working with leading cryptocurrency projects. Helping projects grow in audience, investments, developments and partnerships.",
+      link: {
+        linkedin: "https://www.linkedin.com/in/leonardus-soeterbroek/",
+      },
+    },
+    {
       name: "Balint Mendli",
       role: "Product Advisor",
       img: "/about/team6.png",
@@ -70,15 +79,7 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/balint-mendli/",
       },
     },
-    {
-      name: "Leonardus Soeterbroek",
-      role: "CMO",
-      img: "/about/team7.png",
-      desc: "Working in the blockchain Industry since 2017. Managed blockchain events such as Blockchain Summit Dubai and Blockbali. Working with leading cryptocurrency projects. Helping projects grow in audience, investments, developments and partnerships.",
-      link: {
-        linkedin: "https://www.linkedin.com/in/leonardus-soeterbroek/",
-      },
-    },
+
     {
       name: "Adeeb Ahmad ",
       role: "Senior web developer and advisor ",
