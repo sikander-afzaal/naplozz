@@ -82,7 +82,7 @@ const Team = () => {
     {
       name: "Adeeb Ahmad ",
       role: "Senior web developer and advisor ",
-      img: "/about/team6.png",
+      img: "/about/team8.png",
       desc: "Adeeb Ahmad graduated from the University of Agriculture, Faisalabad.  He is a professional web developer with 3 years of experience in HTML, CSS, Bootstrap, Materialize, TailwindCSS, JS, Typescript, React(with Javascript & Typescript), Firebase & NodeJS.   He was working on projects like Secondwinery and Docterio and several others. ",
       link: {
         linkedin: "https://www.linkedin.com/in/adeebahmad01/",
@@ -91,7 +91,7 @@ const Team = () => {
     {
       name: "Nilesh Kikani",
       role: "Product and Blockchain advisor",
-      img: "/about/team6.png",
+      img: "/about/team10.png",
       desc: "Nilesh is a passionate senior iOS developer who is highly interested in working on challenging and innovative projects. He is a business OWNER with experience designing and building software solutions. Currently, he is a Director at Logistic Infotech, and he and his team a great help for us in developing our product. ",
       link: {
         linkedin: "https://www.linkedin.com/in/nilesh-kikani-a1099242/ ",
@@ -138,7 +138,7 @@ const Team = () => {
     {
       name: "Muhammad Arif ",
       role: "Graphic designer ",
-      img: "/about/team6.png",
+      img: "/about/team9.png",
       link: {
         linkedin: "https://www.linkedin.com/in/muhammad-arif-7664b4221/",
       },
