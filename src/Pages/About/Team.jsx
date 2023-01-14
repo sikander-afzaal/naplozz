@@ -71,8 +71,8 @@ const Team = () => {
       },
     },
     {
-      name: "Virag Mendline Kiss",
-      role: "Web designer",
+      name: "Leonardus Soeterbroek",
+      role: "CMO",
       img: "/about/team7.png",
       desc: "Working in the blockchain Industry since 2017. Managed blockchain events such as Blockchain Summit Dubai and Blockbali. Working with leading cryptocurrency projects. Helping projects grow in audience, investments, developments and partnerships.",
       link: {
@@ -99,8 +99,8 @@ const Team = () => {
     },
 
     {
-      name: "Leonardus Soeterbroek",
-      role: "BI Manager",
+      name: "Virag Mendline Kiss",
+      role: "Web Designer",
       img: "/about/team6.png",
       link: {
         linkedin: "https://www.linkedin.com/in/virag-mendline-kiss-073267247/",
