@@ -4,6 +4,7 @@ import { useState } from "react";
 import BlogCard from "../../Components/BlogCard";
 
 const AllBlogs = () => {
+  const [searchInput, setSearchInput] = useState("");
   const BLOGS = [
     {
       img: "/blogs/hero-bg.png",
@@ -57,6 +58,8 @@ const AllBlogs = () => {
               className="text-[#B3B3B3] text-base"
             />
             <input
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
               type="text"
               placeholder="Search"
               className="w-full border-0 outline-0 h-full bg-transparent text-[#B3B3B3] text-xl font-normal"
@@ -64,7 +67,9 @@ const AllBlogs = () => {
           </div>
         </div>
         <div className="grid w-full mt-[40px] grid-cols-1 md:grid-cols-2 place-items-center xl:grid-cols-3 auto-rows-fr gap-[40px]">
-          {BLOGS.map((elem, idx) => {
+          {BLOGS.filter((elem) => {
+            return elem.head.toLowerCase().includes(searchInput.toLowerCase());
+          }).map((elem, idx) => {
             return <BlogCard {...elem} key={idx + "bloc"} />;
           })}
         </div>
