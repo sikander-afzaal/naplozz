@@ -68,7 +68,7 @@ const Hero = ({ loader }) => {
           ref={img}
           src="/explore/hero-img.png"
           alt=""
-          className="max-w-[400px] xl:max-w-[500px] mid:max-w-[600px] w-full object-contain"
+          className="max-w-[400px] xl:max-w-[400px] mid:max-w-[500px] w-full object-contain"
         />
       </div>
     </div>
