@@ -80,10 +80,10 @@ const Tokenomics = () => {
             </div>
             <TokenomicsRow
               pool="Preseed Round"
-              percentage="6.00%"
-              tgs="12 000 000"
-              price="$0.014"
-              discount="76.67 %"
+              percentage="7.00%"
+              tgs="14 000 000"
+              price="$0.012"
+              discount="80 %"
               tge="6.0 %"
               cliff={4}
               visiting={10}
@@ -160,8 +160,8 @@ const Tokenomics = () => {
             />
             <TokenomicsRow
               pool="General Reserve"
-              percentage="9.00%"
-              tgs="18 000 000"
+              percentage="8.00%"
+              tgs="16 000 000"
               price=""
               discount=""
               tge="0.0 %"

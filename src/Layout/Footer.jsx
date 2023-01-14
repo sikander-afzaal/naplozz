@@ -15,11 +15,15 @@ import { HashLink } from "react-router-hash-link";
 const Footer = () => {
   return (
     <div className="wrapper sm:p-0 pb-16  mt-[60px] lg:mt-[100px] relative">
-      <FontAwesomeIcon
-        onClick={() => window.scrollTo(0, 0)}
-        icon={faArrowUp}
-        className="absolute bg-btnGr rounded-full h-7 w-7 box-border p-3 cursor-pointer text-white  bottom-5 right-5"
-      />
+      <div className="absolute group overflow-hidden  bottom-5 right-5 rounded-full isolate">
+        <div className="absolute -z-10 bg-blueGr rounded-full left-0 top-0 h-[52px] w-[52px] transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+        <div className="absolute -z-10 bg-btnGr rounded-full left-0 top-0 h-[52px] w-[52px] transition-all duration-300 opacity-100 group-hover:opacity-0"></div>
+        <FontAwesomeIcon
+          onClick={() => window.scrollTo(0, 0)}
+          icon={faArrowUp}
+          className="  hover:scale-105 rounded-full h-7 w-7 box-border p-3 cursor-pointer text-white "
+        />
+      </div>
       <div className="contain pt-[40px] sm:pt-[60px] pb-5 justify-start items-center flex-col">
         <footer className="w-full grid grid-cols-2 grid-rows-2 sm:flex sm:flex-col lg:flex-row justify-between items-center sm:items-start gap-5">
           <svg
@@ -349,12 +353,18 @@ const Footer = () => {
             <a href="#" className="text-sm sm:text-base text-pink font-normal">
               © Naplozz 2022
             </a>
-            <a href="#" className="text-sm sm:text-base text-pink font-normal">
+            <Link
+              to={"/info"}
+              className="text-sm sm:text-base text-pink font-normal"
+            >
               Privacy Policy
-            </a>
-            <a href="#" className="text-sm sm:text-base text-pink font-normal">
+            </Link>
+            <Link
+              to={"/info"}
+              className="text-sm sm:text-base text-pink font-normal"
+            >
               Terms of Use
-            </a>
+            </Link>
           </div>
         </div>
       </div>

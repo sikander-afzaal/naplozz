@@ -117,9 +117,9 @@ const Solutions = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:flex justify-start  flex-row items-start xl:flex-col gap-5 w-full">
             <div
               ref={tab1}
-              onClick={() => setTab("task")}
+              onClick={() => setTab("log")}
               className={`flex rounded-full border-2 border-solid cursor-pointer transition-all duration-500 ${
-                tab === "task" ? "border-[#544683]" : "border-transparent"
+                tab === "log" ? "border-[#544683]" : "border-transparent"
               } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
               <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
@@ -129,7 +129,7 @@ const Solutions = () => {
                 -
               </span>
               <span className="text-white font-bold text-lg xl:text-[24px]">
-                Task Manager
+                Log Management
               </span>
             </div>
             <div
@@ -149,11 +149,12 @@ const Solutions = () => {
                 User level hierarchy
               </span>
             </div>
+
             <div
               ref={tab3}
-              onClick={() => setTab("log")}
+              onClick={() => setTab("task")}
               className={`flex rounded-full border-2 border-solid cursor-pointer transition-all duration-500 ${
-                tab === "log" ? "border-[#544683]" : "border-transparent"
+                tab === "task" ? "border-[#544683]" : "border-transparent"
               } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
               <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
@@ -163,7 +164,7 @@ const Solutions = () => {
                 -
               </span>
               <span className="text-white font-bold text-lg xl:text-[24px]">
-                Log Management
+                Task Manager
               </span>
             </div>
             <div
