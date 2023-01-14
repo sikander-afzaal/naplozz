@@ -18,9 +18,11 @@ import Blog from "./Pages/Blog/Blog";
 import Pricing from "./Pages/Pricing/Pricing";
 import Contact from "./Pages/Contact/Contact";
 import BlogDetail from "./Pages/BlogDetail/BlogDetail";
+import CookiesPopup from "./Components/CookiesPopup";
 
 function App() {
   const [disclaimerOnce, setDisclaimerOnce] = useState(false);
+  const [cookies, setCookies] = useState(false);
   const [loader, setLoader] = useState(true);
   const { pathname } = useLocation();
   useEffect(() => {
@@ -28,6 +30,9 @@ function App() {
   }, [pathname]);
   //loader functionality
   useEffect(() => {
+    setTimeout(() => {
+      setCookies(true);
+    }, 11000);
     const body = document.querySelector("html");
     body.style.overflow = "hidden";
     setTimeout(() => {
@@ -42,6 +47,7 @@ function App() {
     <div className="App">
       <ProgressBar gradient gradientColor="#33FDFF" color="#8715E6" />
       {loader && <Loader />}
+      {cookies && <CookiesPopup setModal={setCookies} />}
 
       <Header />
       <Routes>
