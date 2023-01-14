@@ -98,11 +98,18 @@ const Team = () => {
         linkedin: "https://www.linkedin.com/in/nilesh-kikani-a1099242/ ",
       },
     },
-
+    {
+      name: "Muhammad Arif ",
+      role: "Graphic designer ",
+      img: "/about/team9.png",
+      link: {
+        linkedin: "https://www.linkedin.com/in/muhammad-arif-7664b4221/",
+      },
+    },
     {
       name: "Virag Mendline Kiss",
       role: "Web Designer",
-      img: "/about/team6.png",
+      img: "/about/blank.png",
       link: {
         linkedin: "https://www.linkedin.com/in/virag-mendline-kiss-073267247/",
       },
@@ -110,7 +117,7 @@ const Team = () => {
     {
       name: "Tas ",
       role: "Community Manager",
-      img: "/about/team6.png",
+      img: "/about/blank.png",
       link: {
         twitter: "https://twitter.com/balogh_tas",
       },
@@ -118,7 +125,7 @@ const Team = () => {
     {
       name: "Umair Ali",
       role: "Umair Ali",
-      img: "/about/team6.png",
+      img: "/about/blank.png",
       link: {
         linkedin: "https://www.linkedin.com/in/muhammad-umair-ali-4274621b2/ ",
       },
@@ -126,22 +133,14 @@ const Team = () => {
     {
       name: "Suhail",
       role: "Community Manager",
-      img: "/about/team6.png",
+      img: "/about/blank.png",
     },
     {
       name: "Abdul Hanan",
       role: "Web designer",
-      img: "/about/team6.png",
+      img: "/about/blank.png",
       link: {
         linkedin: "https://www.linkedin.com/in/abdul-hanan-webdev/",
-      },
-    },
-    {
-      name: "Muhammad Arif ",
-      role: "Graphic designer ",
-      img: "/about/team9.png",
-      link: {
-        linkedin: "https://www.linkedin.com/in/muhammad-arif-7664b4221/",
       },
     },
   ];
