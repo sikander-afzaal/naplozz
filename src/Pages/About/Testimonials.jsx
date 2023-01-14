@@ -106,20 +106,30 @@ const ReviewBox = ({
     <div className="h-full w-full max-w-[420px] lg:max-w-[820px] relative">
       <div className="grid grid-cols-1 lg:grid-cols-[auto__1fr] px-6 pb-[60px] pt-[30px] lg:py-[40px] gap-x-10 relative rounded-[30px] bg-black w-full h-full">
         {/* arrows---------------- */}
-        {idx > 0 && (
-          <FontAwesomeIcon
-            onClick={PrevArrow}
-            icon={faArrowLeft}
-            className="absolute left-[20px] text-[#B3B3B3] bottom-[20px] text-2xl cursor-pointer"
-          />
+        {/* {idx > 0 && (
+           <FontAwesomeIcon
+          onClick={PrevArrow}
+          icon={faArrowLeft}
+          className="absolute left-[20px] text-[#B3B3B3] bottom-[20px] text-2xl cursor-pointer"
+        />
         )}
         {idx < totalReviews - 1 && (
-          <FontAwesomeIcon
-            onClick={NextArrow}
-            icon={faArrowRight}
-            className="absolute right-[20px] text-[#B3B3B3] bottom-[20px] text-2xl cursor-pointer"
-          />
-        )}
+            <FontAwesomeIcon
+          onClick={NextArrow}
+          icon={faArrowRight}
+          className="absolute right-[20px] text-[#B3B3B3] bottom-[20px] text-2xl cursor-pointer"
+        />
+        )} */}
+        <FontAwesomeIcon
+          onClick={PrevArrow}
+          icon={faArrowLeft}
+          className="absolute left-[20px] text-[#B3B3B3] bottom-[20px] text-2xl cursor-pointer"
+        />
+        <FontAwesomeIcon
+          onClick={NextArrow}
+          icon={faArrowRight}
+          className="absolute right-[20px] text-[#B3B3B3] bottom-[20px] text-2xl cursor-pointer"
+        />
         {/* arrows---------------- */}
         <img className="lg:block hidden" src={img} alt="" />
         <div className="flex justify-start items-center sm:text-left text-center sm:items-start flex-col gap-3">
