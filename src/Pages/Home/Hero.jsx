@@ -63,6 +63,7 @@ const Hero = ({ loader }) => {
                 words={["by the Blockchain"]}
                 loop
                 cursor
+                delaySpeed={8000}
                 cursorBlinking
               />
             </span>

@@ -125,11 +125,15 @@ const Features = () => {
             className="absolute bead max-w-[110px] right-0 bottom-full -z-10"
             alt=""
           />
-          <img
-            ref={video}
-            src="/vid.png"
+          <video
             className="w-full max-w-full lg:max-w-[720px] object-contain"
-            alt=""
+            ref={video}
+            poster={"/vid.png"}
+            src="/vid.mp4"
+            autoPlay
+            muted
+            playsInline
+            loop
           />
         </div>
         <div

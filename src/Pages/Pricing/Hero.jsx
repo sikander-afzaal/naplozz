@@ -21,7 +21,7 @@ const Hero = ({ loader }) => {
         { stagger: 0.4, y: 0, opacity: 1 }
       )
       .fromTo(img.current, { opacity: 0 }, { opacity: 1 });
-    gsap.to(img.current, { y: -40, yoyo: true, repeat: -1, duration: 3 });
+    gsap.to(img.current, { y: -40, yoyo: true, repeat: -1, duration: 7 });
     return () => {
       timeLine.kill();
     };
