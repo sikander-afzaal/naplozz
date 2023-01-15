@@ -1,10 +1,10 @@
 import AllBlogs from "./AllBlogs";
 import Hero from "./Hero";
 
-const Blog = () => {
+const Blog = ({ loader }) => {
   return (
     <div>
-      <Hero />
+      <Hero loader={loader} />
       <AllBlogs />
     </div>
   );

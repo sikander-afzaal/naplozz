@@ -70,7 +70,7 @@ function App() {
         <Route element={<About loader={loader} />} path="/about" />
         <Route element={<Faq />} path="/faq" />
         <Route element={<Info />} path="/info" />
-        <Route element={<Blog />} path="/blogs" />
+        <Route element={<Blog loader={loader} />} path="/blogs" />
         <Route element={<Pricing loader={loader} />} path="/pricing" />
         <Route element={<Contact />} path="/contact" />
         <Route element={<BlogDetail />} path="/blog/:id" />
