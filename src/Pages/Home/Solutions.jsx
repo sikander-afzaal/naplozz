@@ -138,7 +138,7 @@ const Features = () => {
         </div>
         <div
           ref={container2}
-          className="flex justify-start gap-8 mt-[40px] xl:mt-[80px] items-center flex-col xl:flex-row xl:items-stretch w-full "
+          className="flex justify-center gap-8 mt-[40px] xl:mt-[80px] items-center flex-col xl:flex-row xl:items-stretch w-full "
         >
           <div
             ref={box1}
