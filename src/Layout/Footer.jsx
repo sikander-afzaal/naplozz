@@ -336,7 +336,7 @@ const Footer = () => {
                 icon={faDiscord}
               />
             </a>
-            <a href="#" target={"blank"}>
+            <a href="https://www.youtube.com/@naplozzio" target={"blank"}>
               <FontAwesomeIcon
                 className="text-white text-2xl hover:text-lightPink transition-all"
                 icon={faYoutube}

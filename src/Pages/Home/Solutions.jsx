@@ -87,7 +87,7 @@ const Features = () => {
   }, []);
 
   return (
-    <div ref={container} className="wrapper mt-[190px] sm:mt-[240px] ">
+    <div ref={container} className="wrapper mb-[120px] mt-[150px] xl:mt-[0px] ">
       <div className="contain flex-col justify-start items-center">
         <div className="flex  w-full xl:flex-row flex-col justify-center relative isolate items-start gap-[50px] xl:gap-[100px]">
           <div className="absolute bg-blueRadial opacity-10 hidden head:block blur-[115px] -z-10 w-[1130px] h-[600px] -translate-x-1/2 left-1/2 top-0"></div>
@@ -128,7 +128,7 @@ const Features = () => {
           <img
             ref={video}
             src="/vid.png"
-            className="w-full max-w-[720px] object-contain"
+            className="w-full max-w-full lg:max-w-[720px] object-contain"
             alt=""
           />
         </div>

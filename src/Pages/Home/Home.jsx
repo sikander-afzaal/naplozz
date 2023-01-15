@@ -8,8 +8,8 @@ const Home = ({ loader }) => {
   return (
     <div>
       <Hero loader={loader} />
-      <Ecosystem />
       <Solutions />
+      <Ecosystem />
       <Partners />
       <Helps />
     </div>
