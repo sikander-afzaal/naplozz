@@ -1,8 +1,11 @@
 import gsap, { Circ } from "gsap";
 import { useEffect, useRef } from "react";
+//typewriter
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = ({ loader }) => {
   const heading = useRef();
+  const underline = useRef();
   const smallHead = useRef();
   const sub1 = useRef();
   const para1 = useRef();
@@ -16,6 +19,11 @@ const Hero = ({ loader }) => {
     });
     timeLine
       .fromTo(heading.current, { x: -20, opacity: 0 }, { x: 0, opacity: 1 })
+      .fromTo(
+        underline.current,
+        { opacity: 0, width: 0 },
+        { opacity: 1, width: "100%", duration: 1 }
+      )
       .fromTo(smallHead.current, { opacity: 0 }, { opacity: 1 })
       .fromTo(
         [sub1.current, para1.current, sub2.current, para2.current],
@@ -38,13 +46,26 @@ const Hero = ({ loader }) => {
           ref={heading}
           className="font-bold text-center sm:text-left leading-[1.2] xl:leading-[88px] text-[35px] sm:text-[55px] xl:text-[63px] mid:text-[68px]  text-white"
         >
-          Naplozz Star Program <br className="sm:block hidden" />
+          <span className="relative">
+            {" "}
+            Naplozz Star Program{" "}
+            <span
+              ref={underline}
+              className="absolute sm:block hidden left-0 top-full h-[2px] bg-blueGr "
+            ></span>{" "}
+          </span>
+          <br className="sm:block hidden" />
           <span className="gr-text">
             is the first and only social <br className="sm:block hidden" /> and
             market feed
           </span>{" "}
           <span ref={smallHead} className="text-lg sm:text-[24px]">
-            based on the Naplozz Compliance Metric.
+            <Typewriter
+              words={["based on the Naplozz Compliance Metric."]}
+              loop
+              cursor
+              cursorBlinking
+            />
           </span>
         </h2>
         <div className="flex xl:flex-row gap-[40px] xl:gap-0 flex-col mt-[30px] sm:mt-[60px] justify-between items-center sm:items-start w-full ">

@@ -2,6 +2,8 @@ import { useRef, useEffect, useLayoutEffect } from "react";
 import GradientButton from "../../Components/GradientButton";
 //gsap
 import gsap, { Circ } from "gsap";
+//typewriter
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = ({ loader }) => {
   const heading = useRef();
@@ -57,7 +59,12 @@ const Hero = ({ loader }) => {
               Management <br /> Powered
             </span>{" "}
             <span ref={sub} className="text-[24px]">
-              by the Blockchain
+              <Typewriter
+                words={["by the Blockchain"]}
+                loop
+                cursor
+                cursorBlinking
+              />
             </span>
           </h2>
           <p

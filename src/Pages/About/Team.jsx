@@ -107,16 +107,15 @@ const Team = ({ loader }) => {
         linkedin: "https://www.linkedin.com/in/peter-gorog-81912146/ ",
       },
     },
+
     {
       ref: team5,
-      name: "Noor Al Hassan",
-      role: "Head of Development",
-      img: "/about/team5.png",
-      desc: "Noor ul Hassan is a software developer. He completed a BS Degree in Computer Science from a well-reputed university in Pakistan. He worked as a full-stack engineer at Full Stack Engineer DMechs.",
+      name: " Zoltan Halmai",
+      role: "CFO",
+      img: "/about/team13.jpg",
+      // desc: "",
       link: {
-        github: "https://github.com/NoorulHassan364",
-        linkedin: "https://www.linkedin.com/in/noor-ul-hassan-641413214/",
-        twitter: "https://twitter.com/NoorUlH01785547",
+        linkedin: "https://www.linkedin.com/in/halmai-zolt%C3%A1n-875280262/",
       },
     },
     {
@@ -127,6 +126,18 @@ const Team = ({ loader }) => {
       desc: "Working in the blockchain Industry since 2017. Managed blockchain events such as Blockchain Summit Dubai and Blockbali. Working with leading cryptocurrency projects. Helping projects grow in audience, investments, developments and partnerships.",
       link: {
         linkedin: "https://www.linkedin.com/in/leonardus-soeterbroek/",
+      },
+    },
+    {
+      ref: team5,
+      name: "Noor Al Hassan",
+      role: "Head of Development",
+      img: "/about/team5.png",
+      desc: "Noor ul Hassan is a software developer. He completed a BS Degree in Computer Science from a well-reputed university in Pakistan. He worked as a full-stack engineer at Full Stack Engineer DMechs.",
+      link: {
+        github: "https://github.com/NoorulHassan364",
+        linkedin: "https://www.linkedin.com/in/noor-ul-hassan-641413214/",
+        twitter: "https://twitter.com/NoorUlH01785547",
       },
     },
     {

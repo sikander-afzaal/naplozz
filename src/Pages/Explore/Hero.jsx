@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 
 const Hero = ({ loader }) => {
   const heading = useRef();
+  const underline = useRef();
   const para = useRef();
   const button = useRef();
   const img = useRef();
@@ -16,6 +17,11 @@ const Hero = ({ loader }) => {
     });
     timeLine
       .fromTo(heading.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
+      .fromTo(
+        underline.current,
+        { opacity: 0, width: 0 },
+        { opacity: 1, width: "100%", duration: 1 }
+      )
       .fromTo(para.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
       .fromTo(button.current, { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
       .fromTo(img.current, { opacity: 0, x: 80 }, { opacity: 1, x: 0 });
@@ -38,8 +44,14 @@ const Hero = ({ loader }) => {
             ref={heading}
             className="font-bold leading-[1.2]  mid:leading-[72px] text-[40px] sm:text-[55px] xl:text-[63px] text-white"
           >
-            <span className="gr-text">Naplozz App</span> the paperless record
-            keeper
+            <span className="gr-text relative">
+              Naplozz App{" "}
+              <span
+                ref={underline}
+                className="absolute left-0 top-full h-[2px] bg-blueGr "
+              ></span>
+            </span>{" "}
+            the paperless record keeper
           </h2>
           <p
             ref={para}

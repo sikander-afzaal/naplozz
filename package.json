@@ -22,7 +22,8 @@
     "react-progressbar-on-scroll": "^2.0.0",
     "react-rangeslider": "^2.2.0",
     "react-router-dom": "^6.6.1",
-    "react-router-hash-link": "^2.4.3"
+    "react-router-hash-link": "^2.4.3",
+    "react-simple-typewriter": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
