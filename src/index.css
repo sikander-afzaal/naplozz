@@ -14,10 +14,10 @@
     @apply bg-blueGr bg-clip-text text-transparent;
   }
   .bead {
-    @apply sm:animate-bounce-slow animate-none  transition-all duration-500;
+    @apply animate-bounce-slow transition-all duration-500;
   }
   .bead-delayed {
-    @apply sm:animate-bounce-slow-delayed animate-none  transition-all duration-500;
+    @apply animate-bounce-slow-delayed  transition-all duration-500;
   }
 }
 @font-face {
@@ -83,10 +83,10 @@ html {
 .eco-words {
   animation: float 5s ease-in-out 0s infinite alternate;
 }
-.bead:hover,
+/* .bead:hover,
 .bead-delayed:hover {
   transform: translateX(-10px) translateY(-20px) !important;
-}
+} */
 @keyframes move {
   0% {
     top: 0;

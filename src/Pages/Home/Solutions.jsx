@@ -89,7 +89,7 @@ const Features = () => {
   return (
     <div
       ref={container}
-      className="wrapper mb-[120px] mt-[150px] xl:mt-[70px] "
+      className="wrapper mb-[120px] mt-[250px] xl:mt-[70px] "
     >
       <div className="contain flex-col justify-start items-center">
         <div className="flex  w-full xl:flex-row flex-col justify-center relative isolate items-start gap-[50px] xl:gap-[100px]">
