@@ -4,8 +4,10 @@ import GradientButton from "../../Components/GradientButton";
 import gsap, { Circ } from "gsap";
 //typewriter
 import { Typewriter } from "react-simple-typewriter";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Hero = ({ loader }) => {
+  const container = useRef();
   const heading = useRef();
   const sub = useRef();
   const para = useRef();
@@ -13,6 +15,7 @@ const Hero = ({ loader }) => {
   const img = useRef();
   const shadow = useRef();
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const timeLine = gsap.timeline({
       defaults: { duration: 0.4, ease: Circ.easeOut },
       delay: loader ? 6.9 : 0.5,
@@ -37,13 +40,32 @@ const Hero = ({ loader }) => {
         duration: 2,
       }
     );
+    gsap.matchMedia({
+      // large
+      "(min-width: 1280px)": function () {
+        gsap.to(img.current, {
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top top",
+            end: "+=1000",
+            scrub: true,
+          },
+          y: -190,
+          scale: 0.6,
+        });
+      },
+    });
+
     return () => {
       timeLine.kill();
     };
   }, []);
 
   return (
-    <div className="wrapper  mt-[130px] xl:min-h-screen min-h-[600px] xl:mt-[100px] relative isolate">
+    <div
+      ref={container}
+      className="wrapper  mt-[130px] xl:min-h-screen min-h-[600px] xl:mt-[100px] relative isolate"
+    >
       <div
         ref={shadow}
         className="w-[80%] lg:w-[800px] bg-greenRadial absolute opacity-50 -z-10 blur-[125px] left-0 lg:-left-[400px]  h-[800px] "
@@ -86,8 +108,8 @@ const Hero = ({ loader }) => {
         </div>
         <img
           ref={img}
-          src="/hero-phone.gif"
-          className="w-full opacity-0 object-contain max-w-[650px] mid:max-w-[700px]"
+          src="/hero-phone.png"
+          className="w-full opacity-0 object-contain max-w-[500px] md:max-w-[600px] mid:max-w-[650px]"
           alt=""
         />
       </div>
