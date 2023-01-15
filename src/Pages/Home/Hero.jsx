@@ -40,21 +40,21 @@ const Hero = ({ loader }) => {
         duration: 2,
       }
     );
-    gsap.matchMedia({
-      // large
-      "(min-width: 1280px)": function () {
-        gsap.to(img.current, {
-          scrollTrigger: {
-            trigger: container.current,
-            start: "top top",
-            end: "+=1000",
-            scrub: true,
-          },
-          y: -190,
-          scale: 0.6,
-        });
-      },
-    });
+    // gsap.matchMedia({
+    //   // large
+    //   "(min-width: 1280px)": function () {
+    //     gsap.to(img.current, {
+    //       scrollTrigger: {
+    //         trigger: container.current,
+    //         start: "top top",
+    //         end: "+=1000",
+    //         scrub: true,
+    //       },
+    //       y: -190,
+    //       scale: 0.6,
+    //     });
+    //   },
+    // });
 
     return () => {
       timeLine.kill();
@@ -108,7 +108,7 @@ const Hero = ({ loader }) => {
         </div>
         <img
           ref={img}
-          src="/hero-phone.png"
+          src="/hero-phone.gif"
           className="w-full opacity-0 object-contain max-w-[500px] md:max-w-[600px] mid:max-w-[650px]"
           alt=""
         />
