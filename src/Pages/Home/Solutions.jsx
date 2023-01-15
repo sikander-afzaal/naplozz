@@ -128,17 +128,22 @@ const Features = () => {
             className="absolute bead max-w-[110px] right-0 bottom-full -z-10"
             alt=""
           />
-          <video
-            className="w-full max-w-full lg:max-w-[720px] object-contain"
+          <div
             ref={video}
-            poster={"/vid.png"}
-            src="/vid.mp4"
-            controls
-          />
+            className="w-full relative max-w-full lg:max-w-[720px] rounded-[20px]"
+          >
+            <video
+              className="w-full rounded-[20px] max-w-full lg:max-w-[720px] object-contain"
+              poster={"/vid.png"}
+              src="/vid.mp4"
+              controls
+            />
+            <div className="absolute -inset-[1px] bg-blueGr -z-20 rounded-[20px]"></div>
+          </div>
         </div>
         <div
           ref={container2}
-          className="flex justify-center gap-8 mt-[40px] xl:mt-[80px] items-center flex-col xl:flex-row xl:items-stretch w-full "
+          className="flex justify-center gap-8 mt-[40px] xl:mt-[120px] items-center flex-col xl:flex-row xl:items-stretch w-full "
         >
           <div
             ref={box1}

@@ -63,7 +63,7 @@ const Ecosystem = () => {
   return (
     <div
       ref={container}
-      className="wrapper mt-[70px]  sm:mt-[0px] isolate relative"
+      className="wrapper mt-[70px]  sm:mt-[150px] isolate relative"
     >
       <div className="absolute -left-[20%] lg:block hidden opacity-70 w-[1064px] h-[700px] -z-10 -top-[10%] bg-[#360D39] blur-[250px]"></div>
       <div className="contain flex-col items-start justify-start">
@@ -71,7 +71,7 @@ const Ecosystem = () => {
           <img
             ref={bead}
             src="/set1.png"
-            className="mb-[50px] max-w-[100px] bead"
+            className="sm:mb-[50px] max-w-[100px] bead"
             alt=""
           />
           <h2

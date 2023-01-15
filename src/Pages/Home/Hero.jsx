@@ -80,6 +80,7 @@ const Hero = ({ loader }) => {
             <span className="gr-text">
               Management <br /> Powered
             </span>{" "}
+            <br className="md:hidden block" />
             <span ref={sub} className="text-[24px]">
               <Typewriter
                 words={["by the Blockchain"]}
