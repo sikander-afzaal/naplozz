@@ -2,10 +2,10 @@ import Description from "./Description";
 import SignUp from "./SignUp";
 import Usage from "./Usage";
 
-const Industry = () => {
+const Industry = ({ loader }) => {
   return (
     <div>
-      <Usage />
+      <Usage loader={loader} />
       <Description />
       <SignUp />
     </div>

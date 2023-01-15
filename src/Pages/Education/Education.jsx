@@ -1,10 +1,10 @@
 import SignUp from "../Ecosystem/SignUp";
 import Hero from "./Hero";
 
-const Education = () => {
+const Education = ({ loader }) => {
   return (
     <div>
-      <Hero />
+      <Hero loader={loader} />
       <SignUp />
     </div>
   );

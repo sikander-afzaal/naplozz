@@ -2,10 +2,10 @@ import Contact from "./Contact";
 import Hero from "./Hero";
 import Mid from "./Mid";
 
-const Marketplace = () => {
+const Marketplace = ({ loader }) => {
   return (
     <div>
-      <Hero />
+      <Hero loader={loader} />
       <Mid />
       <Contact />
     </div>

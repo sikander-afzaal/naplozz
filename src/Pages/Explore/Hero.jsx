@@ -11,7 +11,7 @@ const Hero = ({ loader }) => {
   const img = useRef();
   useEffect(() => {
     const timeLine = gsap.timeline({
-      defaults: { duration: 0.5 },
+      defaults: { duration: 0.4 },
       delay: loader ? 6.9 : 0.5,
     });
     timeLine

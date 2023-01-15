@@ -14,7 +14,7 @@ const Flow = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const timeLine = gsap.timeline({
-      defaults: { duration: 0.5 },
+      defaults: { duration: 0.4 },
       scrollTrigger: {
         trigger: container2.current,
         start: "top 20%",

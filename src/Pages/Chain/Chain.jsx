@@ -1,10 +1,10 @@
 import Connect from "./Connect";
 import Hero from "./Hero";
 
-const Chain = () => {
+const Chain = ({ loader }) => {
   return (
     <div>
-      <Hero />
+      <Hero loader={loader} />
       <Connect />
     </div>
   );

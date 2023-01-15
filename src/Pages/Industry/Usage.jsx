@@ -1,7 +1,48 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import gsap, { Circ } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
-const Usage = () => {
+const Usage = ({ loader }) => {
+  const heading = useRef();
+  const tab1 = useRef();
+  const tab2 = useRef();
+  const tab3 = useRef();
+  const tab4 = useRef();
+  const tab5 = useRef();
+  const tab6 = useRef();
+  const tab7 = useRef();
+  const tab8 = useRef();
+  const tab9 = useRef();
+  const tab10 = useRef();
+  useEffect(() => {
+    const timeLine = gsap.timeline({
+      defaults: { duration: 0.4, ease: Circ.easeOut },
+      delay: loader ? 6.9 : 0.5,
+    });
+    timeLine
+      .fromTo(heading.current, { y: -20, opacity: 0 }, { y: 0, opacity: 1 })
+      .fromTo(
+        [
+          tab1.current,
+          tab2.current,
+          tab3.current,
+          tab4.current,
+          tab5.current,
+          tab6.current,
+          tab7.current,
+          tab8.current,
+          tab9.current,
+          tab10.current,
+        ],
+        { y: 20, opacity: 0 },
+        { stagger: 0.2, y: 0, opacity: 1 }
+      );
+    return () => {
+      timeLine.kill();
+    };
+  }, []);
   return (
     <div className="wrapper mt-[100px] lg:mt-[130px] relative">
       <img
@@ -38,65 +79,78 @@ const Usage = () => {
       <div className="absolute w-full max-w-[946px] h-[242px] rounded-full left-0 -translate-x-[20%] top-[89%] opacity-[0.42] -z-10 blur-[130px]  bg-[#E04ADC]"></div>
       {/* //shadows end ------------------------ */}
       <div className="contain flex-col justify-start items-center gap-5">
-        <h2 className="gr-text text-[45px] sm:text-[72px] font-bold text-center">
+        <h2
+          ref={heading}
+          className="gr-text text-[45px] sm:text-[72px] font-bold text-center"
+        >
           Industry Usage
         </h2>
         <div className="sm:flex-wrap sm:overflow-auto overflow-x-scroll w-full roadmap flex justify-start sm:justify-center items-center gap-x-3 gap-y-5 ">
           <a
+            ref={tab1}
             href="#catering"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Catering
           </a>
           <a
+            ref={tab2}
             href="#public_catering"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Public Catering
           </a>
           <a
+            ref={tab3}
             href="#accommodation"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Accommodation
           </a>
           <a
+            ref={tab4}
             href="#food_producer"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Food Producer
           </a>
           <a
+            ref={tab5}
             href="#food_retail"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Food Retail
           </a>
           <a
+            ref={tab6}
             href="#retail"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Retail
           </a>
           <a
+            ref={tab7}
             href="#industrial_activity"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Industrial Activity
           </a>
           <a
+            ref={tab8}
             href="#office_activity"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Office Activity
           </a>
           <a
+            ref={tab9}
             href="#health"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Health Care
           </a>
           <a
+            ref={tab10}
             href="#warehouse"
             className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
@@ -173,24 +227,73 @@ const Usage = () => {
 export default Usage;
 
 const IndustryRow = ({ heading, desc, more, order, img }) => {
+  const container = useRef();
+  const headingRef = useRef();
+  const para = useRef();
+  const imageRef = useRef();
+  const link = useRef();
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeline = gsap.timeline({
+      defaults: { duration: 0.3 },
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top 50%",
+      },
+    });
+    if (order) {
+      timeline
+        .fromTo(headingRef.current, { x: 20, opacity: 0 }, { x: 0, opacity: 1 })
+        .fromTo(para.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
+        .fromTo(imageRef.current, { x: -20, opacity: 0 }, { x: 0, opacity: 1 });
+    } else {
+      timeline
+        .fromTo(
+          headingRef.current,
+          { x: -20, opacity: 0 },
+          { x: 0, opacity: 1 }
+        )
+        .fromTo(para.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
+        .fromTo(imageRef.current, { x: 20, opacity: 0 }, { x: 0, opacity: 1 });
+    }
+    if (more) {
+      timeline.fromTo(
+        link.current,
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1 }
+      );
+    }
+    return () => {
+      timeline.kill();
+    };
+  }, []);
+
   return (
     <div
+      ref={container}
       id={img}
       className={`w-full  ${
         order ? "flex-col lg:flex-row-reverse" : "flex-col lg:flex-row"
       } flex justify-between items-center gap-8 lg:gap-5`}
     >
       <div className="flex lg:text-left text-center w-full max-w-[583px] justify-start items-center lg:items-start flex-col gap-2 lg:gap-5">
-        <h3 className="text-white font-bold text-[40px] sm:text-[48px]">
+        <h3
+          ref={headingRef}
+          className="text-white font-bold text-[40px] sm:text-[48px]"
+        >
           {heading}
         </h3>
-        <p className="text-base sm:text-xl text-white font-medium opacity-[0.62]">
+        <p
+          ref={para}
+          className="text-base sm:text-xl text-white font-medium opacity-[0.62]"
+        >
           {desc}
         </p>
         {more && (
           <a
+            ref={link}
             className="text-[#2BD1FF] text-xl flex justify-start items-center gap-2 font-medium no-underline"
-            href="#"
+            href="#cateringDesc"
           >
             More <FontAwesomeIcon icon={faChevronRight} className="text-sm" />
           </a>
@@ -198,6 +301,7 @@ const IndustryRow = ({ heading, desc, more, order, img }) => {
       </div>
       <div className="w-full lg:w-1/2 flex justify-center items-center">
         <img
+          ref={imageRef}
           src={`/industry/${img}.png`}
           className=" max-w-[400px] sm:w-auto w-[80%] sm:max-h-max max-h-[250px] sm:max-w-[500px] object-contain"
           alt=""

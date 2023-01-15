@@ -1,11 +1,34 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Testimonials = () => {
   const sliderRef = useRef();
+  const sliderDiv = useRef();
+  const heading = useRef();
+  const container = useRef();
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeline = gsap.timeline({
+      defaults: { duration: 0.3 },
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top 50%",
+        markers: true,
+      },
+    });
+    timeline
+      .fromTo(heading.current, { y: -20, opacity: 0 }, { y: 0, opacity: 1 })
+      .fromTo(sliderDiv.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 });
+    return () => {
+      timeline.kill();
+    };
+  }, []);
+
   const PrevArrow = () => {
     if (sliderRef.current) {
       const index = sliderRef.current.splide.Components.Controller.getPrev();
@@ -45,47 +68,55 @@ const Testimonials = () => {
     },
   ];
   return (
-    <div className="wrapper mt-[120px] mb-[50px] sm:my-[120px] relative">
+    <div
+      ref={container}
+      className="wrapper mt-[120px] mb-[50px] sm:my-[120px] relative"
+    >
       <div className="absolute left-1/2 blur-[120px] -translate-x-1/2 top-[40%] -z-10 bg-[#0262F7] opacity-10 w-full max-w-[1188px] h-[542px]"></div>
       <div className="absolute left-1/2 blur-[120px] -translate-x-1/2 bottom-[80%] -z-10 bg-[#0262F7] opacity-[0.05] w-full max-w-[1188px] h-[542px]"></div>
       <div className="contain gap-10 flex-col justify-start items-start">
-        <h2 className="text-white text-[40px] sm:text-[48px] font-bold leading-[1]">
+        <h2
+          ref={heading}
+          className="text-white text-[40px] sm:text-[48px] font-bold leading-[1]"
+        >
           Testimonials
         </h2>
-        <Splide
-          options={{
-            arrows: false,
-            pagination: false,
-            width: "100%",
-            autoWidth: true,
-            focus: "center",
-            drag: "true",
-            rewind: true,
-            gap: "40px",
-            breakpoints: {
-              480: {
-                autoWidth: false,
-                perPage: 1,
+        <div className="w-full" ref={sliderDiv}>
+          <Splide
+            options={{
+              arrows: false,
+              pagination: false,
+              width: "100%",
+              autoWidth: true,
+              focus: "center",
+              drag: "true",
+              rewind: true,
+              gap: "40px",
+              breakpoints: {
+                480: {
+                  autoWidth: false,
+                  perPage: 1,
+                },
               },
-            },
-          }}
-          className="review-slider"
-          ref={sliderRef}
-        >
-          {REVIEW_DATA.map((elem, idx) => {
-            return (
-              <SplideSlide key={"review" + idx}>
-                <ReviewBox
-                  {...elem}
-                  idx={idx}
-                  totalReviews={REVIEW_DATA.length}
-                  PrevArrow={PrevArrow}
-                  NextArrow={NextArrow}
-                />
-              </SplideSlide>
-            );
-          })}
-        </Splide>
+            }}
+            className="review-slider"
+            ref={sliderRef}
+          >
+            {REVIEW_DATA.map((elem, idx) => {
+              return (
+                <SplideSlide key={"review" + idx}>
+                  <ReviewBox
+                    {...elem}
+                    idx={idx}
+                    totalReviews={REVIEW_DATA.length}
+                    PrevArrow={PrevArrow}
+                    NextArrow={NextArrow}
+                  />
+                </SplideSlide>
+              );
+            })}
+          </Splide>
+        </div>
       </div>
     </div>
   );

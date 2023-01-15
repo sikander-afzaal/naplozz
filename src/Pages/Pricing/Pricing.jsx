@@ -3,10 +3,10 @@ import Hero from "./Hero";
 import Subscription from "./Subscription";
 import Signup from "../Explore/SignUp";
 
-const Pricing = () => {
+const Pricing = ({ loader }) => {
   return (
     <div>
-      <Hero />
+      <Hero loader={loader} />
       <Subscription />
       <Detailed />
       <Signup />

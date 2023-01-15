@@ -2,10 +2,10 @@ import Team from "./Team";
 import Partners from "../Home/Partners";
 import Contact from "./Contact";
 import Testimonials from "./Testimonials";
-const About = () => {
+const About = ({ loader }) => {
   return (
     <div>
-      <Team />
+      <Team loader={loader} />
       <Partners />
       <Testimonials />
       <Contact />

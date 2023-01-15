@@ -130,10 +130,18 @@ html {
 }
 @keyframes float {
   from {
-    transform: translateX(-8px) translateY(-8px);
+    transform: translateX(-8px);
   }
   to {
-    transform: translateX(8px) translateY(8px);
+    transform: translateX(8px);
+  }
+}
+@keyframes float2 {
+  from {
+    transform: translateY(-4px);
+  }
+  to {
+    transform: translateY(4px);
   }
 }
 .roadmap::-webkit-scrollbar {
@@ -196,4 +204,21 @@ html {
   top: 29% !important;
   transform: translateY(-50%);
   bottom: initial !important;
+}
+.delay1 {
+  animation-delay: 0.5s;
+}
+.delay2 {
+  animation-delay: 0.9s;
+}
+.delay3 {
+  animation-delay: 0.2s;
+  animation: float2 5s ease-in-out 0s infinite alternate;
+}
+.delay4 {
+  animation-delay: 1s;
+}
+.delay5 {
+  animation-delay: 1.2s;
+  animation: float2 5s ease-in-out 0s infinite alternate;
 }

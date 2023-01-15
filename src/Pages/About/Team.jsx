@@ -5,11 +5,66 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import gsap, { Circ } from "gsap";
+import React, { useEffect, useRef, useState } from "react";
 
-const Team = () => {
+const Team = ({ loader }) => {
+  const heading = useRef();
+  const team1 = useRef();
+  const team2 = useRef();
+  const team3 = useRef();
+  const team4 = useRef();
+  const team5 = useRef();
+  const team6 = useRef();
+  const team7 = useRef();
+  const team8 = useRef();
+  const team9 = useRef();
+  const team10 = useRef();
+  const team11 = useRef();
+  const team12 = useRef();
+  const team13 = useRef();
+  const team14 = useRef();
+  const team15 = useRef();
+  const team16 = useRef();
+  const sub = useRef();
+  useEffect(() => {
+    const timeLine = gsap.timeline({
+      defaults: { duration: 0.4, ease: Circ.easeOut },
+      delay: loader ? 6.9 : 0.5,
+    });
+    timeLine
+      .fromTo(heading.current, { x: -20, opacity: 0 }, { x: 0, opacity: 1 })
+      .fromTo(sub.current, { y: -20, opacity: 0 }, { y: 0, opacity: 1 })
+      .fromTo(
+        [
+          team1.current,
+          team2.current,
+          team3.current,
+          team4.current,
+          team5.current,
+          team6.current,
+          team7.current,
+          team8.current,
+          team9.current,
+          team10.current,
+          team11.current,
+          team12.current,
+          team13.current,
+          team14.current,
+          team15.current,
+          team16.current,
+          ,
+        ],
+        { y: -20, opacity: 0 },
+        { stagger: 0.2, y: 0, opacity: 1 }
+      );
+    return () => {
+      timeLine.kill();
+    };
+  }, []);
   const TEAM_DATA = [
     {
+      ref: team1,
       name: "Gabor Kiss",
       role: "The CEO and Founder",
       img: "/about/team1.png",
@@ -20,6 +75,7 @@ const Team = () => {
       },
     },
     {
+      ref: team2,
       name: "Zsolt Hegyvari",
       role: " The Co-founder and Chairman",
       img: "/about/team2.png",
@@ -30,6 +86,7 @@ const Team = () => {
       },
     },
     {
+      ref: team3,
       name: "Balazs Hornyanszky",
       role: "CSO",
       img: "/about/team3.png",
@@ -41,6 +98,7 @@ const Team = () => {
       },
     },
     {
+      ref: team4,
       name: "Peter Gorog",
       role: "BI Manager",
       img: "/about/team4.png",
@@ -50,6 +108,7 @@ const Team = () => {
       },
     },
     {
+      ref: team5,
       name: "Noor Al Hassan",
       role: "Head of Development",
       img: "/about/team5.png",
@@ -61,6 +120,7 @@ const Team = () => {
       },
     },
     {
+      ref: team6,
       name: "Leonardus Soeterbroek",
       role: "CMO",
       img: "/about/team7.png",
@@ -70,6 +130,7 @@ const Team = () => {
       },
     },
     {
+      ref: team7,
       name: "Balint Mendli",
       role: "Product Advisor",
       img: "/about/team6.png",
@@ -81,6 +142,7 @@ const Team = () => {
     },
 
     {
+      ref: team9,
       name: "Adeeb Ahmad ",
       role: "Senior web developer and advisor ",
       img: "/about/team8.png",
@@ -90,6 +152,7 @@ const Team = () => {
       },
     },
     {
+      ref: team10,
       name: "Nilesh Kikani",
       role: "Product and Blockchain advisor",
       img: "/about/team10.png",
@@ -99,6 +162,7 @@ const Team = () => {
       },
     },
     {
+      ref: team11,
       name: "Muhammad Arif ",
       role: "Graphic designer ",
       img: "/about/team9.png",
@@ -107,6 +171,7 @@ const Team = () => {
       },
     },
     {
+      ref: team12,
       name: "Virag Mendline Kiss",
       role: "Web Designer",
       img: "/about/team12.png",
@@ -115,6 +180,7 @@ const Team = () => {
       },
     },
     {
+      ref: team13,
       name: "Tas ",
       role: "Community Manager",
       img: "/about/team11.png",
@@ -123,6 +189,7 @@ const Team = () => {
       },
     },
     {
+      ref: team14,
       name: "Umair Ali",
       role: "Umair Ali",
       img: "/about/blank.png",
@@ -131,11 +198,13 @@ const Team = () => {
       },
     },
     {
+      ref: team15,
       name: "Suhail",
       role: "Community Manager",
       img: "/about/blank.png",
     },
     {
+      ref: team16,
       name: "Abdul Hanan",
       role: "Web designer",
       img: "/about/blank.png",
@@ -155,16 +224,24 @@ const Team = () => {
         alt=""
       />
       <div className="contain flex-col justify-start items-center lg:items-start">
-        <h2 className="gr-text font-bold text-[55px] sm:text-[72px]">
+        <h2
+          ref={heading}
+          className="gr-text font-bold text-[55px] sm:text-[72px]"
+        >
           About Us
         </h2>
         <div className="flex justify-start items-center flex-col gap-6 w-full mt-[10px] lg:mt-[30px]">
-          <h3 className="text-white font-bold text-2xl sm:text-[40px] text-center">
+          <h3
+            ref={sub}
+            className="text-white font-bold text-2xl sm:text-[40px] text-center"
+          >
             Our Vibrant Team
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full sm:items-start place-items-center gap-y-[40px] lg:gap-x-5 lg:gap-y-10">
             {TEAM_DATA.map((elem, idx) => {
-              return <TeamBox {...elem} key={"team" + "name" + idx} />;
+              return (
+                <TeamBox ref={elem.ref} {...elem} key={"team" + "name" + idx} />
+              );
             })}
           </div>
         </div>
@@ -175,10 +252,10 @@ const Team = () => {
 
 export default Team;
 
-const TeamBox = ({ img, name, role, desc, link }) => {
+const TeamBox = React.forwardRef(({ img, name, role, desc, link }, ref) => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <div className="flex justify-start items-center flex-col gap-1 ">
+    <div className="flex justify-start items-center flex-col gap-1" ref={ref}>
       <img
         src={img}
         className="rounded-full w-[148px] h-[148px] object-contain"
@@ -234,4 +311,4 @@ const TeamBox = ({ img, name, role, desc, link }) => {
       )}
     </div>
   );
-};
+});

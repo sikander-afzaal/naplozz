@@ -94,12 +94,12 @@ const BlogCard = ({ img, head, desc, date, id }) => {
                 y2="16.2351"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-opacity="0" />
-                <stop offset="0.23" stop-color="#003345" stop-opacity="0.27" />
-                <stop offset="0.51" stop-color="#016E93" stop-opacity="0.58" />
-                <stop offset="0.74" stop-color="#0199CC" stop-opacity="0.81" />
-                <stop offset="0.91" stop-color="#01B3F0" stop-opacity="0.95" />
-                <stop offset="1" stop-color="#01BDFD" />
+                <stop stopOpacity="0" />
+                <stop offset="0.23" stopColor="#003345" stopOpacity="0.27" />
+                <stop offset="0.51" stopColor="#016E93" stopOpacity="0.58" />
+                <stop offset="0.74" stopColor="#0199CC" stopOpacity="0.81" />
+                <stop offset="0.91" stopColor="#01B3F0" stopOpacity="0.95" />
+                <stop offset="1" stopColor="#01BDFD" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_917_428"
@@ -109,12 +109,12 @@ const BlogCard = ({ img, head, desc, date, id }) => {
                 y2="8.40049"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-opacity="0" />
-                <stop offset="0.23" stop-color="#003345" stop-opacity="0.27" />
-                <stop offset="0.51" stop-color="#016E93" stop-opacity="0.58" />
-                <stop offset="0.74" stop-color="#0199CC" stop-opacity="0.81" />
-                <stop offset="0.91" stop-color="#01B3F0" stop-opacity="0.95" />
-                <stop offset="1" stop-color="#01BDFD" />
+                <stop stopOpacity="0" />
+                <stop offset="0.23" stopColor="#003345" stopOpacity="0.27" />
+                <stop offset="0.51" stopColor="#016E93" stopOpacity="0.58" />
+                <stop offset="0.74" stopColor="#0199CC" stopOpacity="0.81" />
+                <stop offset="0.91" stopColor="#01B3F0" stopOpacity="0.95" />
+                <stop offset="1" stopColor="#01BDFD" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_917_428"
@@ -124,12 +124,12 @@ const BlogCard = ({ img, head, desc, date, id }) => {
                 y2="14.9936"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-opacity="0" />
-                <stop offset="0.23" stop-color="#003345" stop-opacity="0.27" />
-                <stop offset="0.51" stop-color="#016E93" stop-opacity="0.58" />
-                <stop offset="0.74" stop-color="#0199CC" stop-opacity="0.81" />
-                <stop offset="0.91" stop-color="#01B3F0" stop-opacity="0.95" />
-                <stop offset="1" stop-color="#01BDFD" />
+                <stop stopOpacity="0" />
+                <stop offset="0.23" stopColor="#003345" stopOpacity="0.27" />
+                <stop offset="0.51" stopColor="#016E93" stopOpacity="0.58" />
+                <stop offset="0.74" stopColor="#0199CC" stopOpacity="0.81" />
+                <stop offset="0.91" stopColor="#01B3F0" stopOpacity="0.95" />
+                <stop offset="1" stopColor="#01BDFD" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_917_428"
@@ -139,8 +139,8 @@ const BlogCard = ({ img, head, desc, date, id }) => {
                 y2="1.36875"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#33FDFF" />
-                <stop offset="1" stop-color="#424CFF" />
+                <stop stopColor="#33FDFF" />
+                <stop offset="1" stopColor="#424CFF" />
               </linearGradient>
             </defs>
           </svg>

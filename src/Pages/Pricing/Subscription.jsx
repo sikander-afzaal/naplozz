@@ -1,9 +1,19 @@
-import { useState } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
 import SubscribeBox from "../../Components/SubscribeBox";
 
 const Subscription = () => {
+  const container = useRef();
+  const heading = useRef();
+  const btn = useRef();
+  const slider = useRef();
+  const box1 = useRef();
+  const box2 = useRef();
+  const box3 = useRef();
+  const box4 = useRef();
   const [planType, setPlanType] = useState("monthly");
   const [users, setUsers] = useState(3);
   const handleChange = (val) => {
@@ -30,6 +40,7 @@ const Subscription = () => {
         "No audit",
         "Basic statistics after the tasks",
       ],
+      ref: box1,
     },
     {
       heading: "Basic",
@@ -46,6 +57,7 @@ const Subscription = () => {
         "No audit system",
         "Basic statistics",
       ],
+      ref: box2,
     },
     {
       heading: "Pro",
@@ -63,6 +75,7 @@ const Subscription = () => {
         "Detailed statistics",
       ],
       recommended: true,
+      ref: box3,
     },
     {
       heading: "Premium",
@@ -79,17 +92,50 @@ const Subscription = () => {
         "Unlimited protocols at once",
         "Income tracking and detailed statistics",
       ],
+      ref: box4,
     },
   ];
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeline = gsap.timeline({
+      defaults: { duration: 0.3 },
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top 50%",
+      },
+    });
+    timeline
+      .fromTo(heading.current, { opacity: 0, x: -30 }, { opacity: 1, x: 0 })
+      .fromTo(btn.current, { opacity: 0, x: 30 }, { opacity: 1, x: 0 })
+      .fromTo(slider.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0 })
+      .fromTo(
+        [box1.current, box2.current, box3.current, box4.current],
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, stagger: 0.4 }
+      );
+    return () => {
+      timeline.kill();
+    };
+  }, []);
+
   return (
-    <div className="wrapper pt-[80px] md:pt-[100px] xl:pt-[300px] relative">
+    <div
+      ref={container}
+      className="wrapper pt-[80px] md:pt-[100px] xl:pt-[300px] relative"
+    >
       <div className="bg-btnGr w-full absolute left-1/2 top-0 -translate-x-1/2 max-w-[1709px] h-[533px] opacity-20 blur-[130px] -z-10"></div>
       <div className="contain flex flex-col gap-5 justify-start items-start ">
         <div className="flex justify-between items-center md:flex-row flex-col gap-4 md:mb-0 mb-3 md:gap-2 w-full">
-          <h2 className="gr-text font-bold text-[40px] sm:text-left text-center sm:text-[45px] lg:text-[60px] xl:text-[90px]">
+          <h2
+            ref={heading}
+            className="gr-text font-bold text-[40px] sm:text-left text-center sm:text-[45px] lg:text-[60px] xl:text-[90px]"
+          >
             Subscription Model
           </h2>
-          <div className="flex relative justify-between p-[3px] items-center gap-1 w-full rounded-full max-w-[206px] bg-black border-[1px] border-solid border-[#FF519F] h-[48px]">
+          <div
+            ref={btn}
+            className="flex relative justify-between p-[3px] items-center gap-1 w-full rounded-full max-w-[206px] bg-black border-[1px] border-solid border-[#FF519F] h-[48px]"
+          >
             <p
               onClick={() => setPlanType("monthly")}
               className={`${
@@ -117,7 +163,10 @@ const Subscription = () => {
             )}
           </div>
         </div>
-        <div className="flex justify-start items-start flex-col w-full">
+        <div
+          ref={slider}
+          className="flex justify-start items-start flex-col w-full"
+        >
           <p className="text-white opacity-[0.38] text-xl">
             Please select the number of users.
           </p>
@@ -134,6 +183,7 @@ const Subscription = () => {
           {PLANS__DATA.map((elem, idx) => {
             return (
               <SubscribeBox
+                ref={elem.ref}
                 users={users}
                 {...elem}
                 discount={planType === "yearly" ? true : false}

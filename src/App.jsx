@@ -62,16 +62,16 @@ function App() {
           }
           path="/explore"
         />
-        <Route element={<Eco />} path="/ecosystem" />
-        <Route element={<Education />} path="/education" />
-        <Route element={<Marketplace />} path="/marketplace" />
-        <Route element={<Chain />} path="/chain" />
-        <Route element={<Industry />} path="/industry" />
-        <Route element={<About />} path="/about" />
+        <Route element={<Eco loader={loader} />} path="/ecosystem" />
+        <Route element={<Education loader={loader} />} path="/education" />
+        <Route element={<Marketplace loader={loader} />} path="/marketplace" />
+        <Route element={<Chain loader={loader} />} path="/chain" />
+        <Route element={<Industry loader={loader} />} path="/industry" />
+        <Route element={<About loader={loader} />} path="/about" />
         <Route element={<Faq />} path="/faq" />
         <Route element={<Info />} path="/info" />
         <Route element={<Blog />} path="/blogs" />
-        <Route element={<Pricing />} path="/pricing" />
+        <Route element={<Pricing loader={loader} />} path="/pricing" />
         <Route element={<Contact />} path="/contact" />
         <Route element={<BlogDetail />} path="/blog/:id" />
       </Routes>

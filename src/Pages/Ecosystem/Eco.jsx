@@ -1,10 +1,10 @@
 import Hero from "./Hero";
 import SignUp from "./SignUp";
 
-const Eco = () => {
+const Eco = ({ loader }) => {
   return (
     <div>
-      <Hero />
+      <Hero loader={loader} />
       <SignUp />
     </div>
   );

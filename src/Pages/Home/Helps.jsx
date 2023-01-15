@@ -41,7 +41,7 @@ const Helps = () => {
       .fromTo(
         [para.current, para2.current, para3.current],
         { y: 90, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.3 }
+        { y: 0, opacity: 1, duration: 0.2 }
       )
       .fromTo(form.current, { x: 90, opacity: 0 }, { x: 0, opacity: 1 })
       .fromTo(

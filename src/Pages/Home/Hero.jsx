@@ -12,7 +12,7 @@ const Hero = ({ loader }) => {
   const shadow = useRef();
   useLayoutEffect(() => {
     const timeLine = gsap.timeline({
-      defaults: { duration: 0.5, ease: Circ.easeOut },
+      defaults: { duration: 0.4, ease: Circ.easeOut },
       delay: loader ? 6.9 : 0.5,
     });
     timeLine.fromTo(

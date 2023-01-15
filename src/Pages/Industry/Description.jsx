@@ -51,7 +51,7 @@ const Description = () => {
   const [tab, setTab] = useState("restaurant");
 
   return (
-    <div className="wrapper mt-[80px]">
+    <div id="cateringDesc" className="wrapper mt-[80px]">
       <div className="contain flex-col  justify-start items-center sm:items-start">
         <h2 className="gr-text font-bold text-[60px] sm:text-[72px]">
           Catering

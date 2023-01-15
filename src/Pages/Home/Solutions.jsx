@@ -24,7 +24,7 @@ const Features = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const timeLine = gsap.timeline({
-      defaults: { duration: 0.5, ease: Circ.easeOut },
+      defaults: { duration: 0.4, ease: Circ.easeOut },
       scrollTrigger: {
         trigger: container.current,
         start: "top 50%",
@@ -40,7 +40,7 @@ const Features = () => {
     });
     //for feature boxes
     const timeLine3 = gsap.timeline({
-      defaults: { duration: 0.5, ease: Circ.easeOut },
+      defaults: { duration: 0.4, ease: Circ.easeOut },
       scrollTrigger: {
         trigger: container3.current,
         start: "top 50%",
@@ -52,18 +52,18 @@ const Features = () => {
       .fromTo(
         [para.current, para2.current, para3.current],
         { opacity: 0, x: -90 },
-        { opacity: 1, x: 0, stagger: 0.5 }
+        { opacity: 1, x: 0, stagger: 0.3 }
       )
       .fromTo(
         [video.current, bead.current],
         { opacity: 0, x: 90 },
-        { opacity: 1, x: 0, stagger: 0.5 }
+        { opacity: 1, x: 0, stagger: 0.3 }
       );
     /////////////////////////////
     timeLine2.fromTo(
       [box1.current, box2.current],
       { opacity: 0, x: -90 },
-      { opacity: 1, x: 0, stagger: 0.5 }
+      { opacity: 1, x: 0, stagger: 0.3 }
     );
     ///////////////////
     timeLine3
@@ -77,7 +77,7 @@ const Features = () => {
           feat5.current,
         ],
         { opacity: 0, y: 90 },
-        { opacity: 1, y: 0, stagger: 0.3 }
+        { opacity: 1, y: 0, stagger: 0.2 }
       );
     return () => {
       timeLine.kill();
