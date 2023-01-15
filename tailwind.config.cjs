@@ -55,6 +55,7 @@ module.exports = {
         btnBg: "#14133B",
         purple: "#060610",
         pink: "#D54BD5",
+        lightPink: "#ff519f",
       },
     },
   },

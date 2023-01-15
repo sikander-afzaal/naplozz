@@ -122,10 +122,10 @@ const Solutions = () => {
                 tab === "log" ? "border-[#544683]" : "border-transparent"
               } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 01
               </span>
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 -
               </span>
               <span className="text-white font-bold text-lg xl:text-[24px]">
@@ -139,10 +139,10 @@ const Solutions = () => {
                 tab === "user" ? "border-[#544683]" : "border-transparent"
               } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 02
               </span>
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 -
               </span>
               <span className="text-white font-bold text-lg xl:text-[24px]">
@@ -157,10 +157,10 @@ const Solutions = () => {
                 tab === "task" ? "border-[#544683]" : "border-transparent"
               } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 03
               </span>
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 -
               </span>
               <span className="text-white font-bold text-lg xl:text-[24px]">
@@ -174,10 +174,10 @@ const Solutions = () => {
                 tab === "wizard" ? "border-[#544683]" : "border-transparent"
               } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 04
               </span>
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 -
               </span>
               <span className="text-white font-bold text-lg xl:text-[24px]">
@@ -191,10 +191,10 @@ const Solutions = () => {
                 tab === "audit" ? "border-[#544683]" : "border-transparent"
               } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 05
               </span>
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 -
               </span>
               <span className="text-white font-bold text-lg xl:text-[24px]">
@@ -208,10 +208,10 @@ const Solutions = () => {
                 tab === "comms" ? "border-[#544683]" : "border-transparent"
               } px-5 w-full min-w-0 xl:min-w-[400px] mid:min-w-[460px] h-[72px]  justify-start items-center gap-5`}
             >
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 06
               </span>
-              <span className="text-[#FF519F] font-bold text-lg xl:text-[24px]">
+              <span className="text-lightPink font-bold text-lg xl:text-[24px]">
                 -
               </span>
               <span className="text-white font-bold text-lg xl:text-[24px]">

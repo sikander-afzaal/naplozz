@@ -41,13 +41,13 @@ const SubscribeBox = React.forwardRef(
                   ? (users * (price * 0.8)).toFixed(2)
                   : (users * price).toFixed(2)}
               </p>
-              <p className="text-[#FF519F]  mt-2">
+              <p className="text-lightPink  mt-2">
                 Paid in $NAP token: $
                 {discount
                   ? (0.1 * (users * (price * 0.8))).toFixed(2)
                   : (0.1 * (users * price)).toFixed(2)}
               </p>
-              {/* <p className="text-left text-[#FF519F] text-sm mt-2">
+              {/* <p className="text-left text-lightPink text-sm mt-2">
               *you will pay 10% with token and 90% with usd
             </p> */}
             </div>
@@ -71,7 +71,7 @@ const SubscribeBox = React.forwardRef(
           </div>
           <a
             href="#detailed"
-            className="font-semibold cursor-pointer text-[#ff519f] mt-2"
+            className="font-semibold cursor-pointer text-lightPink mt-2"
           >
             View Detailed Pricing
           </a>

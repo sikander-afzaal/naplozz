@@ -1,7 +1,16 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 const SignUp = () => {
+  const img = useRef();
+  useEffect(() => {
+    gsap.to(img.current, { y: 20, repeat: -1, yoyo: true, duration: 2 });
+
+    return () => {};
+  }, []);
+
   return (
     <div className="wrapper mt-[100px] xl:mt-[150px] relative">
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0262F7] blur-[120px] w-full max-w-[1270px] h-[674px] opacity-[0.1] -z-10"></div>
@@ -17,7 +26,12 @@ const SignUp = () => {
             <FontAwesomeIcon icon={faChevronRight} className="text-sm" />
           </a>
         </h2>
-        <img src="/explore/sign-up.png" className="xl:mb-[140px] " alt="" />
+        <img
+          ref={img}
+          src="/explore/sign-up.png"
+          className="xl:mb-[140px] "
+          alt=""
+        />
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const BlogDetail = () => {
           <h2 className="gr-text text-[24px] sm:text-[30px] md:text-[42px] font-bold">
             {DATA[id].heading}
           </h2>
-          <h4 className="text-[#ff519f] text-base font-medium">
+          <h4 className="text-lightPink text-base font-medium">
             {DATA[id].date}
           </h4>
         </div>

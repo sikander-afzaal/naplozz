@@ -134,13 +134,13 @@ const Subscription = () => {
           </h2>
           <div
             ref={btn}
-            className="flex relative justify-between p-[3px] items-center gap-1 w-full rounded-full max-w-[206px] bg-black border-[1px] border-solid border-[#FF519F] h-[48px]"
+            className="flex relative justify-between p-[3px] items-center gap-1 w-full rounded-full max-w-[206px] bg-black border-[1px] border-solid border-lightPink h-[48px]"
           >
             <p
               onClick={() => setPlanType("monthly")}
               className={`${
                 planType === "monthly"
-                  ? "bg-[#FF519F] text-black"
+                  ? "bg-lightPink text-black"
                   : "bg-transparent text-white"
               } rounded-full w-full font-medium h-full flex select-none cursor-pointer transition-all duration-500 justify-center items-center`}
             >
@@ -150,14 +150,14 @@ const Subscription = () => {
               onClick={() => setPlanType("yearly")}
               className={`${
                 planType === "yearly"
-                  ? "bg-[#FF519F] text-black"
+                  ? "bg-lightPink text-black"
                   : "bg-transparent text-white"
               } rounded-full w-full font-medium h-full select-none  flex cursor-pointer transition-all duration-500 justify-center items-center`}
             >
               Yearly
             </p>
             {planType === "yearly" && (
-              <p className="text-[#FF519F] font-medium text-base absolute top-[120%] left-1/2 -translate-x-1/2">
+              <p className="text-lightPink font-medium text-base absolute top-[120%] left-1/2 -translate-x-1/2">
                 20% Discount
               </p>
             )}

@@ -23,7 +23,7 @@ const Hero = () => {
         </p>
         <Link
           to="/blog/1"
-          className="no-underline text-[#FF519F] font-medium text-xl md:text-base flex justify-start items-center gap-2"
+          className="no-underline text-lightPink font-medium text-xl md:text-base flex justify-start items-center gap-2"
         >
           View Post{" "}
           <FontAwesomeIcon icon={faArrowRight} className="text-white" />

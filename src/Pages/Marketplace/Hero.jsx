@@ -52,7 +52,7 @@ const Hero = ({ loader }) => {
               ref={para2}
               className="text-white font-medium text-base sm:text-xl"
             >
-              <span className="text-bold text-[#FF519F]">Imagine this:</span>{" "}
+              <span className="text-bold text-lightPink">Imagine this:</span>{" "}
               you need to have a service day in an outer event urgently, and you
               need to find someone immediately. Or maybe you have a big project
               coming up and need some extra hands on deck—but you don't know

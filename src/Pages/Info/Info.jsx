@@ -783,7 +783,7 @@ const Info = () => {
           </div>
           <p className="text-xl font-semibold text-white">
             A dokumentumot hitelesíti és készítette:{" "}
-            <span className="text-[#FF519F]">Virtualjog.hu</span> <br />{" "}
+            <span className="text-lightPink">Virtualjog.hu</span> <br />{" "}
             Megtekintés / letöltés PDF formátumban: Megtekintés / letöltés{" "}
             <br /> A legutóbbi frissítés dátuma: 2022.04.25
           </p>

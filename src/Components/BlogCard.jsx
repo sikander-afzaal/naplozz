@@ -145,7 +145,7 @@ const BlogCard = ({ img, head, desc, date, id }) => {
             </defs>
           </svg>
 
-          <p className="text-[#ff519f] text-sm sm:text-xl">{date}</p>
+          <p className="text-lightPink text-sm sm:text-xl">{date}</p>
         </div>
       </div>
     </Link>

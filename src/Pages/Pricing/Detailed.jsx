@@ -277,7 +277,7 @@ const DetailedRow = ({ text, free, basic, pro, premium, soon }) => {
   return (
     <div className="grid min-w-[1200px] grid-cols-[1.5fr__1fr__1fr__1fr__1fr] sm:grid-cols-[2.5fr__1fr__1fr__1fr__1fr] w-full">
       <div className="flex  justify-start items-center leading-[1] w-full text-white text-sm sm:text-lg font-medium border-b-[1px] border-solid border-b-[#FFFFFF1F]  text-left py-4 px-3">
-        {text} {soon && <span className="text-[#FF519F]"> (Coming Soon)</span>}
+        {text} {soon && <span className="text-lightPink"> (Coming Soon)</span>}
       </div>
       <div className="w-full border-l-[1px] flex justify-center items-center text-white text-lg font-medium border-b-[1px] border-solid border-b-[#FFFFFF1F] border-l-[#FFFFFF9E] text-center py-4 px-6">
         {free && free !== "check" ? (

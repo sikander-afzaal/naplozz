@@ -136,7 +136,7 @@ const Roadmap = () => {
               ref={shadow}
               className="absolute bg-[#400091] left-[0.5%] top-[0px] blur-[30px] isolate w-[40px] h-[40px] rounded-full"
             >
-              <div className="bg-[#ff519f] w-[60px] h-[60px] -z-10 blur-[15px]"></div>
+              <div className="bg-lightPink w-[60px] h-[60px] -z-10 blur-[15px]"></div>
             </div>
             <div
               ref={line}
@@ -145,9 +145,9 @@ const Roadmap = () => {
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
               <div
                 ref={list1Dot}
-                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+                className="rounded-full bg-lightPink w-4 h-4 relative"
               >
-                <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
+                <div className="rounded-full  bg-lightPink w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
               <h4 ref={list1Heading} className="text-xl text-white font-bold">
                 2021
@@ -174,9 +174,9 @@ const Roadmap = () => {
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
               <div
                 ref={list2Dot}
-                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+                className="rounded-full bg-lightPink w-4 h-4 relative"
               >
-                <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
+                <div className="rounded-full  bg-lightPink w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
               <h4 ref={list2Heading} className="text-xl text-white font-bold">
                 2022
@@ -208,9 +208,9 @@ const Roadmap = () => {
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
               <div
                 ref={list3Dot}
-                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+                className="rounded-full bg-lightPink w-4 h-4 relative"
               >
-                <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
+                <div className="rounded-full  bg-lightPink w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
               <h4 ref={list3Heading} className="text-xl text-white font-bold">
                 2023/1
@@ -242,9 +242,9 @@ const Roadmap = () => {
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
               <div
                 ref={list4Dot}
-                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+                className="rounded-full bg-lightPink w-4 h-4 relative"
               >
-                <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
+                <div className="rounded-full  bg-lightPink w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
               <h4 ref={list4Heading} className="text-xl text-white font-bold">
                 2023/2
@@ -273,9 +273,9 @@ const Roadmap = () => {
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
               <div
                 ref={list5Dot}
-                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+                className="rounded-full bg-lightPink w-4 h-4 relative"
               >
-                <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
+                <div className="rounded-full  bg-lightPink w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
               <h4 ref={list5Heading} className="text-xl text-white font-bold">
                 2024/1
@@ -304,9 +304,9 @@ const Roadmap = () => {
             <div className="flex justify-start min-w-[250px] items-start flex-col gap-7">
               <div
                 ref={list6Dot}
-                className="rounded-full bg-[#FF519f] w-4 h-4 relative"
+                className="rounded-full bg-lightPink w-4 h-4 relative"
               >
-                <div className="rounded-full  bg-[#FF519f] w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
+                <div className="rounded-full  bg-lightPink w-[22px] -z-10 h-[22px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute blur-[12px]"></div>
               </div>
               <h4 ref={list6Heading} className="text-xl text-white font-bold">
                 2024/2

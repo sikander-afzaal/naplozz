@@ -161,7 +161,7 @@ const CookiesPopup = ({ setModal }) => {
         </p>
         <button
           onClick={() => setModal(false)}
-          className="rounded-full bg-[#FF519F] text-white w-[118px] h-[45px] border-[1px] border-solid border-[#FF519F] hover:bg-transparent transition-all duration-300 cursor-pointer text-lg font-medium"
+          className="rounded-full bg-lightPink text-white w-[118px] h-[45px] border-[1px] border-solid border-lightPink hover:bg-transparent transition-all duration-300 cursor-pointer text-lg font-medium"
         >
           I Accept
         </button>

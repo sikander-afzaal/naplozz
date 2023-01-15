@@ -305,13 +305,13 @@ const Footer = () => {
           <div className="flex justify-center items-center flex-wrap gap-5">
             <a href="#" target={"blank"}>
               <FontAwesomeIcon
-                className="text-white text-2xl"
+                className="text-white text-2xl hover:text-lightPink transition-all"
                 icon={faFacebook}
               />
             </a>
             <a href="https://twitter.com/naplozz" target={"blank"}>
               <FontAwesomeIcon
-                className="text-white text-2xl"
+                className="text-white text-2xl hover:text-lightPink transition-all"
                 icon={faTwitter}
               />
             </a>
@@ -320,31 +320,31 @@ const Footer = () => {
               target={"blank"}
             >
               <FontAwesomeIcon
-                className="text-white text-2xl"
+                className="text-white text-2xl hover:text-lightPink transition-all"
                 icon={faLinkedin}
               />
             </a>
             <a href="#" target={"blank"}>
               <FontAwesomeIcon
-                className="text-white text-2xl"
+                className="text-white text-2xl hover:text-lightPink transition-all"
                 icon={faTelegram}
               />
             </a>
             <a href="#" target={"blank"}>
               <FontAwesomeIcon
-                className="text-white text-2xl"
+                className="text-white text-2xl hover:text-lightPink transition-all"
                 icon={faDiscord}
               />
             </a>
             <a href="#" target={"blank"}>
               <FontAwesomeIcon
-                className="text-white text-2xl"
+                className="text-white text-2xl hover:text-lightPink transition-all"
                 icon={faYoutube}
               />
             </a>
             <a href="https://medium.com/@naplozzio" target={"blank"}>
               <FontAwesomeIcon
-                className="text-white text-2xl"
+                className="text-white text-2xl hover:text-lightPink transition-all"
                 icon={faMedium}
               />
             </a>

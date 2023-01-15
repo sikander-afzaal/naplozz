@@ -75,7 +75,7 @@ const Usage = ({ loader }) => {
       <div className="absolute w-full max-w-[1110px] h-[360px] rounded-full -translate-x-1/2 left-0 top-[37%] opacity-[0.5] -z-10 blur-[131px] bg-[#2BD1FF]"></div>
       <div className="absolute w-full max-w-[1077px] h-[380px] rounded-full translate-x-1/2 right-0 top-[42.5%] opacity-[0.47] -z-10 blur-[159px] -rotate-[17.61deg] bg-greenishGr"></div>
       <div className="absolute w-full max-w-[1077px] h-[380px] rounded-full translate-x-1/2 right-0 top-[78.5%] opacity-[0.47] -z-10 blur-[159px] -rotate-[17.61deg] bg-greenishGr"></div>
-      <div className="absolute w-full max-w-[828px] h-[877px] rounded-full right-0 top-[74.5%] opacity-[0.19] -z-10 blur-[103px]  bg-[#FF519F]"></div>
+      <div className="absolute w-full max-w-[828px] h-[877px] rounded-full right-0 top-[74.5%] opacity-[0.19] -z-10 blur-[103px]  bg-lightPink"></div>
       <div className="absolute w-full max-w-[946px] h-[242px] rounded-full left-0 -translate-x-[20%] top-[89%] opacity-[0.42] -z-10 blur-[130px]  bg-[#E04ADC]"></div>
       {/* //shadows end ------------------------ */}
       <div className="contain flex-col justify-start items-center gap-5">
@@ -89,70 +89,70 @@ const Usage = ({ loader }) => {
           <a
             ref={tab1}
             href="#catering"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Catering
           </a>
           <a
             ref={tab2}
             href="#public_catering"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Public Catering
           </a>
           <a
             ref={tab3}
             href="#accommodation"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Accommodation
           </a>
           <a
             ref={tab4}
             href="#food_producer"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Food Producer
           </a>
           <a
             ref={tab5}
             href="#food_retail"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Food Retail
           </a>
           <a
             ref={tab6}
             href="#retail"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Retail
           </a>
           <a
             ref={tab7}
             href="#industrial_activity"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Industrial Activity
           </a>
           <a
             ref={tab8}
             href="#office_activity"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Office Activity
           </a>
           <a
             ref={tab9}
             href="#health"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Health Care
           </a>
           <a
             ref={tab10}
             href="#warehouse"
-            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-[#ff519f] bg-transparent font-medium text-xl hover:bg-[#ff519f] transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
+            className="border-[1px] sm:min-w-0 min-w-[200px]  border-solid border-lightPink bg-transparent font-medium text-xl hover:bg-lightPink transition-all duration-500 cursor-pointer no-underline rounded-full px-5 sm:px-12 h-[50px] flex justify-center items-center text-white"
           >
             Warehouse
           </a>
