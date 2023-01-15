@@ -16,6 +16,7 @@ const Header = () => {
   const [bg, setBg] = useState(false);
   const [dropDownExplore, setDropDownExplore] = useState(false);
   const [dropDownEco, setDropDownEco] = useState(false);
+  const [languageDrop, setLanguageDrop] = useState(false);
   useEffect(() => {
     //header bg when you scroll
     const showBg = () => {
@@ -223,6 +224,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   setDropDownEco(false);
+                  setLanguageDrop(false);
                   setDropDownExplore((prev) => !prev);
                 }}
                 className={`no-underline flex justify-start items-center gap-2 ${
@@ -245,6 +247,7 @@ const Header = () => {
                     onClick={() => {
                       setDropDownExplore(false);
                       setHeaderToggle(false);
+                      setLanguageDrop(false);
                       setDropDownEco(false);
                     }}
                     to={"/explore"}
@@ -257,6 +260,7 @@ const Header = () => {
                       setDropDownExplore(false);
                       setHeaderToggle(false);
                       setDropDownEco(false);
+                      setLanguageDrop(false);
                     }}
                     smooth
                     className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
@@ -271,6 +275,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   setDropDownExplore(false);
+                  setLanguageDrop(false);
                   setDropDownEco((prev) => !prev);
                 }}
                 className={`no-underline flex justify-start items-center gap-2 ${
@@ -291,6 +296,7 @@ const Header = () => {
                     onClick={() => {
                       setDropDownExplore(false);
                       setDropDownEco(false);
+                      setLanguageDrop(false);
                       setHeaderToggle(false);
                     }}
                     to={"/ecosystem"}
@@ -302,6 +308,7 @@ const Header = () => {
                     onClick={() => {
                       setDropDownExplore(false);
                       setDropDownEco(false);
+                      setLanguageDrop(false);
                       setHeaderToggle(false);
                     }}
                     smooth
@@ -315,6 +322,7 @@ const Header = () => {
                       setDropDownExplore(false);
                       setDropDownEco(false);
                       setHeaderToggle(false);
+                      setLanguageDrop(false);
                     }}
                     smooth
                     className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
@@ -327,6 +335,7 @@ const Header = () => {
                       setDropDownExplore(false);
                       setDropDownEco(false);
                       setHeaderToggle(false);
+                      setLanguageDrop(false);
                     }}
                     smooth
                     className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
@@ -342,6 +351,7 @@ const Header = () => {
                 setDropDownEco(false);
                 setDropDownExplore(false);
                 setHeaderToggle(false);
+                setLanguageDrop(false);
               }}
               to="/industry"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
@@ -353,6 +363,7 @@ const Header = () => {
                 setDropDownEco(false);
                 setDropDownExplore(false);
                 setHeaderToggle(false);
+                setLanguageDrop(false);
               }}
               to="/blogs"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
@@ -364,6 +375,7 @@ const Header = () => {
                 setDropDownEco(false);
                 setDropDownExplore(false);
                 setHeaderToggle(false);
+                setLanguageDrop(false);
               }}
               to="/pricing"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
@@ -375,6 +387,7 @@ const Header = () => {
                 setDropDownEco(false);
                 setDropDownExplore(false);
                 setHeaderToggle(false);
+                setLanguageDrop(false);
               }}
               to="/about"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
@@ -386,6 +399,7 @@ const Header = () => {
                 setDropDownEco(false);
                 setDropDownExplore(false);
                 setHeaderToggle(false);
+                setLanguageDrop(false);
               }}
               to="/contact"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
@@ -408,11 +422,49 @@ const Header = () => {
             >
               Log in
             </a>
-            <div className="flex justify-start items-center gap-3">
-              <button className="flex justify-start items-center gap-2 cursor-pointer text-white text-base">
+            <div className="flex flex-col justify-start sm:w-auto w-full items-center sm:items-start gap-5 relative">
+              <button
+                onClick={() => {
+                  setDropDownEco(false);
+                  setDropDownExplore(false);
+                  setLanguageDrop((prev) => !prev);
+                }}
+                className="flex justify-start items-center gap-2 cursor-pointer text-white text-base"
+              >
                 <FontAwesomeIcon icon={faGlobe} />{" "}
-                <FontAwesomeIcon icon={faChevronDown} />
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`transition-all ${
+                    languageDrop ? "rotate-180" : ""
+                  }`}
+                />
               </button>
+              {languageDrop && (
+                <div className="static head:absolute px-5 py-3 gap-2 flex justify-center items-center flex-col w-full head:w-max bg-black text-white border-[1px] border-solid border-[#b3b3b3] rounded top-[200%] left-1/2 head:-translate-x-1/2">
+                  <p
+                    onClick={() => {
+                      setDropDownEco(false);
+                      setDropDownExplore(false);
+                      setLanguageDrop(false);
+                      setHeaderToggle(false);
+                    }}
+                    className="text-white text-xl cursor-pointer select-none"
+                  >
+                    EN
+                  </p>
+                  <p
+                    onClick={() => {
+                      setDropDownEco(false);
+                      setDropDownExplore(false);
+                      setLanguageDrop(false);
+                      setHeaderToggle(false);
+                    }}
+                    className="text-white text-xl cursor-pointer select-none"
+                  >
+                    HU
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </nav>

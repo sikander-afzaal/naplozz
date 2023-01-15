@@ -3,7 +3,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 
 const Solutions = () => {
-  const [tab, setTab] = useState("task");
+  const [tab, setTab] = useState("log");
   const DATA = {
     task: {
       desc: "A simple interface that allows you to track your tasks and assign them to employees. You can create tasks for each department to track what needs to be done and when you need to do it. You can also set deadlines, regularity and alerts for each task so that you know when something is due or overdue.",

@@ -85,7 +85,7 @@ const Usage = ({ loader }) => {
         >
           Industry Usage
         </h2>
-        <div className="sm:flex-wrap sm:overflow-auto overflow-x-scroll w-full roadmap flex justify-start sm:justify-center items-center gap-x-3 gap-y-5 ">
+        <div className="sm:flex-wrap sm:overflow-x-auto overflow-y-hidden overflow-x-scroll w-full roadmap flex justify-start sm:justify-center items-center gap-x-3 gap-y-5 ">
           <a
             ref={tab1}
             href="#catering"

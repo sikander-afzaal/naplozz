@@ -18,7 +18,6 @@ const Testimonials = () => {
       scrollTrigger: {
         trigger: container.current,
         start: "top 50%",
-        markers: true,
       },
     });
     timeline

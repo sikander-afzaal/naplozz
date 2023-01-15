@@ -25,7 +25,7 @@ const Footer = () => {
         />
       </div>
       <div className="contain pt-[40px] sm:pt-[60px] pb-5 justify-start items-center flex-col">
-        <footer className="w-full grid grid-cols-2 grid-rows-2 sm:flex sm:flex-col lg:flex-row justify-between items-center sm:items-start gap-5">
+        <footer className="w-full grid grid-cols-2 grid-rows-[auto__1fr] sm:flex sm:flex-col lg:flex-row justify-between items-start gap-8 lg:gap-5">
           <svg
             width="329"
             height="77"

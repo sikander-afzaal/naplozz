@@ -58,7 +58,11 @@ const Programs = () => {
         { opacity: 1, x: 0, stagger: 0.4 }
       );
     timeLine2
-      .fromTo(img3.current, { opacity: 0, x: 50 }, { opacity: 1, x: 0 })
+      .fromTo(
+        img3.current,
+        { opacity: 0, x: -100, transformOrigin: "left", scale: 0 },
+        { opacity: 1, x: 0, scale: 1 }
+      )
       .fromTo(
         [heading3.current, para6.current, para7.current],
         { opacity: 0, x: -50 },

@@ -131,7 +131,7 @@ const Whitepaper = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-start items-center gap-7 flex-col ">
+        <div className="flex lg:w-auto w-full  justify-start items-center gap-7 flex-col ">
           <div
             ref={calculator}
             className="flex justify-start items-center pb-0 flex-col w-full bg-blackGr2 rounded-[30px] border-[1px] max-w-[500px] py-5 sm:py-[30px] px-5 sm:px-[50px] border-sold border-[#b3b3b3]  gap-[30px]"
