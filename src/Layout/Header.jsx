@@ -17,6 +17,7 @@ const Header = () => {
   const [dropDownExplore, setDropDownExplore] = useState(false);
   const [dropDownEco, setDropDownEco] = useState(false);
   const [languageDrop, setLanguageDrop] = useState(false);
+  const [docsDrop, setDocsDrop] = useState(false);
   useEffect(() => {
     //header bg when you scroll
     const showBg = () => {
@@ -225,6 +226,7 @@ const Header = () => {
                 onClick={() => {
                   setDropDownEco(false);
                   setLanguageDrop(false);
+                  setDocsDrop(false);
                   setDropDownExplore((prev) => !prev);
                 }}
                 className={`no-underline flex justify-start items-center gap-2 ${
@@ -247,6 +249,7 @@ const Header = () => {
                     onClick={() => {
                       setDropDownExplore(false);
                       setHeaderToggle(false);
+                      setDocsDrop(false);
                       setLanguageDrop(false);
                       setDropDownEco(false);
                     }}
@@ -260,6 +263,7 @@ const Header = () => {
                       setDropDownExplore(false);
                       setHeaderToggle(false);
                       setDropDownEco(false);
+                      setDocsDrop(false);
                       setLanguageDrop(false);
                     }}
                     smooth
@@ -275,6 +279,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   setDropDownExplore(false);
+                  setDocsDrop(false);
                   setLanguageDrop(false);
                   setDropDownEco((prev) => !prev);
                 }}
@@ -296,6 +301,7 @@ const Header = () => {
                     onClick={() => {
                       setDropDownExplore(false);
                       setDropDownEco(false);
+                      setDocsDrop(false);
                       setLanguageDrop(false);
                       setHeaderToggle(false);
                     }}
@@ -309,6 +315,7 @@ const Header = () => {
                       setDropDownExplore(false);
                       setDropDownEco(false);
                       setLanguageDrop(false);
+                      setDocsDrop(false);
                       setHeaderToggle(false);
                     }}
                     smooth
@@ -322,6 +329,7 @@ const Header = () => {
                       setDropDownExplore(false);
                       setDropDownEco(false);
                       setHeaderToggle(false);
+                      setDocsDrop(false);
                       setLanguageDrop(false);
                     }}
                     smooth
@@ -335,6 +343,7 @@ const Header = () => {
                       setDropDownExplore(false);
                       setDropDownEco(false);
                       setHeaderToggle(false);
+                      setDocsDrop(false);
                       setLanguageDrop(false);
                     }}
                     smooth
@@ -351,6 +360,7 @@ const Header = () => {
                 setDropDownEco(false);
                 setDropDownExplore(false);
                 setHeaderToggle(false);
+                setDocsDrop(false);
                 setLanguageDrop(false);
               }}
               to="/industry"
@@ -364,6 +374,7 @@ const Header = () => {
                 setDropDownExplore(false);
                 setHeaderToggle(false);
                 setLanguageDrop(false);
+                setDocsDrop(false);
               }}
               to="/blogs"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
@@ -376,6 +387,7 @@ const Header = () => {
                 setDropDownExplore(false);
                 setHeaderToggle(false);
                 setLanguageDrop(false);
+                setDocsDrop(false);
               }}
               to="/pricing"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
@@ -388,6 +400,7 @@ const Header = () => {
                 setDropDownExplore(false);
                 setHeaderToggle(false);
                 setLanguageDrop(false);
+                setDocsDrop(false);
               }}
               to="/about"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
@@ -400,12 +413,67 @@ const Header = () => {
                 setDropDownExplore(false);
                 setHeaderToggle(false);
                 setLanguageDrop(false);
+                setDocsDrop(false);
               }}
               to="/contact"
               className="no-underline flex justify-start items-center gap-2 text-[rgba(255,255,255,0.8)] hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium"
             >
               Contact
             </Link>
+            <div className="flex head:w-auto w-full justify-start items-center sm:items-start flex-col relative">
+              <button
+                onClick={() => {
+                  setDropDownEco(false);
+                  setLanguageDrop(false);
+                  setDropDownExplore(false);
+                  setDocsDrop((prev) => !prev);
+                }}
+                className={`no-underline flex justify-start items-center gap-2 ${
+                  docsDrop ? "text-white" : "text-[rgba(255,255,255,0.8)]"
+                } hover:text-white hover:brightness-200 text-lg head:text-base xl:text-base font-medium`}
+              >
+                Docs{" "}
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`text-inherit transition-transform text-xs ${
+                    docsDrop ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {docsDrop && (
+                <div className="static mt-5 head:m-0 head:absolute px-5 py-3 gap-2 flex justify-center items-center sm:items-start flex-col w-full head:w-max bg-black text-white border-[1px] border-solid border-[#b3b3b3] rounded top-[140%] left-1/2 head:-translate-x-1/2">
+                  <a
+                    href="http://docs.naplozz.io"
+                    target={"blank"}
+                    onClick={() => {
+                      setDropDownExplore(false);
+                      setHeaderToggle(false);
+                      setLanguageDrop(false);
+                      setDropDownEco(false);
+                      setDocsDrop(false);
+                    }}
+                    className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
+                  >
+                    Whitepaper
+                  </a>
+                  <a
+                    onClick={() => {
+                      setDocsDrop(false);
+                      setDropDownExplore(false);
+                      setHeaderToggle(false);
+                      setDropDownEco(false);
+                      setLanguageDrop(false);
+                    }}
+                    smooth
+                    className="text-lg text-[rgba(255,255,255,0.8)] hover:text-white"
+                    href={"#"}
+                    target="blank"
+                  >
+                    Nap Token
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
           <div className="flex justify-start items-center sm:items-start flex-col head:flex-row head:items-center  gap-6 head:gap-2 xl:gap-6">
             <a
