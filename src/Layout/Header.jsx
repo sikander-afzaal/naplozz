@@ -469,7 +469,7 @@ const Header = () => {
                     href={"#"}
                     target="blank"
                   >
-                    Nap Token
+                    Litepaper
                   </a>
                 </div>
               )}
